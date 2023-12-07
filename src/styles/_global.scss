@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "legofont";
+  src: url('/public/fonts/cerapro-regular.otf');
+}
+
+:root {
+  /* Font */
+  --typo-font-general: legofont;
+
+  /*Colores*/
+
+  --black-light: #191919;
+  --black: #000;
+  --blue-dark: #003a71;
+  --blue-extra-light: #e6f3ff;
+  --blue-kids-dark: #3055b5;
+  --blue-kids: #abd9ff;
+  --box-shadow-kids: #3055b570;
+  --blue-light: #31a1e0;
+  --blue: #006db7;
+  --green-extra-light: #ccead8;
+  --green: #008537;
+  --grey-dark: #2c2c2c;
+  --grey-extra-extra-light: #f6f6f6;
+  --grey-extra-light: #f8f8f8;
+  --grey-light: #e0e0e0;
+  --grey-medium: #cacaca;
+  --grey: #757575;
+  --orange-dark: #e86902;
+  --orange: #fd8024;
+  --purple-dark: #18152d;
+  --purple: #201d48;
+  --red-dark: #9d1604;
+  --red-extra-light: #fff2f2;
+  --red: #d0021b;
+  --transparent: transparent;
+  --vip-blue: #0a4dad;
+  --white: #fff;
+  --yellow-extra-light: #fef6d2;
+  --yellow-light: #ffdb4b;
+  --yellow: #ffcf00;
+}
