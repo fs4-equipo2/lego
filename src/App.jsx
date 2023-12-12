@@ -1,6 +1,7 @@
 import { FaChevronRight } from "react-icons/fa6";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import Button from "./components/Button/Button";
+import Dropdown from "./components/Dropdown/Dropdown";
 
 function App() {
   return (
