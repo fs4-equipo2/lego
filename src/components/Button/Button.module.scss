@@ -48,19 +48,15 @@
   }
 }
 
-.boton-sesion {
+.sesion {
   background-color: transparent;
   border: none;
   font-weight: bold;
   font-size: 0.75rem;
 
   height: 1.7rem;
-  cursor: pointer;
 }
 
-.link-iniciar-sesion {
-  text-decoration: none;
-}
 
 .boton-menu-nav {
   background-color: transparent;
@@ -96,35 +92,23 @@
   cursor: pointer;
 }
 
-.boton-buscador {
+.buscador {
   padding: 0.5rem;
-  background-color: var(--white);
+  background-color: white;
   height: auto;
   width: auto;
   border-radius: 50%;
   border: none;
 }
 
-.boton-buscador:hover {
-  cursor: pointer;
-}
-
-.boton-lista-deseos {
+.deseos {
   background-color: transparent;
   border: none;
 }
 
-.boton-lista-deseos:hover {
-  cursor: pointer;
-}
-
-.boton-bolsa-compra {
+.bolsaCompra {
   background-color: transparent;
   border: none;
-}
-
-.boton-bolsa-compra:hover {
-  cursor: pointer;
 }
 
 /* Parte de Martin empieza aquí */

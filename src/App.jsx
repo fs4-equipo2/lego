@@ -1,4 +1,6 @@
-import { FaChevronRight } from "react-icons/fa6";
+import { FaChevronRight, FaRegHeart, FaShieldHeart } from "react-icons/fa6";
+import { SlMagnifier } from "react-icons/sl";
+import { MdOutlineShoppingBag } from "react-icons/md";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import Button from "./components/Button/Button";
 import Input from "./components/Input/Input";
@@ -28,6 +30,21 @@ function App() {
         texto={"Ver todos los artículos"}
         isArticulo={true}
         handleClick={() => console.log("router.push(/login)")}
+      />
+      <Button
+        isDeseos={true}
+        iconLeft={<FaRegHeart/>}
+        handleClick={() => console.log("router.push(/login")}
+        />
+      <Button
+        isBuscador={true}
+        iconLeft={<SlMagnifier/>}
+        handleClick={() => console.log("router.push(/login")}
+        />
+      <Button
+      isBolsaCompra={true}
+      iconLeft={<MdOutlineShoppingBag />}
+      handleClick={() => console.log("router.push(/login")}
       />
 
       <Tipografia color={"--orange"} texto={"Tipografia de type=titulo"} />
