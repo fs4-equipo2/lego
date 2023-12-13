@@ -129,10 +129,6 @@
 
 /* Parte de Martin empieza aquí */
 .añadirBolsa {
-  text-decoration: none;
-}
-
-.añadirBolsa {
   width: auto;
   background-color: var(--orange);
 
@@ -158,10 +154,11 @@
 
   padding: 0.85rem;
 
-  font-size: 0.8rem;
-  font-weight: bold;
   border: 2px solid var(--blue);
   border-radius: 30rem;
+  
+  font-size: 0.8rem;
+  font-weight: bold;
 
   &:hover {
     background-color: var(--blue);
