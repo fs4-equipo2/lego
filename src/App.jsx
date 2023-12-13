@@ -1,6 +1,8 @@
 import { FaChevronRight } from "react-icons/fa6";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import Button from "./components/Button/Button";
+import {LogInButton} from "./components/logInButton/logInButton"
+import { TbLego } from "react-icons/tb";
 
 function App() {
   return (
@@ -17,7 +19,14 @@ function App() {
         iconLeft={<FaArrowLeftLong />}
         handleClick={() => console.log("router.push(/login)")}
       />
+      <LogInButton
+        label="Iniciar sesión"
+        href=""
+        icon={<TbLego/>}
+
+      />
     </>
+
   );
 }
 
