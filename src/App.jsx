@@ -1,8 +1,7 @@
 import { FaChevronRight } from "react-icons/fa6";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import Button from "./components/Button/Button";
-import Input from "./components/Input/Input";
-import Tipografia from "./components/Tipografia/Tipografia";
+import { JoinButton } from "./components/JoinButton/JoinButton";
 
 function App() {
   return (
@@ -19,14 +18,7 @@ function App() {
         iconLeft={<FaArrowLeftLong />}
         handleClick={() => console.log("router.push(/login)")}
       />
-
-      <Tipografia color={"--orange"} texto={"Tipografia de type=titulo"} />
-      <Tipografia color={"--purple-dark"} texto={"Tipografia de type=titulo"} />
-      <Tipografia color={"--red-dark"} texto={"Tipografia de type=titulo"} />
-      <Tipografia color={"--vip-blue"} texto={"Tipografia de type=titulo"} />
-
-      <Input type={"text"} placeholder={"Enter email"} />
-      <Input type={"password"} placeholder={"Enter password"} />
+      <JoinButton label="Únete a LEGO® Insiders" icon="https://www.lego.com/_next/static/images/insidersOut-1007c87df3063963a6a3f7de243ac98e.svg" href="https://www.lego.com/es-es/insiders" />
     </>
   );
 }
