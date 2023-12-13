@@ -29,11 +29,6 @@ function App() {
         isArticulo={true}
         handleClick={() => console.log("router.push(/login)")}
       />
-            {/* <Button
-        texto={"Ver todos los artículos"}
-        isRedes={true}
-        handleClick={() => console.log("router.push(/login)")}
-      /> */}
 
       <Tipografia color={"--orange"} texto={"Tipografia de type=titulo"} />
       <Tipografia color={"--purple-dark"} texto={"Tipografia de type=titulo"} />

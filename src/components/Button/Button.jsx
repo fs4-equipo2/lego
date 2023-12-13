@@ -2,8 +2,6 @@ import styles from "./Button.module.scss";
 import classNames from "classnames/bind";
 //  Botón PreNavbar @CantosCDenise
 //  Botón Navbar @CantosCDenise
-//  Botón Compra @MartinGergov
-//  Botón Articulo - Card Blogs @MartinGergov
 //  Botón redes - Footer @MartinGergov
 const cx = classNames.bind(styles);
 
@@ -41,7 +39,6 @@ const Button = ({
     prenavbar: isPrenavbar,
     añadirBolsa: isAñadirBolsa,
     verArticulos: isArticulo,
-    redes: isRedes
 
   });
 
