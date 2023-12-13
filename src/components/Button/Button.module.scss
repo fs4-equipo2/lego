@@ -3,10 +3,11 @@
   flex-direction: row;
   align-items: center;
   gap: 10px;
+
+  cursor: pointer;
 }
 
 .main {
-
   padding: 0.75rem;
   border: none;
 
@@ -38,7 +39,6 @@
   font-weight: 600;
   font-size: 0.75rem;
 
-
   transition: 0.2s ease-in-out;
   box-shadow: var(--box-shadow-kids) 0px 1px 4px 0px;
 
@@ -56,7 +56,6 @@
 
   height: 1.7rem;
   cursor: pointer;
-
 }
 
 .link-iniciar-sesion {
@@ -129,12 +128,11 @@
 }
 
 /* Parte de Martin empieza aquí */
-.boton-compra-link {
+.añadirBolsa {
   text-decoration: none;
 }
 
-.boton-compra {
-  display: block;
+.añadirBolsa {
   width: auto;
   background-color: var(--orange);
 
@@ -148,14 +146,13 @@
   font-size: 0.875rem;
   font-weight: bold;
   line-height: 1.1875rem;
+
+  &:hover {
+    background-color: transparent;
+  }
 }
 
-.boton-compra:hover {
-  cursor: pointer;
-  background-color: transparent;
-}
-
-.boton-articulos {
+.verArticulos {
   min-width: max-content;
   background-color: transparent;
 
@@ -165,14 +162,13 @@
   font-weight: bold;
   border: 2px solid var(--blue);
   border-radius: 30rem;
-}
 
-.boton-articulos:hover {
-  cursor: pointer;
-  background-color: var(--blue);
+  &:hover {
+    background-color: var(--blue);
 
-  color: var(--white);
-  text-decoration: underline;
+    color: var(--white);
+    text-decoration: underline;
+  }
 }
 
 .boton-rs {
@@ -188,8 +184,4 @@
   width: 40px;
   height: 40px;
   fill: var(--white);
-}
-
-.boton-rs:hover {
-  cursor: pointer;
 }

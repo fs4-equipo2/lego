@@ -24,7 +24,7 @@ const Button = ({
   isGamezone,
   isPrenavbar,
   isNavbar,
-  isCompra,
+  isAñadirBolsa,
   isArticulo,
   isRedes,
   handleClick,
@@ -39,6 +39,10 @@ const Button = ({
     main: isMain,
     gamezone: isGamezone,
     prenavbar: isPrenavbar,
+    añadirBolsa: isAñadirBolsa,
+    verArticulos: isArticulo,
+    redes: isRedes
+
   });
 
   return (
@@ -46,6 +50,7 @@ const Button = ({
       {iconLeft && iconLeft}
       {texto}
       {iconRight && iconRight}
+      
     </button>
   );
 };
