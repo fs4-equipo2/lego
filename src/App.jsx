@@ -3,10 +3,13 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import Button from "./components/Button/Button";
 import Input from "./components/Input/Input";
 import Tipografia from "./components/Tipografia/Tipografia";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <>
+      <Navbar />
+      
       <Button
         texto={"Ofertas"}
         isMain={true}
@@ -31,7 +34,7 @@ function App() {
       />
       <Button
         texto={"COMPRAR"}
-        isNavBar={true}  
+        isNavBar={true}
         handleClick={() => console.log("router.push(/login)")}
       />
 
