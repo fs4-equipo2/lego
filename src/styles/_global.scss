@@ -1,6 +1,6 @@
 @font-face {
   font-family: "legofont";
-  src: url('/public/fonts/cerapro-regular.otf');
+  src: url("/public/fonts/cerapro-regular.otf");
 }
 
 :root {
@@ -39,4 +39,8 @@
   --yellow-extra-light: #fef6d2;
   --yellow-light: #ffdb4b;
   --yellow: #ffcf00;
+}
+
+body {
+  font-family: var(--typo-font-general);
 }
