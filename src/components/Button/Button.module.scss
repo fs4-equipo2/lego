@@ -156,7 +156,7 @@
 
   border: 2px solid var(--blue);
   border-radius: 30rem;
-  
+
   font-size: 0.8rem;
   font-weight: bold;
 
@@ -183,21 +183,20 @@
   fill: var(--white);
 }
 
-
 //  Estilos de la navbar de María, isNavBar?
 
 .isNavBar {
   background-color: var(--yellow);
   border: none;
   font-weight: bold;
-  
+
   &:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 0.2rem;
-  text-underline-offset: 0.2rem;
+    text-decoration: underline;
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.2rem;
 
-  background-color: aqua;
+    background-color: aqua;
 
-  cursor: pointer;
-};
+    cursor: pointer;
+  }
 }

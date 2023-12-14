@@ -22,7 +22,7 @@ const Button = ({
   isMain,
   isGamezone,
   isPrenavbar,
-  isNavbar,
+  isNavBar,
   isAñadirBolsa,
   isArticulo,
   isRedes,
@@ -38,7 +38,7 @@ const Button = ({
     main: isMain,
     gamezone: isGamezone,
     prenavbar: isPrenavbar,
-    isNavBar: isNavbar,
+    isNavBar: isNavBar,
     añadirBolsa: isAñadirBolsa,
     verArticulos: isArticulo,
 
