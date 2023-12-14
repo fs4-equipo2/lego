@@ -182,3 +182,22 @@
   height: 40px;
   fill: var(--white);
 }
+
+
+//  Estilos de la navbar de María, isNavBar?
+
+.isNavBar {
+  background-color: var(--yellow);
+  border: none;
+  font-weight: bold;
+  
+  &:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.2rem;
+  text-underline-offset: 0.2rem;
+
+  background-color: aqua;
+
+  cursor: pointer;
+};
+}
