@@ -3,7 +3,7 @@ export const JoinButton = ({ label, icon, href }) => {
   return (
     <>
       <a className={styles.joinButton} href={href} target="_blank">
-        <img src={icon} alt="join logo" />
+        {icon}
         <p>{label}</p>
       </a>
     </>
