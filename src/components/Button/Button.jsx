@@ -11,6 +11,7 @@ const cx = classNames.bind(styles);
  * @param {boolean} isMain - True si el boton es Main
  * @param {boolean} isGamezone - True si el boton es Gamezone
  * @param {boolean} isPrenavbar - True si el boton es Prenavbar
+ * @param {boolean} isNavBar - True si el boton es NavBar
  * @param {Callback} handleClick - Callback que se va a ejecutar con el click del boton
  * @param {JSX.Element} iconLeft - Icono de la izquierda
  * @param {JSX.Element} iconRight - Icono de la derecha
@@ -21,7 +22,7 @@ const Button = ({
   isMain,
   isGamezone,
   isPrenavbar,
-  isNavbar,
+  isNavBar,
   isAñadirBolsa,
   isArticulo,
   isDeseos,
@@ -43,6 +44,7 @@ const Button = ({
     deseos: isDeseos,
     buscador: isBuscador,
     bolsaCompra: isBolsaCompra,
+    isNavBar: isNavBar,
     añadirBolsa: isAñadirBolsa,
     verArticulos: isArticulo,
 
