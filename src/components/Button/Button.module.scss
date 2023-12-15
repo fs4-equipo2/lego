@@ -123,6 +123,46 @@
   }
 }
 
+.leeMas {
+  background-color: transparent;
+  
+  border: none;
+  
+  font-size: 1rem;
+  font-weight: bold;
+
+  color: white;
+
+  svg{
+      width: 15px;
+      height: 15px;
+  }
+  
+  &:hover{
+    text-decoration: underline;
+  }
+
+  }
+  .saberMas {
+  background-color: transparent;
+  
+  border: none;
+  
+  font-size: 1rem;
+  font-weight: bold;
+
+  color: #2c2c2c;  
+
+  svg{
+      width: 15px;
+      height: 15px;
+  }
+
+  &:hover{
+    text-decoration: underline;
+  }
+  }
+
 /* Parte de Martin empieza aquí */
 .añadirBolsa {
   width: auto;

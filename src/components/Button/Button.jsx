@@ -29,6 +29,8 @@ const Button = ({
   isBuscador,
   isBolsaCompra,
   isRedes,
+  isLeeMas,
+  isSaberMas,
   handleClick,
   iconLeft,
   iconRight,
@@ -47,6 +49,8 @@ const Button = ({
     isNavBar: isNavBar,
     añadirBolsa: isAñadirBolsa,
     verArticulos: isArticulo,
+    leeMas: isLeeMas,
+    saberMas: isSaberMas
 
   });
 
