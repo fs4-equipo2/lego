@@ -1,0 +1,31 @@
+.LogInButton {
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.LogInButton cara {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.625rem;
+    stroke: black;
+    fill: yellow;
+    
+}
+
+.LogInButton p {
+    color: black;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1.1875rem;
+}
+
+.LogInButton div {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: flex-start;
+
+}

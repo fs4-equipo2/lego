@@ -1,7 +1,16 @@
-.container {
+.containerNav {
   width: 100%;
   padding: 10px 0;
   background-color: var(--yellow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.containerPre {
+  width: 100%;
+  padding: 10px 0;
+  background-color: bisque;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,4 +22,12 @@
 
 .buttonContainer {
   display: flex;
+}
+
+.containerRight {
+  display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+background-color: transparent
 }

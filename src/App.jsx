@@ -6,6 +6,8 @@ import Button from "./components/Button/Button";
 import Input from "./components/Input/Input";
 import Tipografia from "./components/Tipografia/Tipografia";
 import Navbar from "./components/Navbar/Navbar";
+import { LogInButton } from "./components/logInButton/logInButton";
+
 
 function App() {
   return (
@@ -18,12 +20,7 @@ function App() {
         iconRight={<FaChevronRight />}
         handleClick={() => console.log("router.push(/login)")}
       />
-      <Button
-        texto={"ZONA DE JUEGOS"}
-        isGamezone={true}
-        iconLeft={<FaArrowLeftLong />}
-        handleClick={() => console.log("router.push(/login)")}
-      />
+
       <Button
         texto={"Añadir a la bolsa"}
         isAñadirBolsa={true}
@@ -39,30 +36,10 @@ function App() {
         isNavBar={true}
         handleClick={() => console.log("router.push(/login)")}
       />
-      <Button
-        isDeseos={true}
-        iconLeft={<FaRegHeart/>}
-        handleClick={() => console.log("router.push(/login")}
-        />
-      <Button
-        isBuscador={true}
-        iconLeft={<SlMagnifier/>}
-        handleClick={() => console.log("router.push(/login")}
-        />
-      <Button
-      isBolsaCompra={true}
-      iconLeft={<MdOutlineShoppingBag />}
-      handleClick={() => console.log("router.push(/login")}
-      />
+   
       <Button
       texto={"Lee más"}
       isLeeMas={true}
-      iconRight={<FaChevronRight />}
-      handleClick={() => console.log("router.push(/login)")}
-      />
-      <Button
-      texto={"Saber más"}
-      isSaberMas={true}
       iconRight={<FaChevronRight />}
       handleClick={() => console.log("router.push(/login)")}
       />
@@ -74,6 +51,8 @@ function App() {
 
       <Input type={"text"} placeholder={"Enter email"} />
       <Input type={"password"} placeholder={"Enter password"} />
+
+   
     </>
   );
 }

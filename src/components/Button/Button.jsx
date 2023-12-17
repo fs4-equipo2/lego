@@ -59,7 +59,6 @@ const Button = ({
       {iconLeft && iconLeft}
       {texto}
       {iconRight && iconRight}
-      
     </button>
   );
 };

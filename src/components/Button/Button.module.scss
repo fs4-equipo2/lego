@@ -219,19 +219,18 @@
   fill: var(--white);
 }
 
-//  Estilos de la navbar de María, isNavBar?
+//  Estilos de la navbar de María, isNavBar
 
 .isNavBar {
   border: none;
   font-weight: bold;
+  background-color: transparent;
 
   &:hover {
     text-decoration: underline;
     text-decoration-thickness: 0.2rem;
     text-underline-offset: 0.2rem;
-
-    background-color: aqua;
-
     cursor: pointer;
   }
 }
+
