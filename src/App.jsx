@@ -6,6 +6,7 @@ import { JoinButton } from "./components/JoinButton/JoinButton";
 import { JoinLogo } from "./components/JoinButton/JoinLogo";
 import {LogInButton} from "./components/logInButton/logInButton"
 import { TbLego } from "react-icons/tb";
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -189,7 +190,9 @@ function App() {
           isBodyLarge
           isLineHeight14
       />
+       <Footer/>
     </div>
+   
     </>
 
   );
