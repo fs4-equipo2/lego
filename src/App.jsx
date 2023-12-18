@@ -11,6 +11,7 @@ function App() {
   return (
     <>
     <div>
+    <h1>Botones</h1>
       <Button
         texto={"Ofertas"}
         isMain={true}
@@ -22,6 +23,13 @@ function App() {
         isGamezone={true}
         iconLeft={<FaArrowLeftLong />}
         handleClick={() => console.log("router.push(/login)")}
+      />
+            <JoinButton label="Únete a LEGO® Insiders" icon={<JoinLogo />} href="https://www.lego.com/es-es/insiders" />
+      <LogInButton
+        label="Iniciar sesión"
+        href=""
+        icon={<TbLego/>}
+
       />
     </div>
     <div>
@@ -182,13 +190,6 @@ function App() {
           isLineHeight14
       />
     </div>
-      <JoinButton label="Únete a LEGO® Insiders" icon={<JoinLogo />} href="https://www.lego.com/es-es/insiders" />
-      <LogInButton
-        label="Iniciar sesión"
-        href=""
-        icon={<TbLego/>}
-
-      />
     </>
 
   );
