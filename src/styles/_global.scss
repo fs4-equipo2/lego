@@ -41,6 +41,10 @@
   --yellow: #ffcf00;
 }
 
+body {
+  font-family: var(--typo-font-general);
+}
+
 /**
 * Make all elements from the DOM inherit from the parent box-sizing
 * Since `*` has a specificity of 0, it does not override the `html` value
