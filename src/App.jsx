@@ -1,15 +1,22 @@
-import { FaChevronRight } from "react-icons/fa6";
+import { FaChevronRight, FaRegHeart, FaShieldHeart } from "react-icons/fa6";
+import { SlMagnifier } from "react-icons/sl";
+import { MdOutlineShoppingBag } from "react-icons/md";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import Button from "./components/Button/Button";
 import Tipografia from "./components/Tipografia/Tipografia";
+import Navbar from "./components/Navbar/Navbar";
 import { JoinButton } from "./components/JoinButton/JoinButton";
 import { JoinLogo } from "./components/JoinButton/JoinLogo";
 import {LogInButton} from "./components/logInButton/logInButton"
 import { TbLego } from "react-icons/tb";
 
+
 function App() {
   return (
     <>
+      <Navbar />
+      
+
     <div>
     <h1>Botones</h1>
       <Button
@@ -24,7 +31,57 @@ function App() {
         iconLeft={<FaArrowLeftLong />}
         handleClick={() => console.log("router.push(/login)")}
       />
-            <JoinButton label="Únete a LEGO® Insiders" icon={<JoinLogo />} href="https://www.lego.com/es-es/insiders" />
+      <Button
+        texto={"Añadir a la bolsa"}
+        isAñadirBolsa={true}
+        handleClick={() => console.log("router.push(/login)")}
+      />
+      <Button
+        texto={"Ver todos los artículos"}
+        isArticulo={true}
+        handleClick={() => console.log("router.push(/login)")}
+      />
+      <Button
+        texto={"COMPRAR"}
+        isNavBar={true}
+        handleClick={() => console.log("router.push(/login)")}
+      />
+      <Button
+        isDeseos={true}
+        iconLeft={<FaRegHeart/>}
+        handleClick={() => console.log("router.push(/login")}
+        />
+      <Button
+        isBuscador={true}
+        iconLeft={<SlMagnifier/>}
+        handleClick={() => console.log("router.push(/login")}
+        />
+      <Button
+      isBolsaCompra={true}
+      iconLeft={<MdOutlineShoppingBag />}
+      handleClick={() => console.log("router.push(/login")}
+      />
+      <Button
+      texto={"Lee más"}
+      isLeeMas={true}
+      iconRight={<FaChevronRight />}
+      handleClick={() => console.log("router.push(/login)")}
+      />
+      <Button
+      texto={"Saber más"}
+      isSaberMas={true}
+      iconRight={<FaChevronRight />}
+      handleClick={() => console.log("router.push(/login)")}
+      />
+      
+      <Tipografia color={"--orange"} texto={"Tipografia de type=titulo"} />
+      <Tipografia color={"--purple-dark"} texto={"Tipografia de type=titulo"} />
+      <Tipografia color={"--red-dark"} texto={"Tipografia de type=titulo"} />
+      <Tipografia color={"--vip-blue"} texto={"Tipografia de type=titulo"} />
+
+      <Input type={"text"} placeholder={"Enter email"} />
+      <Input type={"password"} placeholder={"Enter password"} />
+      <JoinButton label="Únete a LEGO® Insiders" icon={<JoinLogo />} href="https://www.lego.com/es-es/insiders" />
       <LogInButton
         label="Iniciar sesión"
         href=""
