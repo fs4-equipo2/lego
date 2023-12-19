@@ -34,6 +34,7 @@ const Button = ({
   handleClick,
   iconLeft,
   iconRight,
+  isBotonEspecial,
 }) => {
   /**
    * Contexto de estilos
@@ -50,7 +51,8 @@ const Button = ({
     añadirBolsa: isAñadirBolsa,
     verArticulos: isArticulo,
     leeMas: isLeeMas,
-    saberMas: isSaberMas
+    saberMas: isSaberMas,
+    isBotonEspecial: isBotonEspecial,
 
   });
 

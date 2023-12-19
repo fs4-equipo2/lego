@@ -234,3 +234,21 @@
   }
 }
 
+.isBotonEspecial {
+  border: none;
+  font-weight: bold;
+  background-color: var(--white);
+  color: var(--red);
+  padding: 5px 15px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: var(--black);
+    color: var(--white);
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.2rem;
+    cursor: pointer;
+  }
+}
+
+
