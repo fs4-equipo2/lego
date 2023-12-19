@@ -10,8 +10,11 @@ import {IconoJoin} from "./components/MixButton/IconoJoin"
 import { TbLego } from "react-icons/tb";
 import { JoinButton } from "./components/JoinButton/JoinButton";
 import { JoinLogo } from "./components/JoinButton/JoinLogo";
-import {LogInButton} from "./components/logInButton/logInButton"
+import {LogInButton} from "./components/LogInButton/logInButton"
+import {IconoJoin} from "./components/MixButton/IconoJoin"
 import { TbLego } from "react-icons/tb";
+import { MixButton } from "./components/MixButton/MixButton";
+import IconoCara from "./components/logInButton/IconoCara";
 
 function App() {
   return (
@@ -88,6 +91,19 @@ function App() {
         href=""
         icon={<TbLego/>}
 
+      />
+      <h3>MixButton component</h3>
+      <MixButton
+        isLogin={false}
+        label="Únete a LEGO® Insiders"
+        href=""
+        icon={<IconoJoin />}
+      />
+      <MixButton
+        isLogin={true} 
+        label="Iniciar sesión"
+        href=""
+        icon={<TbLego/>}
       />
     </div>
     <div>
