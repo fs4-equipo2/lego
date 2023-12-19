@@ -1,17 +1,60 @@
-.container {
+.containerPadreNav {
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  padding: 10px 0;
+  flex-wrap: nowrap;
   background-color: var(--yellow);
 
+}
+
+.containerNav {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+
+}
+
+.containerPre {
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 40px;
 }
 
-.left {
+.rightPre {
   display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.containerLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
 }
 
 .buttonContainer {
   display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.containerRight {
+  display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+background-color: transparent;
+gap: 40px;
+}
+
+.menuEspecial {
+background-color: var(--white);
+color: var(--red);
 }

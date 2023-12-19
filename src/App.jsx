@@ -5,17 +5,18 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import Button from "./components/Button/Button";
 import Tipografia from "./components/Tipografia/Tipografia";
 import Navbar from "./components/Navbar/Navbar";
+import { MixButton } from "./components/MixButton/MixButton";
+import {IconoJoin} from "./components/MixButton/IconoJoin"
+import { TbLego } from "react-icons/tb";
 import { JoinButton } from "./components/JoinButton/JoinButton";
 import { JoinLogo } from "./components/JoinButton/JoinLogo";
 import {LogInButton} from "./components/logInButton/logInButton"
 import { TbLego } from "react-icons/tb";
 
-
 function App() {
   return (
     <>
       <Navbar />
-      
 
     <div>
     <h1>Botones</h1>
