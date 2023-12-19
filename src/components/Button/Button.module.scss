@@ -1,0 +1,254 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+}
+
+.main {
+  padding: 0.75rem;
+  border: none;
+
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 3px;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--white);
+    color: var(--black);
+
+    cursor: pointer;
+  }
+}
+
+.gamezone {
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: none;
+
+  background-color: var(--blue-kids);
+  color: var(--black);
+
+  font-weight: 600;
+  font-size: 0.75rem;
+
+  transition: 0.2s ease-in-out;
+  box-shadow: var(--box-shadow-kids) 0px 1px 4px 0px;
+
+  &:hover {
+    background-color: var(--white);
+    cursor: pointer;
+  }
+}
+
+.sesion {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  font-size: 0.75rem;
+
+  height: 1.7rem;
+}
+
+
+.boton-menu-nav {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+}
+
+.boton-menu-nav:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.2rem;
+  text-underline-offset: 0.2rem;
+  cursor: pointer;
+}
+
+.boton-unete {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  font-size: 0.75rem;
+  height: 1.7rem;
+}
+
+.boton-unete img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.link-unete-boton {
+  text-decoration: none;
+}
+
+.boton-unete:hover {
+  cursor: pointer;
+}
+
+.buscador {
+  padding: 0.5rem;
+  background-color: white;
+  height: auto;
+  width: auto;
+  border-radius: 50%;
+  border: none;
+  svg{
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.deseos {
+  background-color: transparent;
+  border: none;
+  svg{
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.bolsaCompra {
+  background-color: transparent;
+  border: none;
+  svg{
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.leeMas {
+  background-color: transparent;
+  
+  border: none;
+  
+  font-size: 1rem;
+  font-weight: bold;
+
+  color: white;
+
+  svg{
+      width: 15px;
+      height: 15px;
+  }
+  
+  &:hover{
+    text-decoration: underline;
+  }
+
+  }
+  .saberMas {
+  background-color: transparent;
+  
+  border: none;
+  
+  font-size: 1rem;
+  font-weight: bold;
+
+  color: #2c2c2c;  
+
+  svg{
+      width: 15px;
+      height: 15px;
+  }
+
+  &:hover{
+    text-decoration: underline;
+  }
+  }
+
+/* Parte de Martin empieza aquí */
+.añadirBolsa {
+  width: auto;
+  background-color: var(--orange);
+
+  padding: 0.9375rem;
+
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 4px;
+  border-color: var(--orange);
+
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.1875rem;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.verArticulos {
+  min-width: max-content;
+  background-color: transparent;
+
+  padding: 0.85rem;
+
+  border: 2px solid var(--blue);
+  border-radius: 30rem;
+
+  font-size: 0.8rem;
+  font-weight: bold;
+
+  &:hover {
+    background-color: var(--blue);
+
+    color: var(--white);
+    text-decoration: underline;
+  }
+}
+
+.boton-rs {
+  width: 40px;
+  height: 40px;
+  background-color: var(--black);
+
+  border: none;
+  border-radius: 50%;
+}
+
+.svg-rs {
+  width: 40px;
+  height: 40px;
+  fill: var(--white);
+}
+
+//  Estilos de la navbar de María, isNavBar
+
+.isNavBar {
+  border: none;
+  font-weight: bold;
+  background-color: transparent;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.2rem;
+    cursor: pointer;
+  }
+}
+
+.isBotonEspecial {
+  border: none;
+  font-weight: bold;
+  background-color: var(--white);
+  color: var(--red);
+  padding: 5px 15px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: var(--black);
+    color: var(--white);
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.2rem;
+    cursor: pointer;
+  }
+}
+
+
