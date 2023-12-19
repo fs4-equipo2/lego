@@ -1,0 +1,52 @@
+.cardContainerBlog{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    background-color: var(--black);
+
+    color: var(--white);
+
+    height: 500px;
+}
+
+.imagen-blog-container{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-centered{
+    font-family: var(--typo-font-general);
+
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--black);
+
+    width: 400px;
+    margin: 15px;
+    padding: 5px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h3, p, span {
+    font-family: var(--typo-font-general);
+}
+
+span{
+    font-style: italic;
+}
+
+.no-style{
+    font-style: normal;
+}
