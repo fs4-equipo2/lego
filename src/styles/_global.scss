@@ -46,25 +46,37 @@ body {
 }
 
 /**
-Make all elements from the DOM inherit from the parent box-sizing
-Since * has a specificity of 0, it does not override the html value
-making all elements inheriting from the root box-sizing value
-See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+* Make all elements from the DOM inherit from the parent box-sizing
+* Since `*` has a specificity of 0, it does not override the `html` value
+* making all elements inheriting from the root box-sizing value
+* See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 */
 *,
 *::before,
-::after {
+*::after {
   box-sizing: inherit;
+
   margin: 0;
   padding: 0;
 }
+
+/*
+              Allow percentage-based heights in the application
+            */
+html,
+body,
 #__next {
   height: 100%;
 }
 
+/*
+              Create a root stacking context
+            */
+#root,
 #__next {
   isolation: isolate;
 }
+
 h1,
 h2,
 h3,
@@ -76,6 +88,7 @@ h5 {
 ul {
   list-style-type: none;
 }
+
 button {
   color: inherit;
   font-family: inherit;
@@ -84,7 +97,6 @@ button {
   background-color: transparent;
   outline: none;
   cursor: pointer;
-
 }
 
 a {
