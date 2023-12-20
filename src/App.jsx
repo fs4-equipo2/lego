@@ -17,6 +17,8 @@ import { JoinButton } from "./components/JoinButton/JoinButton";
 import { JoinLogo } from "./components/JoinButton/JoinLogo";
 import IconoCara from "./components/logInButton/IconoCara";
 import { LogInButton } from "./components/logInButton/logInButton";
+import Input from "./components/Input/Input";
+
 
 function App() {
   return (
@@ -83,8 +85,8 @@ function App() {
         <Tipografia color={"--red-dark"} texto={"Tipografia de type=titulo"} />
         <Tipografia color={"--vip-blue"} texto={"Tipografia de type=titulo"} />
 
-   {/*      <Input type={"text"} placeholder={"Enter email"} />
-        <Input type={"password"} placeholder={"Enter password"} /> */}
+     <Input type={"text"} placeholder={"Enter email"} />
+        <Input type={"password"} placeholder={"Enter password"} />
         <JoinButton
           label="Únete a LEGO® Insiders"
           icon={<JoinLogo />}
