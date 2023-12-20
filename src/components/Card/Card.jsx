@@ -8,10 +8,10 @@ export function Card({ src, title, content, button, link, iconButton }) {
       <div className={styles.imageContainer}>
         <img src={src} className={styles.image} />
       </div>
-      <Tipografia texto={title} isTitle />
-      <Tipografia texto={content} isBody />
+      <Tipografia texto={title} isSubtitle />
+      <Tipografia texto={content} isBody isRegularWeight />
 
-      {button && <Button isLeeMas texto={button} iconRight={iconButton} />}
+      {button && <Button isLeeMas texto={button} iconRight={iconButton}  />}
       {link && <Button />}
     </div>
   );
