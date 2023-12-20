@@ -8,6 +8,7 @@ const cx = classNames.bind(styles);
  *
  * @param {string} color - Color del Texto
  * @param {string} texto
+ * @param {boolean} isTitleXL - Titulo de las secciones (Nombre de la seccion)
  * @returns
  */
 

@@ -11,7 +11,7 @@ export function Card({ src, title, content, button, link }) {
       <Tipografia texto={title} isTitle />
       <Tipografia texto={content} isBody />
 
-      {button && <Button />}
+      {button && <Button isLeeMas texto={button} />}
       {link && <Button />}
     </div>
   );
