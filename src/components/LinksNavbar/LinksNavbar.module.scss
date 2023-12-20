@@ -1,0 +1,18 @@
+.links {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  gap: 50px;
+}
+
+.menu {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+
+  width: 50vw;
+  height: 100vh;
+
+  background-color: rgb(170, 170, 170);
+}

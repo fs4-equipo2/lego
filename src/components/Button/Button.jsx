@@ -19,6 +19,7 @@ const cx = classNames.bind(styles);
  */
 const Button = ({
   texto,
+  id,
   isMain,
   isGamezone,
   isPrenavbar,
@@ -53,11 +54,10 @@ const Button = ({
     leeMas: isLeeMas,
     saberMas: isSaberMas,
     isBotonEspecial: isBotonEspecial,
-
   });
 
   return (
-    <button className={classNames} onClick={handleClick}>
+    <button id={id} className={classNames} onClick={handleClick}>
       {iconLeft && iconLeft}
       {texto}
       {iconRight && iconRight}
