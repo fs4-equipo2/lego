@@ -1,57 +1,58 @@
-div{
-    display: flex;
-    flex-direction: column;
-    width: 400px;
+.cardContainer {
+  width: 400px;
+  margin: 15px;
+  padding: 5px;
 
-    color: white;
-    background-color: black;
-
-    width: 400px;
-    margin: 15px;
-    padding: 5px;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  gap: 10px;
 }
 
-.imagen-blog-container{
-    position: relative;
-    width: 100%;
-    height: 300px;
-}
+.imageContainer {
+  height: 290px;
+  width: 420px;
 
+  position: relative;
 
-img{
+  .image {
     width: 100%;
     height: 100%;
-}
-.card-centered{
-    font-family: var(--typo-font-general);
 
-    text-decoration: none;
-    color: var(--white);
-    background-color: var(--black);
+    position: absolute;
+    top: 0;
+    left: 0;
 
-    width: 400px;
-    margin: 15px;
-    padding: 5px;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    object-fit: cover;
+  }
 }
 
-h3, p, span {
-    font-family: var(--typo-font-general);
+.imagen-blog-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.card-centered {
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--black);
+
+  width: 400px;
+  margin: 15px;
+  padding: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-span{
-    font-style: italic;
+span {
+  font-style: italic;
 }
 
-.no-style{
-    font-style: normal;
+.no-style {
+  font-style: normal;
 }

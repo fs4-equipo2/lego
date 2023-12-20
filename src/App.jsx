@@ -7,10 +7,10 @@ import { JoinLogo } from "./components/JoinButton/JoinLogo";
 import { LogInButton } from "./components/logInButton/logInButton";
 import { TbLego } from "react-icons/tb";
 import { Card } from "./components/Card/Card";
-
+import styles from "./styles/pages/home.module.scss";
 function App() {
   return (
-    <>
+    <div className={styles.container}>
       <div>
         <Button
           texto={"Ofertas"}
@@ -26,7 +26,6 @@ function App() {
         />
       </div>
       <div>
-        <br />
         <h1>Tipografía</h1>
         <h4>(propiedad: font-size)</h4>
         <br />
@@ -47,7 +46,8 @@ function App() {
         <Tipografia color={"--yellow"} texto={"Body Large"} isBodyLarge />
         <Tipografia color={"--purple-dark"} texto={"Body"} isBody />
         <Tipografia color={"--orange-dark"} texto={"Body Small"} isBodySmall />
-        <br />
+      </div>
+      <div>
         <h1>Tipografía</h1>
         <h4>(propiedad: font-weight)</h4>
         <br />
@@ -62,7 +62,8 @@ function App() {
           isMediumWeight
         />
         <Tipografia color={"--vip-blue"} texto={"Bold Weight"} isBoldWeight />
-        <br />
+      </div>
+      <div>
         <h1>Tipografía</h1>
         <h4>(propiedad: line-height)</h4>
         <br />
@@ -156,14 +157,14 @@ function App() {
         icon={<JoinLogo />}
         href="https://www.lego.com/es-es/insiders"
       />
-      <LogInButton label="Iniciar sesión" href="" icon={<TbLego />} /> */}
+      <LogInButton label="Iniciar sesión" href="" icon={<TbLego />} />
       <Card
         src="https://www.lego.com/cdn/cs/set/assets/bltd242a29e8881c557/76269-Page-202310-Block-Standard.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1"
         title="Sets de LEGO® DUPLO® para el Black Friday"
         content="¡Celebra este Black Friday con los sets de LEGO® DUPLO®! Los juguetes de LEGO DUPLO cubren varios intereses y son el regalo perfecto para los
         más peques."
       />
-    </>
+    </div>
   );
 }
 
