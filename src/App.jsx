@@ -83,8 +83,8 @@ function App() {
         <Tipografia color={"--red-dark"} texto={"Tipografia de type=titulo"} />
         <Tipografia color={"--vip-blue"} texto={"Tipografia de type=titulo"} />
 
-        <Input type={"text"} placeholder={"Enter email"} />
-        <Input type={"password"} placeholder={"Enter password"} />
+   {/*      <Input type={"text"} placeholder={"Enter email"} />
+        <Input type={"password"} placeholder={"Enter password"} /> */}
         <JoinButton
           label="Únete a LEGO® Insiders"
           icon={<JoinLogo />}
