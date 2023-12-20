@@ -168,7 +168,8 @@ function App() {
         title="Sets de LEGO® DUPLO® para el Black Friday"
         content="¡Celebra este Black Friday con los sets de LEGO® DUPLO®! Los juguetes de LEGO DUPLO cubren varios intereses y son el regalo perfecto para los
         más peques."
-        button="Leer Mas"
+        button="A la tienda"
+        iconButton={<FaChevronRight />}
       />
     </div>
   );

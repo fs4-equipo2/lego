@@ -2,7 +2,7 @@ import Button from "../Button/Button";
 import Tipografia from "../Tipografia/Tipografia";
 import styles from "./Card.module.scss";
 
-export function Card({ src, title, content, button, link }) {
+export function Card({ src, title, content, button, link, iconButton }) {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.imageContainer}>
@@ -11,7 +11,7 @@ export function Card({ src, title, content, button, link }) {
       <Tipografia texto={title} isTitle />
       <Tipografia texto={content} isBody />
 
-      {button && <Button isLeeMas texto={button} />}
+      {button && <Button isLeeMas texto={button} iconRight={iconButton} />}
       {link && <Button />}
     </div>
   );
