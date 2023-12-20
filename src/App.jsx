@@ -1,7 +1,12 @@
-import { FaChevronRight } from "react-icons/fa6";
+import { FaChevronRight, FaRegHeart, FaShieldHeart } from "react-icons/fa6";
+import { SlMagnifier } from "react-icons/sl";
+import { MdOutlineShoppingBag } from "react-icons/md";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import Button from "./components/Button/Button";
 import Tipografia from "./components/Tipografia/Tipografia";
+import Navbar from "./components/Navbar/Navbar";
+import { MixButton } from "./components/MixButton/MixButton";
+import { IconoJoin } from "./components/MixButton/IconoJoin";
 import { JoinButton } from "./components/JoinButton/JoinButton";
 import { JoinLogo } from "./components/JoinButton/JoinLogo";
 import { LogInButton } from "./components/logInButton/logInButton";

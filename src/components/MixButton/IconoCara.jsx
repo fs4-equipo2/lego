@@ -23,4 +23,3 @@ const IconoCara = () => {
 };
 
 export default IconoCara;
-
