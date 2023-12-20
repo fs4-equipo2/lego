@@ -10,102 +10,16 @@ import { IconoJoin } from "./components/MixButton/IconoJoin";
 import { TbLego } from "react-icons/tb";
 import { JoinButton } from "./components/JoinButton/JoinButton";
 import { JoinLogo } from "./components/JoinButton/JoinLogo";
-
 import LinksNavbar from "./components/LinksNavbar/LinksNavbar";
 import { LogInButton } from "./components/logInButton/logInButton";
+
+
 
 function App() {
   return (
     <>
       <Navbar />
 
-      <div>
-        <h1>Botones</h1>
-        <Button
-          texto={"Ofertas"}
-          isMain={true}
-          iconRight={<FaChevronRight />}
-          handleClick={() => console.log("router.push(/login)")}
-        />
-        <Button
-          texto={"ZONA DE JUEGOS"}
-          isGamezone={true}
-          iconLeft={<FaArrowLeftLong />}
-          handleClick={() => console.log("router.push(/login)")}
-        />
-        <Button
-          texto={"Añadir a la bolsa"}
-          isAñadirBolsa={true}
-          handleClick={() => console.log("router.push(/login)")}
-        />
-        <Button
-          texto={"Ver todos los artículos"}
-          isArticulo={true}
-          handleClick={() => console.log("router.push(/login)")}
-        />
-        <Button
-          texto={"COMPRAR"}
-          isNavBar={true}
-          handleClick={() => console.log("router.push(/login)")}
-        />
-        <Button
-          isDeseos={true}
-          iconLeft={<FaRegHeart />}
-          handleClick={() => console.log("router.push(/login")}
-        />
-        <Button
-          isBuscador={true}
-          iconLeft={<SlMagnifier />}
-          handleClick={() => console.log("router.push(/login")}
-        />
-        <Button
-          isBolsaCompra={true}
-          iconLeft={<MdOutlineShoppingBag />}
-          handleClick={() => console.log("router.push(/login")}
-        />
-        <Button
-          texto={"Lee más"}
-          isLeeMas={true}
-          iconRight={<FaChevronRight />}
-          handleClick={() => console.log("router.push(/login)")}
-        />
-        <Button
-          texto={"Saber más"}
-          isSaberMas={true}
-          iconRight={<FaChevronRight />}
-          handleClick={() => console.log("router.push(/login)")}
-        />
-
-        <Tipografia color={"--orange"} texto={"Tipografia de type=titulo"} />
-        <Tipografia
-          color={"--purple-dark"}
-          texto={"Tipografia de type=titulo"}
-        />
-        <Tipografia color={"--red-dark"} texto={"Tipografia de type=titulo"} />
-        <Tipografia color={"--vip-blue"} texto={"Tipografia de type=titulo"} />
-
-        {/* <Input type={"text"} placeholder={"Enter email"} />
-        <Input type={"password"} placeholder={"Enter password"} /> */}
-        <JoinButton
-          label="Únete a LEGO® Insiders"
-          icon={<JoinLogo />}
-          href="https://www.lego.com/es-es/insiders"
-        />
-        <LogInButton label="Iniciar sesión" href="" icon={<TbLego />} />
-        <h3>MixButton component</h3>
-        <MixButton
-          isLogin={false}
-          label="Únete a LEGO® Insiders"
-          href=""
-          icon={<IconoJoin />}
-        />
-        <MixButton
-          isLogin={true}
-          label="Iniciar sesión"
-          href=""
-          icon={<TbLego />}
-        />
-      </div>
       <div>
         <br />
         <h1>Tipografía</h1>

@@ -11,6 +11,8 @@ import { TbLego } from "react-icons/tb";
 import { MixButton } from "../MixButton/MixButton";
 import { IconoJoin } from "../MixButton/IconoJoin";
 import LinksNavbar from "../LinksNavbar/LinksNavbar";
+//import SubMenuNavbar from ".../subMenuNavbar/SubMenuNavbar";
+
 
 const Navbar = () => {
   return (
@@ -23,12 +25,7 @@ const Navbar = () => {
           handleClick={() => console.log("router.push(/login)")}
         />
         <div className={styles.swiperPre}>
-          <Button
-            texto={"Saber más"}
-            isSaberMas={true}
-            iconRight={<FaChevronRight />}
-            handleClick={() => console.log("router.push(/login)")}
-          />
+          
         </div>
         <div className={styles.rightPre}>
           <MixButton
@@ -52,7 +49,7 @@ const Navbar = () => {
             <Logo />
             <div className={styles.buttonContainer}>
               <LinksNavbar />
-              <Button isBotonEspecial texto={"NAVIDAD"} />
+              {/*<SubMenuNavbar />*/}
             </div>
           </div>
           <div className={styles.containerRight}>

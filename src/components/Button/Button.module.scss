@@ -223,7 +223,8 @@
 
 .isNavBar {
   border: none;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 16px;
   background-color: transparent;
 
   &:hover {
@@ -234,9 +235,11 @@
   }
 }
 
+
 .isBotonEspecial {
   border: none;
-  font-weight: bold;
+  font-weight: 150;
+  font-size: 16px;
   background-color: var(--white);
   color: var(--red);
   padding: 5px 15px;
@@ -246,6 +249,19 @@
     background-color: var(--black);
     color: var(--white);
     text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.2rem;
+    cursor: pointer;
+  }
+}
+
+.isSubMenu {
+  border: none;
+  font-size: 16px;
+  background-color: transparent;
+  
+
+  &:hover {
+    text-decoration: underline;
     text-underline-offset: 0.2rem;
     cursor: pointer;
   }

@@ -2,7 +2,7 @@
   position: relative;
   z-index: 10;
   display: flex;
-  gap: 50px;
+  gap: 60px;
 }
 
 .menu {
@@ -11,8 +11,27 @@
   top: 0;
   left: 0;
 
-  width: 50vw;
+  width: 70vw;
   height: 100vh;
 
-  background-color: rgb(170, 170, 170);
+  background-color: var(--white);
 }
+
+.compraClickeable, .descubrirClickeable, .ayuda {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0px;
+  padding-top: 130px;
+  padding-left: 135px;
+  gap: 20px;
+}
+
+.compra, .descubrir  {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+  padding-left: 135px;
+}
+
+
