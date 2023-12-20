@@ -1,8 +1,8 @@
 import Button from "../Button/Button";
 import Tipografia from "../Tipografia/Tipografia";
-import styles from "./Card.module.scss";
+import styles from "./CardPopulares.module.scss";
 
-export function Card({ src, title, content, button, link, iconButton }) {
+export function CardPopulares({ src, title, content, button, link, iconButton }) {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.imageContainer}>
