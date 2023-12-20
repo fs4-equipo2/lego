@@ -75,14 +75,6 @@ function App() {
           handleClick={() => console.log("router.push(/login)")}
         />
 
-        <Tipografia color={"--orange"} texto={"Tipografia de type=titulo"} />
-        <Tipografia
-          color={"--purple-dark"}
-          texto={"Tipografia de type=titulo"}
-        />
-        <Tipografia color={"--red-dark"} texto={"Tipografia de type=titulo"} />
-        <Tipografia color={"--vip-blue"} texto={"Tipografia de type=titulo"} />
-
    {/*      <Input type={"text"} placeholder={"Enter email"} />
         <Input type={"password"} placeholder={"Enter password"} /> */}
         <JoinButton
@@ -107,129 +99,26 @@ function App() {
       </div>
       <div>
         <br />
-        <h1>Tipografía</h1>
-        <h4>(propiedad: font-size)</h4>
-        <br />
-        <Tipografia color={"--blue-dark"} texto={"Title XL"} isTitleXL />
-        <Tipografia
-          color={"--blue-kids-dark"}
-          texto={"Title Large"}
-          isTitleLarge
-        />
-        <Tipografia color={"--blue-light"} texto={"Title"} isTitle />
-        <Tipografia
-          color={"--green"}
-          texto={"Subtitle Large"}
-          isSubtitleLarge
-        />
-        <Tipografia color={"--red-dark"} texto={"Subtitle"} isSubtitle />
-        <Tipografia color={"--purple"} texto={"Body XL"} isBodyXL />
-        <Tipografia color={"--yellow"} texto={"Body Large"} isBodyLarge />
-        <Tipografia color={"--purple-dark"} texto={"Body"} isBody />
-        <Tipografia color={"--orange-dark"} texto={"Body Small"} isBodySmall />
-        <br />
-        <h1>Tipografía</h1>
-        <h4>(propiedad: font-weight)</h4>
-        <br />
-        <Tipografia
-          color={"--vip-blue"}
-          texto={"Regular Weight"}
-          isRegularWeight
-        />
-        <Tipografia
-          color={"--vip-blue"}
-          texto={"Medium Weight"}
-          isMediumWeight
-        />
-        <Tipografia color={"--vip-blue"} texto={"Bold Weight"} isBoldWeight />
-        <br />
-        <h1>Tipografía</h1>
-        <h4>(propiedad: line-height)</h4>
-        <br />
-        <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 16.1px"}
-          isBodyLarge
-          isLineHeight1
-        />
-        <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 18px"}
-          isBodyLarge
-          isLineHeight2
-        />
-        <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 19px"}
-          isBodyLarge
-          isLineHeight3
-        />
-        <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 20px"}
-          isBodyLarge
-          isLineHeight4
-        />
-        <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 21px"}
-          isBodyLarge
-          isLineHeight5
-        />
-        <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 22px"}
-          isBodyLarge
-          isLineHeight6
-        />
-        <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 24px"}
-          isBodyLarge
-          isLineHeight7
-        />
-        <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 25px"}
-          isBodyLarge
-          isLineHeight8
-        />
-        <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 28px"}
-          isBodyLarge
-          isLineHeight9
-        />
-        <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 31px"}
-          isBodyLarge
-          isLineHeight10
-        />
-        <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 36px"}
-          isBodyLarge
-          isLineHeight11
-        />
-        <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 41.5909px"}
-          isBodyLarge
-          isLineHeight12
-        />
-        <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 43px"}
-          isBodyLarge
-          isLineHeight13
-        />
-        <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 50px"}
-          isBodyLarge
-          isLineHeight14
-        />
+        <h2>Tipografía</h2>
+    <h4>(Diferentes tipos basados en font-size y line-height)</h4>
+    <Tipografia color={"red"} texto={"Title XL"} isTitleXL />
+    <Tipografia color={"red"} texto={"Title Large"} isTitleLarge />
+    <Tipografia color={"red"} texto={"Title Medium"} isTitleMedium />
+    <Tipografia color={"red"} texto={"Title Regular"} isTitleRegular />
+    <Tipografia color={"red"} texto={"Title Small"} isTitleSmall />
+    <Tipografia color={"red"} texto={"Subitle XL"} isSubtitleXL />
+    <Tipografia color={"red"} texto={"Subtitle Large"} isSubtitleLarge />
+    <Tipografia color={"red"} texto={"Subtitle Regular"} isSubtitleRegular />
+    <Tipografia color={"red"} texto={"Body XL"} isBodyXL />
+    <Tipografia color={"red"} texto={"Body Large"} isBodyLarge />
+    <Tipografia color={"red"} texto={"Body Medium"} isBodyMedium />
+    <Tipografia color={"red"} texto={"Body Regular"} isBodyRegular />
+    <Tipografia color={"red"} texto={"Body Small"} isBodySmall />
+    <h2>Tipografía</h2>
+    <h4>(Basada en la propiedad de Font-Weight)</h4>
+    <Tipografia color={"red"} texto={"Font-Weight: 400"} isBodyLarge isRegularWeight />
+    <Tipografia color={"red"} texto={"Font-Weight: 500"} isBodyLarge isMediumWeight />
+    <Tipografia color={"red"} texto={"Font-Weight: 700"} isBodyLarge isBoldWeight />
       </div>
       <h2>Iconos</h2>
       <Iconos

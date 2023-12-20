@@ -6,79 +6,73 @@ const cx = classNames.bind(styles);
 
 /**
  *
- * @param {string} color - Color del Texto
- * @param {string} texto
+ * @param {string} color - Color del Texto tomado de las variables globales
+ * @param {string} texto - Texto personalizado a renderizar
+ * @param {boolean} isTitleXL - Texto usado en títulos de secciones
+ * @param {boolean} isTitleLarge - Texto usado en los títulos generales de las secciones con Cards 
+ * @param {boolean} isTitleMedium - Texto usado en los títulos de las Cards
+ * @param {boolean} isTitleRegular - Texto usado en el cuerpo de las secciones
+ * @param {boolean} isTitleSmall - Texto usado en el título de los Stickers
+ * @param {boolean} isSubtitleXL - Texto usado en el cuerpo de las secciones con botones
+ * @param {boolean} isSubtitleLarge - Texto usado en el título de las secciones compuestas por solo texto
+ * @param {boolean} isSubtitleRegular - Texto usado en los enlaces de las cards y en botones de sección
+ * @param {boolean} isBodyXL - Texto usado en los enlaces de la navbar
+ * @param {boolean} isBodyLarge - Texto usado en los subtítulos y enlaces de las secciones de texto
+ * @param {boolean} isBodyMedium - Texto usado en los subtítulos de las cards
+ * @param {boolean} isBodyRegular - Texto usado en botones prenavbar
+ * @param {boolean} isBodySmall - Texto usado en los avisos de las cards junto a las imágenes
+ * @param {boolean} isRegularWeight - Texto normal 
+ * @param {boolean} isMediumWeight - Texto en negrita (font-weight: 500)
+ * @param {boolean} isBoldWeight - Texto en negrita (font-weight: 700)
  * @returns
  */
 
 const Tipografia = ({
   color,
   texto,
-  //Font-size
+  //Font-size & line-height
   isTitleXL,
   isTitleLarge,
-  isTitle,
+  isTitleMedium,
+  isTitleRegular,
+  isTitleSmall,
+  isSubtitleXL,
   isSubtitleLarge,
-  isSubtitle,
+  isSubtitleRegular,
   isBodyXL,
   isBodyLarge,
-  isBody,
+  isBodyMedium,
+  isBodyRegular,
   isBodySmall,
   //Font-weight
   isRegularWeight,
   isMediumWeight,
   isBoldWeight,
-  //Line-height
-  isLineHeight1,
-  isLineHeight2,
-  isLineHeight3,
-  isLineHeight4,
-  isLineHeight5,
-  isLineHeight6,
-  isLineHeight7,
-  isLineHeight8,
-  isLineHeight9,
-  isLineHeight10,
-  isLineHeight11,
-  isLineHeight12,
-  isLineHeight13,
-  isLineHeight14,
 }) => {
   const classNames = cx({
     //Font-size
     titleXL: isTitleXL,
     titleLarge: isTitleLarge,
-    title: isTitle,
+    titleMedium: isTitleMedium,
+    titleRegular: isTitleRegular,
+    titleSmall: isTitleSmall,
+    subtitleXL: isSubtitleXL,
     subtitleLarge: isSubtitleLarge,
-    subtitle: isSubtitle,
+    subtitleRegular: isSubtitleRegular,
     bodyXL: isBodyXL,
     bodyLarge: isBodyLarge,
-    body: isBody,
+    bodyMedium: isBodyMedium,
+    bodyRegular: isBodyRegular,
     bodySmall: isBodySmall,
     //Font-weight
     regularWeight: isRegularWeight,
     mediumWeight: isMediumWeight,
     boldWeight: isBoldWeight,
-    //Line-height
-    lineHeight1: isLineHeight1,
-    lineHeight2: isLineHeight2,
-    lineHeight3: isLineHeight3,
-    lineHeight4: isLineHeight4,
-    lineHeight5: isLineHeight5,
-    lineHeight6: isLineHeight6,
-    lineHeight7: isLineHeight7,
-    lineHeight8: isLineHeight8,
-    lineHeight9: isLineHeight9,
-    lineHeight10: isLineHeight10,
-    lineHeight11: isLineHeight11,
-    lineHeight12: isLineHeight12,
-    lineHeight13: isLineHeight13,
-    lineHeight14: isLineHeight14,
   });
   return (
-    <h1 className={classNames} style={{ color: `var(${color})` }}>
+    <p className={classNames} style={{ color: `var(${color})` }}>
       {texto}
-    </h1>
+    </p>
   );
 };
 
