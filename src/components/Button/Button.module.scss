@@ -3,10 +3,11 @@
   flex-direction: row;
   align-items: center;
   gap: 10px;
+
+  cursor: pointer;
 }
 
 .main {
-
   padding: 0.75rem;
   border: none;
 
@@ -38,7 +39,6 @@
   font-weight: 600;
   font-size: 0.75rem;
 
-
   transition: 0.2s ease-in-out;
   box-shadow: var(--box-shadow-kids) 0px 1px 4px 0px;
 
@@ -48,20 +48,15 @@
   }
 }
 
-.boton-sesion {
+.sesion {
   background-color: transparent;
   border: none;
   font-weight: bold;
   font-size: 0.75rem;
 
   height: 1.7rem;
-  cursor: pointer;
-
 }
 
-.link-iniciar-sesion {
-  text-decoration: none;
-}
 
 .boton-menu-nav {
   background-color: transparent;
@@ -97,44 +92,79 @@
   cursor: pointer;
 }
 
-.boton-buscador {
+.buscador {
   padding: 0.5rem;
-  background-color: var(--white);
+  background-color: white;
   height: auto;
   width: auto;
   border-radius: 50%;
   border: none;
+  svg{
+    width: 18px;
+    height: 18px;
+  }
 }
 
-.boton-buscador:hover {
-  cursor: pointer;
-}
-
-.boton-lista-deseos {
+.deseos {
   background-color: transparent;
   border: none;
+  svg{
+    width: 20px;
+    height: 20px;
+  }
 }
 
-.boton-lista-deseos:hover {
-  cursor: pointer;
-}
-
-.boton-bolsa-compra {
+.bolsaCompra {
   background-color: transparent;
   border: none;
+  svg{
+    width: 22px;
+    height: 22px;
+  }
 }
 
-.boton-bolsa-compra:hover {
-  cursor: pointer;
-}
+.leeMas {
+  background-color: transparent;
+  
+  border: none;
+  
+  font-size: 1rem;
+  font-weight: bold;
+
+  color: white;
+
+  svg{
+      width: 15px;
+      height: 15px;
+  }
+  
+  &:hover{
+    text-decoration: underline;
+  }
+
+  }
+  .saberMas {
+  background-color: transparent;
+  
+  border: none;
+  
+  font-size: 1rem;
+  font-weight: bold;
+
+  color: #2c2c2c;  
+
+  svg{
+      width: 15px;
+      height: 15px;
+  }
+
+  &:hover{
+    text-decoration: underline;
+  }
+  }
 
 /* Parte de Martin empieza aquí */
-.boton-compra-link {
-  text-decoration: none;
-}
-
-.boton-compra {
-  display: block;
+.añadirBolsa {
   width: auto;
   background-color: var(--orange);
 
@@ -148,31 +178,30 @@
   font-size: 0.875rem;
   font-weight: bold;
   line-height: 1.1875rem;
+
+  &:hover {
+    background-color: transparent;
+  }
 }
 
-.boton-compra:hover {
-  cursor: pointer;
-  background-color: transparent;
-}
-
-.boton-articulos {
+.verArticulos {
   min-width: max-content;
   background-color: transparent;
 
   padding: 0.85rem;
 
-  font-size: 0.8rem;
-  font-weight: bold;
   border: 2px solid var(--blue);
   border-radius: 30rem;
-}
 
-.boton-articulos:hover {
-  cursor: pointer;
-  background-color: var(--blue);
+  font-size: 0.8rem;
+  font-weight: bold;
 
-  color: var(--white);
-  text-decoration: underline;
+  &:hover {
+    background-color: var(--blue);
+
+    color: var(--white);
+    text-decoration: underline;
+  }
 }
 
 .boton-rs {
@@ -190,6 +219,36 @@
   fill: var(--white);
 }
 
-.boton-rs:hover {
-  cursor: pointer;
+//  Estilos de la navbar de María, isNavBar
+
+.isNavBar {
+  border: none;
+  font-weight: bold;
+  background-color: transparent;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.2rem;
+    cursor: pointer;
+  }
 }
+
+.isBotonEspecial {
+  border: none;
+  font-weight: bold;
+  background-color: var(--white);
+  color: var(--red);
+  padding: 5px 15px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: var(--black);
+    color: var(--white);
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.2rem;
+    cursor: pointer;
+  }
+}
+
+

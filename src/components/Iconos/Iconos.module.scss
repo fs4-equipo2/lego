@@ -1,0 +1,25 @@
+.icono {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+}
+
+.redes-sociales {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
