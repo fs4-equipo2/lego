@@ -2,8 +2,6 @@ import styles from "./Button.module.scss";
 import classNames from "classnames/bind";
 //  Botón PreNavbar @CantosCDenise
 //  Botón Navbar @CantosCDenise
-//  Botón Compra @MartinGergov
-//  Botón Articulo - Card Blogs @MartinGergov
 //  Botón redes - Footer @MartinGergov
 const cx = classNames.bind(styles);
 
@@ -13,6 +11,7 @@ const cx = classNames.bind(styles);
  * @param {boolean} isMain - True si el boton es Main
  * @param {boolean} isGamezone - True si el boton es Gamezone
  * @param {boolean} isPrenavbar - True si el boton es Prenavbar
+ * @param {boolean} isNavBar - True si el boton es NavBar
  * @param {Callback} handleClick - Callback que se va a ejecutar con el click del boton
  * @param {JSX.Element} iconLeft - Icono de la izquierda
  * @param {JSX.Element} iconRight - Icono de la derecha
@@ -23,13 +22,19 @@ const Button = ({
   isMain,
   isGamezone,
   isPrenavbar,
-  isNavbar,
-  isCompra,
+  isNavBar,
+  isAñadirBolsa,
   isArticulo,
+  isDeseos,
+  isBuscador,
+  isBolsaCompra,
   isRedes,
+  isLeeMas,
+  isSaberMas,
   handleClick,
   iconLeft,
   iconRight,
+  isBotonEspecial,
 }) => {
   /**
    * Contexto de estilos
@@ -40,6 +45,15 @@ const Button = ({
     gamezone: isGamezone,
     prenavbar: isPrenavbar,
     redes: isRedes,
+    deseos: isDeseos,
+    buscador: isBuscador,
+    bolsaCompra: isBolsaCompra,
+    isNavBar: isNavBar,
+    añadirBolsa: isAñadirBolsa,
+    verArticulos: isArticulo,
+    leeMas: isLeeMas,
+    saberMas: isSaberMas,
+    isBotonEspecial: isBotonEspecial,
   });
 
   return (

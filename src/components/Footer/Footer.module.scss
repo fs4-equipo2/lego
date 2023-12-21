@@ -10,6 +10,12 @@ footer {
     display: flex;
   }
 
+  div >button{
+    display: flex;
+    color: white;
+    gap:5px
+  }
+
   li{
     padding: 0.625rem 0.9375rem
   }
@@ -18,7 +24,7 @@ footer {
     text-decoration: underline;
   }
 
-  .LegoIcon{
+  .LegoIcon > svg {
     width: 97px;
     height: 97px;
     margin: 0.75rem;
@@ -60,6 +66,11 @@ footer {
 .email > a{
     padding-bottom: 1.25rem;
 }
+
+.email >input{
+    height: 4rem;
+}
+
 
 .links{
     padding-bottom: 1.25rem;
