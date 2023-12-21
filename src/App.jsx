@@ -14,6 +14,10 @@ import { TbLego } from "react-icons/tb";
 import { Card } from "./components/Card/Card";
 import styles from "./styles/pages/home.module.scss";
 import { Blog } from "./components/Blog/Blog";
+import { CardSelecciones } from "./components/CardSelecciones/CardSelecciones";
+import { CardRecomendados } from "./components/CardRecomendados/CardRecomendados";
+import { CardPopulares } from "./components/CardPopulares/CardPopulares";
+import { BlogSelecciones } from "./components/BlogSelecciones/BlogSelecciones";
 function App() {
   return (
     // <div className={styles.container}>
@@ -167,6 +171,7 @@ function App() {
     // </div>
     <div>
       <Blog/>
+      <BlogSelecciones/>
     </div>
   );
 }

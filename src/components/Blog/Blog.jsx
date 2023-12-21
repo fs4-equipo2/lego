@@ -6,7 +6,7 @@ import Tipografia from "../Tipografia/Tipografia"
 export function Blog({}){
   return <div className={styles.blogContainer}>
     <div className={styles.titleBlog}>
-    <Tipografia texto= "Descubre todos los detalles" isTitle/>
+    <Tipografia texto= "Descubre todos los detalles" isTitle isRegularWeight/>
     </div>
     <div className={styles.blogCards}>
     <Card
