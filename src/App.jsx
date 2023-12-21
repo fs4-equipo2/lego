@@ -12,6 +12,8 @@ import { JoinButton } from "./components/JoinButton/JoinButton";
 import { JoinLogo } from "./components/JoinButton/JoinLogo";
 import LinksNavbar from "./components/LinksNavbar/LinksNavbar";
 import { LogInButton } from "./components/logInButton/logInButton";
+import LinkSw from "./components/LinkSw/LinkSw";
+
 
 
 
@@ -19,6 +21,8 @@ function App() {
   return (
     <>
       <Navbar />
+<LinkSw
+href={"www.lego.com/es-es/page/free-delivery?icmp=SW-SHB-EG-NO-freesh-204"} />
 
       <div>
         <br />
@@ -146,9 +150,6 @@ function App() {
           isLineHeight14
         />
       </div>
-      <LogInButton label="Iniciar sesión" href="" icon={<TbLego />} />
-
-      <LinksNavbar />
     </>
   );
 }

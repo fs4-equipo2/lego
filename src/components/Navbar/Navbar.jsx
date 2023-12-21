@@ -11,6 +11,7 @@ import { TbLego } from "react-icons/tb";
 import { MixButton } from "../MixButton/MixButton";
 import { IconoJoin } from "../MixButton/IconoJoin";
 import LinksNavbar from "../LinksNavbar/LinksNavbar";
+import LinkSw from "../LinkSw/LinkSw";
 //import SubMenuNavbar from ".../subMenuNavbar/SubMenuNavbar";
 
 
@@ -25,7 +26,8 @@ const Navbar = () => {
           handleClick={() => console.log("router.push(/login)")}
         />
         <div className={styles.swiperPre}>
-          
+          <LinkSw 
+          href={"www.lego.com/es-es/page/free-delivery?icmp=SW-SHB-EG-NO-freesh-204"}/>
         </div>
         <div className={styles.rightPre}>
           <MixButton
