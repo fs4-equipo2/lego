@@ -2,9 +2,11 @@ import React from "react";
 import { LegoLogo } from "./LegoLogo";
 import Button from "../Button/Button";
 import styles from "./Footer.module.scss";
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaTwitter, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import Tipografia from "../Tipografia/Tipografia";
 import {Iconos} from "../Iconos/Iconos";
+import { CgFacebook } from "react-icons/cg";
+import { IoLogoInstagram } from "react-icons/io5";
 
 const Footer = () => {
   return (
@@ -364,10 +366,16 @@ const Footer = () => {
               />
             </a>
             <div className={styles.iconos}>
-              <Iconos icono={FaFacebook} href={""}/>
-              <Iconos icono={FaTwitter} href={""}/>
-              <Iconos icono={FaInstagram} href={""}/>
-              <Iconos icono={FaYoutube} href={""}/>
+            <Iconos
+        icono={<CgFacebook />}
+        href={"https://www.facebook.com/LEGOEsp/"}
+      />
+      <Iconos icono={<FaXTwitter />} href={"https://twitter.com/LEGO_Group"} />
+      <Iconos
+        icono={<IoLogoInstagram />}
+        href={"https://www.instagram.com/lego"}
+      />
+              <Iconos icono={<FaYoutube />} href={"https://m.youtube.com/user/LEGO"} />
               {/* <Button isRedes={true} iconRight={<FaYoutube />} /> */}
             </div>
           </div>
