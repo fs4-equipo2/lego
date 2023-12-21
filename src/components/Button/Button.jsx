@@ -46,6 +46,7 @@ const Button = ({
     main: isMain,
     gamezone: isGamezone,
     prenavbar: isPrenavbar,
+    redes: isRedes,
     deseos: isDeseos,
     buscador: isBuscador,
     bolsaCompra: isBolsaCompra,
