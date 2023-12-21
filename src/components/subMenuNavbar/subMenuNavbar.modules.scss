@@ -1,0 +1,26 @@
+.subMenu {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+
+  width: 70vw;
+  height: 100vh;
+
+  background-color: var(--white);
+}
+
+.subCompra,
+.subDescubrir {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 130px 135px;
+}
+
+.links {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    gap: 60px;
+  }
