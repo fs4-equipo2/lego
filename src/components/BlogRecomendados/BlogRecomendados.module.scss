@@ -1,0 +1,15 @@
+.blogContainer{
+    max-width: 78rem;
+    display: flex;
+    flex-direction: column;
+}
+.titleBlog{
+    margin: 15px;
+    color: var(--white);
+}
+.blogCards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

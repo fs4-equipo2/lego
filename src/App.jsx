@@ -24,6 +24,8 @@ import { CardRecomendados } from "./components/CardRecomendados/CardRecomendados
 import { CardPopulares } from "./components/CardPopulares/CardPopulares";
 import { BlogSelecciones } from "./components/BlogSelecciones/BlogSelecciones";
 import IconoCara from "./components/logInButton/IconoCara";
+import { BlogRecomendados } from "./components/BlogRecomendados/BlogRecomendados";
+import IconoEstrellas from "./components/CardPopulares/IconoEstrellas";
 
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
       <Navbar />
       <Blog/>
       <BlogSelecciones/>
+      <BlogRecomendados/>
 
       <div>
         <h1>Botones</h1>
