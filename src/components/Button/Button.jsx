@@ -39,6 +39,7 @@ const Button = ({
     main: isMain,
     gamezone: isGamezone,
     prenavbar: isPrenavbar,
+    redes: isRedes,
   });
 
   return (
