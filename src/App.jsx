@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar/Navbar";
+import Tipografia from "./components/Tipografia/Tipografia";
 import { MixButton } from "./components/MixButton/MixButton";
 import { IconoJoin } from "./components/MixButton/IconoJoin";
 import { JoinButton } from "./components/JoinButton/JoinButton";
@@ -9,6 +10,17 @@ import Footer from './components/Footer/Footer';
 import IconoCara from "./components/logInButton/IconoCara";
 import { Blog } from "./components/Blog/Blog";
 import { BlogSelecciones } from "./components/BlogSelecciones/BlogSelecciones";
+import Button from "./components/Button/Button";
+import { FaChevronRight, FaRegHeart, FaShieldHeart } from "react-icons/fa6";
+import { SlMagnifier } from "react-icons/sl";
+import { MdOutlineShoppingBag } from "react-icons/md";
+import { Iconos } from "./components/Iconos/Iconos";
+import { FaXTwitter } from "react-icons/fa6";
+import { CgFacebook } from "react-icons/cg";
+import { IoLogoInstagram } from "react-icons/io5";
+import { FaYoutube } from "react-icons/fa";
+
+
 
 function App() {
   return (
@@ -122,153 +134,6 @@ function App() {
       <Iconos
         icono={<IoLogoInstagram />}
         href={"https://www.instagram.com/lego"}
-      />
-      <Tipografia
-          color={"--blue-kids-dark"}
-          texto={"Title Large"}
-          isTitleLarge
-      />
-      <Tipografia
-          color={"--blue-light"}
-          texto={"Title"}
-          isTitle
-      />
-      <Tipografia
-          color={"--green"}
-          texto={"Subtitle Large"}
-          isSubtitleLarge
-      />
-      <Tipografia
-          color={"--red-dark"}
-          texto={"Subtitle"}
-          isSubtitle
-      />
-      <Tipografia
-          color={"--purple"}
-          texto={"Body XL"}
-          isBodyXL
-      />
-      <Tipografia
-          color={"--yellow"}
-          texto={"Body Large"}
-          isBodyLarge
-      />
-      <Tipografia
-          color={"--purple-dark"}
-          texto={"Body"}
-          isBody
-      />
-      <Tipografia
-          color={"--orange-dark"}
-          texto={"Body Small"}
-          isBodySmall
-      />
-            <br />
-      <h1>Tipografía</h1>
-      <h4>(propiedad: font-weight)</h4>
-      <br />
-      <Tipografia
-          color={"--vip-blue"}
-          texto={"Regular Weight"}
-          isRegularWeight
-      />
-      <Tipografia
-          color={"--vip-blue"}
-          texto={"Medium Weight"}
-          isMediumWeight
-      />
-      <Tipografia
-          color={"--vip-blue"}
-          texto={"Bold Weight"}
-          isBoldWeight
-      />
-      <br />
-      <h1>Tipografía</h1>
-      <h4>(propiedad: line-height)</h4>
-      <br />
-      <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 16.1px"}
-          isBodyLarge
-          isLineHeight1
-      />
-      <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 18px"}
-          isBodyLarge
-          isLineHeight2
-      />
-      <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 19px"}
-          isBodyLarge
-          isLineHeight3
-      />
-      <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 20px"}
-          isBodyLarge
-          isLineHeight4
-      />
-      <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 21px"}
-          isBodyLarge
-          isLineHeight5
-      />
-      <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 22px"}
-          isBodyLarge
-          isLineHeight6
-      />
-      <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 24px"}
-          isBodyLarge
-          isLineHeight7
-      />
-      <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 25px"}
-          isBodyLarge
-          isLineHeight8
-      />
-      <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 28px"}
-          isBodyLarge
-          isLineHeight9
-      />
-      <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 31px"}
-          isBodyLarge
-          isLineHeight10
-      />
-      <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 36px"}
-          isBodyLarge
-          isLineHeight11
-      />
-      <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 41.5909px"}
-          isBodyLarge
-          isLineHeight12
-      />
-      <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 43px"}
-          isBodyLarge
-          isLineHeight13
-      />
-      <Tipografia
-          color={" --grey-dark"}
-          texto={"Line-height: 50px"}
-          isBodyLarge
-          isLineHeight14
       />
        <Footer/>
         <Iconos icono={<FaYoutube />} href={"https://m.youtube.com/user/LEGO"} />
