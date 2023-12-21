@@ -1,0 +1,36 @@
+.links {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  gap: 60px;
+}
+
+.menu {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+
+  width: 70vw;
+  height: 100vh;
+  flex-wrap: wrap;
+
+  background-color: var(--white);
+}
+
+.compraClickeable, .descubrirClickeable, .ayuda {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0px;
+  padding-top: 130px;
+  padding-left: 135px;
+  gap: 20px;
+}
+
+.compra, .descubrir  {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+  padding-left: 135px;
+}

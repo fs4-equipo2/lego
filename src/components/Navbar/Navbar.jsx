@@ -10,24 +10,24 @@ import { LogInButton } from "../logInButton/logInButton";
 import { TbLego } from "react-icons/tb";
 import { MixButton } from "../MixButton/MixButton";
 import { IconoJoin } from "../MixButton/IconoJoin";
+import LinksNavbar from "../LinksNavbar/LinksNavbar";
+import LinkSw from "../LinkSw/LinkSw";
+//import SubMenuNavbar from ".../subMenuNavbar/SubMenuNavbar";
+
 
 const Navbar = () => {
   return (
     <>
-    <div className={styles.containerPre}>
-      <Button
-        texto={"ZONA DE JUEGOS"}
-        isGamezone={true}
-        iconLeft={<FaArrowLeftLong />}
-        handleClick={() => console.log("router.push(/login)")}
-      />
-      <div className={styles.swiperPre}>
+      <div className={styles.containerPre}>
         <Button
-          texto={"Saber más"}
-          isSaberMas={true}
-          iconRight={<FaChevronRight />}
+          texto={"ZONA DE JUEGOS"}
+          isGamezone={true}
+          iconLeft={<FaArrowLeftLong />}
           handleClick={() => console.log("router.push(/login)")}
         />
+        <div className={styles.swiperPre}>
+          <LinkSw 
+          href={"www.lego.com/es-es/page/free-delivery?icmp=SW-SHB-EG-NO-freesh-204"}/>
         </div>
         <div className={styles.rightPre}>
           <MixButton
@@ -45,16 +45,13 @@ const Navbar = () => {
         </div>
       </div>
 
-
       <div className={styles.containerPadreNav}>
         <div className={styles.containerNav}>
           <div className={styles.containerLeft}>
             <Logo />
             <div className={styles.buttonContainer}>
-              <Button isNavBar texto={"COMPRAR"} />
-              <Button isNavBar texto={"DESCUBRIR"} />
-              <Button isNavBar texto={"AYUDA"} />
-              <Button isBotonEspecial texto={"NAVIDAD"} />
+              <LinksNavbar />
+              {/*<SubMenuNavbar />*/}
             </div>
           </div>
           <div className={styles.containerRight}>
@@ -77,7 +74,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-          </>
+    </>
   );
 };
 
