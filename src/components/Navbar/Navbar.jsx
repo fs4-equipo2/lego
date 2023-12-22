@@ -12,7 +12,7 @@ import { MixButton } from "../MixButton/MixButton";
 import { IconoJoin } from "../MixButton/IconoJoin";
 import LinksNavbar from "../LinksNavbar/LinksNavbar";
 import LinkSw from "../LinkSw/LinkSw";
-//import SubMenuNavbar from ".../subMenuNavbar/SubMenuNavbar";
+import SubMenuNavbar from "../SubMenuNavbar/SubMenuNavbar";
 
 
 const Navbar = () => {
@@ -51,7 +51,6 @@ const Navbar = () => {
             <Logo />
             <div className={styles.buttonContainer}>
               <LinksNavbar />
-              {/*<SubMenuNavbar />*/}
             </div>
           </div>
           <div className={styles.containerRight}>

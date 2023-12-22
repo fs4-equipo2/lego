@@ -4,13 +4,20 @@ import Button from "../Button/Button";
 import { FaChevronRight } from "react-icons/fa6";
 import { useOutsideAlerter } from "../../hooks/useOutsideAlerter";
 import Tipografia from "../Tipografia/Tipografia";
-//import SubMenuNavbar from ".../subMenuNavbar/SubMenuNavbar";
-
+import SubMenuNavbar from "../SubMenuNavbar/SubMenuNavbar";
+import {
+  subMenuAyuda,
+  subMenuCompraClickeable,
+  subMenuDescubrir,
+  subMenuDescubrirClickeable,
+} from "./LinksNavbar.contants";
 const LinksNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCompraVisible, setIsCompraVisible] = useState(false);
   const [isDescubrirVisible, setIsDescubrirVisible] = useState(false);
   const [isAyudaVisible, setIsAyudaVisible] = useState(false);
+
+  const [isSetsPorTemasOpen, setIsSetsPorTemasOpen] = useState(false);
 
   const menuRef = useRef(null);
 
@@ -39,52 +46,71 @@ const LinksNavbar = () => {
     }
   }
 
-  const subMenuCompraClickeable = [
-    "Sets por tema",
-    "Edades",
-    "Rangos de precios",
-    "Artículos LEGO",
-    "Intereses",
-    "Pick and Build",
-  ];
-  const subMenuCompra = [
-    "Exclusivos",
-    "Novedades",
-    "Los más vendidos",
-    "Decoración del hogar",
-    "Ofertas y rebajas",
-    "Tarjetas regalo",
-    "Próximamente",
-    "Encuentra la inspiración",
-    "Última oportunidad para comprar",
-  ];
+  function handleClickCompra(event) {
+    console.log(event.target.id);
+    switch (event.target.id) {
+      case "setsTema":
+        console.log("sets temas");
+        setIsSetsPorTemasOpen(true);
+        // edades(false);
+        // rangoPrecios(false);
+        // articulosLEGO(false);
+        // intereses(false);
+        // pickBuild(false);
+        break;
 
-  const subMenuDescubrirClickeable = [
-    "Nuestros valores",
-    "Nuestras apps",
-    "Nuestras revistas",
-  ];
-  const subMenuDescubrir = [
-    "Todos los temas LEGO",
-    "Todos los intereses LEGO",
-    "Para fans adultos",
-    "Para familias",
-    "LEGO Fortnite",
-    "LEGO Insiders",
-    "LEGO Mosaic Maker",
-    "Ideas de regalos LEGO",
-  ];
+      case "edades":
+        console.log("edades");
+        setIsSetsPorTemasOpen(false);
+        // edades(true);
+        // rangoPrecios(false);
+        // articulosLEGO(false);
+        // intereses(false);
+        // pickBuild(false);
+        break;
 
-  const subMenuAyuda = [
-    "Comprobar el estado de un pedido",
-    "Envíos y devoluciones",
-    "Encontrar una tienda",
-    "Instrucciones de construcción",
-    "Preguntas frecuentes",
-    "Ponte en contacto con nosotros",
-    "Piezas de repuesto",
-  ];
- 
+      case "rangoPrecios":
+        console.log("rangos precios");
+        setIsSetsPorTemasOpen(false);
+        // edades(false);
+        // rangoPrecios(true);
+        // articulosLEGO(false);
+        // intereses(false);
+        // pickBuild(false);
+        break;
+
+      case "articulosLEGO":
+        console.log("articulos");
+
+        setIsSetsPorTemasOpen(false);
+        // edades(false);
+        // rangoPrecios(false);
+        // articulosLEGO(true);
+        // intereses(false);
+        // pickBuild(false);
+        break;
+
+      case "intereses":
+        console.log("intereses");
+
+        setIsSetsPorTemasOpen(false);
+        // edades(false);
+        // rangoPrecios(false);
+        // articulosLEGO(false);
+        // intereses(true);
+        // pickBuild(false);
+        break;
+
+      case "pickBuild":
+        setIsSetsPorTemasOpen(false);
+        // edades(false);
+        // rangoPrecios(false);
+        // articulosLEGO(false);
+        // intereses(false);
+        // pickBuild(true);
+        break;
+    }
+  }
 
   useOutsideAlerter(menuRef, () => setIsMenuOpen(false));
   return (
@@ -93,27 +119,13 @@ const LinksNavbar = () => {
         <div className={styles.menu}>
           {isCompraVisible && (
             <div className={styles.compraClickeable}>
-              <div></div>
               {subMenuCompraClickeable.map((item) => (
                 <Button
                   isSubMenu
-                  texto={`${item}`}
-                  iconRight={<FaChevronRight />}
-                  //id="compra"
-                  //handleClick={handleClickCompra} //no me la toma porque esta en sub T.T
-                />
-              ))}
-            </div>
-          )}
-          {isCompraVisible && (
-            <div className={styles.compra}>
-              {subMenuCompra.map((item) => (
-                <Tipografia
-                  key={item}
-                  color={"--black"}
-                  texto={`${item}`}
-                  isBodyLarge
-                  isRegularWeight
+                  texto={`${item.texto}`}
+                  iconRight={item.icono}
+                  id={item.id}
+                  handleClick={handleClickCompra} //no me la toma porque esta en sub T.T
                 />
               ))}
             </div>
@@ -121,7 +133,6 @@ const LinksNavbar = () => {
 
           {isDescubrirVisible && (
             <div className={styles.descubrirClickeable}>
-              <div></div>
               {subMenuDescubrirClickeable.map((item) => (
                 <Button
                   isSubMenu
@@ -149,7 +160,6 @@ const LinksNavbar = () => {
 
           {isAyudaVisible && (
             <div className={styles.ayuda}>
-              <div></div>
               {subMenuAyuda.map((item) => (
                 <Tipografia
                   key={item}
@@ -161,6 +171,11 @@ const LinksNavbar = () => {
               ))}
             </div>
           )}
+
+          <SubMenuNavbar
+            isSetsPorTemasOpen={isSetsPorTemasOpen}
+            // isEdadesOpen={isEdadesOpen}
+          />
         </div>
       )}
 
@@ -183,6 +198,5 @@ const LinksNavbar = () => {
     </div>
   );
 };
-
 
 export default LinksNavbar;
