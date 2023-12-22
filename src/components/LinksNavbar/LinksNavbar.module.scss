@@ -13,12 +13,16 @@
 
   width: 70vw;
   height: 100vh;
-  flex-wrap: wrap;
+
+  display: flex;
+  flex-direction: row;
 
   background-color: var(--white);
 }
 
-.compraClickeable, .descubrirClickeable, .ayuda {
+.compraClickeable,
+.descubrirClickeable,
+.ayuda {
   display: flex;
   flex-direction: column;
   padding-bottom: 0px;
@@ -27,7 +31,8 @@
   gap: 20px;
 }
 
-.compra, .descubrir  {
+.compra,
+.descubrir {
   display: flex;
   flex-direction: column;
   gap: 20px;
