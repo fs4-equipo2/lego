@@ -1,0 +1,8 @@
+.generico{
+    display:flex;
+    flex-direction: column;
+}
+
+.item :hover{
+    text-decoration: underline;
+}
