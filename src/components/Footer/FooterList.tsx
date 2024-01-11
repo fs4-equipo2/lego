@@ -3,7 +3,7 @@ export const column = {
   items: [
     "Tarjeta Regalo",
     "Encuentra la inspiración",
-    "Catálogo LEGO",
+    "Catálogos LEGO",
     "Encontrar una tienda",
   ],
 };
@@ -49,3 +49,11 @@ export const masImformacion = {
     "Programa para socios",
   ],
 };
+
+export const links = [
+  "Cookies",
+  "Aviso legal",
+  "Clausulas de uso",
+  "Accesibilidad",
+  "Configuración de cookies"
+]

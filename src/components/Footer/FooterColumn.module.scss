@@ -1,8 +1,14 @@
 .generico{
     display:flex;
     flex-direction: column;
+    width: 12em;
 }
 
-.item :hover{
+.item {
+    color: white;
+    text-underline-position: under;
+}
+
+.item:hover{
     text-decoration: underline;
 }

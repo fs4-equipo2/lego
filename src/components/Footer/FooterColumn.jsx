@@ -6,23 +6,23 @@ const FooterColumn =({title, items}) => {
     return (
         <div className={styles.generico}>
             <ul>
-                <li>
+                {title && <li>
                     <Tipografia
                         color={"--white"}
                         texto={title}
-                        isBodyLarge
+                        isSubtitleRegular
                         isBoldWeight
                     />
 
-                </li>
-                {items.map((items,index) =>(
+                </li>}
+                {items.map((item,index) =>(
                     <li key={index} className={styles.item} >
                         <a href="">
                             <Tipografia
                                   color={"--white"}
-                                  texto={items}
-                                  isBodyLarge
-                                  isRegularWeight
+                                  texto={item}
+                                  isSubtitleRegular
+                                  isMediumWeight
                             />
                         </a>
                     </li>
