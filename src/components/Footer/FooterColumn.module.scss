@@ -4,11 +4,15 @@
     width: 12em;
 }
 
-.item {
+.columnItemFirst {
+    margin-bottom: 1em;
+}
+
+.columnItem {
     color: white;
     text-underline-position: under;
 }
 
-.item:hover{
+.columnItem:hover{
     text-decoration: underline;
 }

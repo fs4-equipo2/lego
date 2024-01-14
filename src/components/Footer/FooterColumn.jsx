@@ -6,7 +6,7 @@ const FooterColumn =({title, items}) => {
     return (
         <div className={styles.generico}>
             <ul>
-                {title && <li>
+                {title && <li className={styles.columnItemFirst}>
                     <Tipografia
                         color={"--white"}
                         texto={title}
@@ -16,7 +16,7 @@ const FooterColumn =({title, items}) => {
 
                 </li>}
                 {items.map((item,index) =>(
-                    <li key={index} className={styles.item} >
+                    <li key={index} className={styles.columnItem} >
                         <a href="">
                             <Tipografia
                                   color={"--white"}

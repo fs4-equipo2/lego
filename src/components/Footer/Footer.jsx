@@ -49,28 +49,29 @@ const Footer = () => {
                 />
               </button>
             </div>
-            <FooterColumn
-              title={column.title}
-              items={column.items}
-            />
+            <FooterColumn title={column.title} items={column.items} />
           </div>
           <div className={styles.groupColumn}>
-          <FooterColumn
-            title={quienessomos.title}
-            items={quienessomos.items}
-          />
-          <FooterColumn
-            title={atencionAlCliente.title}
-            items={atencionAlCliente.items}
-          />
-          <FooterColumn
-            title={atracciones.title}
-            items={atracciones.items}
-          />
-          <FooterColumn
-            title={masImformacion.title}
-            items={masImformacion.items}
-          />
+            <div className={styles.groupColumnTop}>
+              <FooterColumn
+                title={quienessomos.title}
+                items={quienessomos.items}
+              />
+              <FooterColumn
+                title={atencionAlCliente.title}
+                items={atencionAlCliente.items}
+              />
+            </div>
+            <div className={styles.groupColumnBottom}>
+              <FooterColumn
+                title={atracciones.title}
+                items={atracciones.items}
+              />
+              <FooterColumn
+                title={masImformacion.title}
+                items={masImformacion.items}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -99,20 +100,18 @@ const Footer = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   class="Icon__StyledSVG-lm07h6-0 kNvokt"
                 >
-                  <path
-                    d="M1.825 28L18 14 1.825 0 0 1.715 14.196 14 0 26.285z"
-                  ></path>
+                  <path d="M1.825 28L18 14 1.825 0 0 1.715 14.196 14 0 26.285z"></path>
                 </svg>
               </button>
             </form>
           </div>
           <div className={styles.rrss}>
-              <Tipografia
-                color={"--white"}
-                texto={"SÍGUENOS"}
-                isSubtitleRegular
-                isBoldWeight
-              />
+            <Tipografia
+              color={"--white"}
+              texto={"SÍGUENOS"}
+              isSubtitleRegular
+              isBoldWeight
+            />
             <div className={styles.iconos}>
               <Iconos
                 icono={<CgFacebook />}
