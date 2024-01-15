@@ -16,6 +16,7 @@ import {
   links,
 } from "./FooterList";
 import { FooterLinks } from "./FooterLinks";
+import { FooterColumnResponsive } from "./FooterColumnResponsive";
 
 const Footer = () => {
   return (
@@ -72,6 +73,56 @@ const Footer = () => {
                 items={masImformacion.items}
               />
             </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.midResponsive}>
+        <div className={styles.ContainerResponsive}>
+          <div className={styles.emailResponsive}>
+            <Tipografia
+              color={"--white"}
+              texto={"SUSCRÍBETE AL CORREO ELECTRÓNICO DE LEGO® SHOP"}
+              isSubtitleRegular
+              isBoldWeight
+            />
+            <form className={styles.emailFormResponsive}>
+              <input
+                type="email"
+                id="email"
+                placeholder="Tu dirección de correo elctrónico"
+                required
+              />
+              <button type="submit">
+                <svg
+                  width="18"
+                  height="28"
+                  viewBox="0 0 18 28"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="Icon__StyledSVG-lm07h6-0 kNvokt"
+                >
+                  <path d="M1.825 28L18 14 1.825 0 0 1.715 14.196 14 0 26.285z"></path>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div className={styles.groupColumnResponsive}>
+            <FooterColumnResponsive
+              title={quienessomos.title}
+              items={quienessomos.items}
+            />
+            <FooterColumnResponsive
+              title={atencionAlCliente.title}
+              items={atencionAlCliente.items}
+            />
+            <FooterColumnResponsive
+              title={atracciones.title}
+              items={atracciones.items}
+            />
+            <FooterColumnResponsive
+              title={masImformacion.title}
+              items={masImformacion.items}
+            />
           </div>
         </div>
       </div>

@@ -1,0 +1,30 @@
+.genericoResponsive {
+  margin: 0 auto;
+  border-top: 0.5px solid rgb(255, 255, 255);
+  border-bottom: 0.5px solid rgb(255, 255, 255);
+  border-top-color: rgb(48, 52, 54);
+  border-bottom-color: rgb(48, 52, 54);
+
+  .columnResponsiveTitle {
+    cursor: pointer;
+    padding: 0.9375rem 1.25rem 0.9375rem 1.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .columnResponsiveIcon {
+      transform: rotate(90deg);
+    }
+  }
+  .columnResponsiveList {
+    // display: none;
+
+    .columnItemsResponsive {
+      cursor: pointer;
+      border-top: 0.5px solid rgb(255, 255, 255);
+      border-bottom: 0.5px solid rgb(255, 255, 255);
+      border-top-color: rgb(48, 52, 54);
+      border-bottom-color: rgb(48, 52, 54);
+      padding: 0.625rem 1.25rem;
+    }
+  }
+}

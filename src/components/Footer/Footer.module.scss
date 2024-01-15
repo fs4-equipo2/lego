@@ -73,15 +73,15 @@ footer {
     }
   }
 
+  .midResponsive {
+    display: none;
+  }
+
   .mid {
     padding: 2.5rem 1.25rem 1.25rem 1.25rem;
 
-    .email,
-    .rrss {
-      gap: 20px;
-    }
-
     .email {
+      gap: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -115,6 +115,7 @@ footer {
     }
 
     .rrss {
+      gap: 20px;
       display: flex;
       flex-direction: column;
 
@@ -171,6 +172,54 @@ footer {
         }
       }
     }
+
+    .midResponsive {
+      display: flex;
+
+      .ContainerResponsive {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .emailResponsive {
+          padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+          gap: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+    
+          input {
+            height: 4rem;
+          }
+    
+          a {
+            padding-bottom: 1.25rem;
+          }
+    
+          .emailFormResponsive {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+    
+            input {
+              height: 3.7em;
+              width: 100%;
+            }
+    
+            button {
+              height: 4em;
+              background-color: rgb(253, 128, 36);
+              border-color: rgb(253, 128, 36);
+              border-radius: 0px 0.3125rem 0.3125rem 0px;
+              width: 4em;
+            }
+          }
+  
+        }
+      }
+    }
+
     .mid {
       .email {
         display: none;
