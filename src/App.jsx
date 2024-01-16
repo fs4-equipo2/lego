@@ -19,6 +19,8 @@ import { FaXTwitter } from "react-icons/fa6";
 import { CgFacebook } from "react-icons/cg";
 import { IoLogoInstagram } from "react-icons/io5";
 import { FaYoutube } from "react-icons/fa";
+import { Stickers } from "./components/Stickers/Stickers";
+import { WelcomeMessage } from "./components/WelcomeMessage/WelcomeMessage";
 
 
 
@@ -26,10 +28,11 @@ function App() {
   return (
     <>
       <Navbar />
+      <Stickers />
       <BlogSelecciones/>
       <Blog/>
-       <Footer/>
-
+      <WelcomeMessage />
+      <Footer/>
     </>
   );
 };
