@@ -1,0 +1,17 @@
+.sticker {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 150.5px;
+    height: 245.25px;
+
+    :hover {
+        opacity: 0.6;
+        transition: opacity .55s ease-in-out;
+    }
+
+    .stickerTop {
+      transform: translateY(150%);
+    }
+  }

@@ -4,8 +4,8 @@ import styles from "./FooterLinks.module.scss"
 export const FooterLinks = ({ links }) => {
   return (
     <>
-    {links && links.map(link => (
-        <a href=" " className={styles.linkItem}>
+    {links && links.map((link, index) => (
+        <a key={index} href=" " className={styles.linkItem}>
         <Tipografia
           color={"--white"}
           texto={link}
