@@ -19,10 +19,12 @@ const cx = classNames.bind(styles);
  */
 const Button = ({
   texto,
+  id,
   isMain,
   isGamezone,
   isPrenavbar,
   isNavBar,
+  isSubMenu,
   isAñadirBolsa,
   isArticulo,
   isDeseos,
@@ -44,20 +46,21 @@ const Button = ({
     main: isMain,
     gamezone: isGamezone,
     prenavbar: isPrenavbar,
+    redes: isRedes,
     deseos: isDeseos,
     buscador: isBuscador,
     bolsaCompra: isBolsaCompra,
     isNavBar: isNavBar,
+    isSubMenu: isSubMenu,
     añadirBolsa: isAñadirBolsa,
     verArticulos: isArticulo,
     leeMas: isLeeMas,
     saberMas: isSaberMas,
     isBotonEspecial: isBotonEspecial,
-
   });
 
   return (
-    <button className={classNames} onClick={handleClick}>
+    <button id={id} className={classNames} onClick={handleClick}>
       {iconLeft && iconLeft}
       {texto}
       {iconRight && iconRight}
