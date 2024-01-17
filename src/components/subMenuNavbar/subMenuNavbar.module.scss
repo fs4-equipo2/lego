@@ -1,0 +1,36 @@
+.subMenuContainer{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.subMenu {
+  padding-bottom: 0px;
+  position: inherit;
+  background-color: transparent;
+
+  button {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px
+    
+  }
+
+}
+
+.subCompra{
+  display: inline-block;
+  padding-bottom: 0px;
+  gap: 10px;
+  background-color: transparent;
+  columns: 3;
+ column-gap: 20px;
+}
+
+.comprarButtons {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  gap: 20px;
+
+}
