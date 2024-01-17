@@ -11,8 +11,6 @@ import {LogInButton} from "./components/logInButton/logInButton"
 import { TbLego } from "react-icons/tb";
 import Footer from './components/Footer/Footer';
 import IconoCara from "./components/logInButton/IconoCara";
-import { Blog } from "./components/Blog/Blog";
-import { BlogSelecciones } from "./components/BlogSelecciones/BlogSelecciones";
 import Button from "./components/Button/Button";
 import { FaChevronRight, FaRegHeart, FaShieldHeart } from "react-icons/fa6";
 import { SlMagnifier } from "react-icons/sl";
