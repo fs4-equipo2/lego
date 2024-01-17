@@ -31,6 +31,13 @@
   }
 }
 
+.cardText{
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .imagen-blog-container {
   position: relative;
   width: 100%;
