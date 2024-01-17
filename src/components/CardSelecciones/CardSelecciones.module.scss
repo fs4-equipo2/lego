@@ -11,6 +11,10 @@
   gap: 10px;
 
   color: var(--white);
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .imageContainer {
