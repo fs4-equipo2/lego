@@ -6,13 +6,13 @@
 }
 
 .blogContainer{
-    max-width: 78rem;
+    max-width: 100rem;
     display: flex;
     flex-direction: column;
 }
 .titleBlog{
     margin: 15px;
-    color: var(--white);
+    color: var(--black);
 }
 .blogCards{
     display: flex;
