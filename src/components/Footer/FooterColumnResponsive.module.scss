@@ -1,4 +1,5 @@
 .genericoResponsive {
+  overflow: hidden;
   margin: 0 auto;
   border-top: 0.5px solid rgb(255, 255, 255);
   border-bottom: 0.5px solid rgb(255, 255, 255);
@@ -11,12 +12,18 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    .columnResponsiveIcon {
+    .columnResponsiveIconDisable {
+      transition-duration: 200ms;
       transform: rotate(90deg);
     }
+    .columnResponsiveIconActive {
+      transition-duration: 200ms;
+      transform: rotate(270deg);
+    }
   }
-  .columnResponsiveList {
-    // display: none;
+  .columnResponsiveListShow {
+    display: flex;
+    flex-direction: column;
 
     .columnItemsResponsive {
       cursor: pointer;
@@ -27,4 +34,9 @@
       padding: 0.625rem 1.25rem;
     }
   }
+
+  .columnResponsiveListHide {
+    display: none;
+  }
+
 }

@@ -25,7 +25,11 @@ export const FooterColumnResponsive = ({ title, items }) => {
           viewBox="0 0 18 28"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
-          className={styles.columnResponsiveIcon}
+          className={
+            visible
+              ? styles.columnResponsiveIconActive
+              : styles.columnResponsiveIconDisable
+          }
         >
           <path
             d="M1.825 28L18 14 1.825 0 0 1.715 14.196 14 0 26.285z"
@@ -33,22 +37,20 @@ export const FooterColumnResponsive = ({ title, items }) => {
           ></path>
         </svg>
       </div>
-      {visible && (
-        <ul className={styles.columnResponsiveList}>
-          {items.map((item, index) => (
-            <li key={index} className={styles.columnItemsResponsive}>
-              <a href="">
-                <Tipografia
-                  color={"--white"}
-                  texto={item}
-                  isSubtitleRegular
-                  isMediumWeight
-                />
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
+      <ul className={visible ? styles.columnResponsiveListShow : styles.columnResponsiveListHide}>
+        {items.map((item, index) => (
+          <li key={index} className={styles.columnItemsResponsive}>
+            <a href="">
+              <Tipografia
+                color={"--white"}
+                texto={item}
+                isSubtitleRegular
+                isMediumWeight
+              />
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
