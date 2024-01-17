@@ -5,7 +5,8 @@ import { CardPopulares } from "../CardPopulares/CardPopulares"
 import { CardRecomendados } from "../CardRecomendados/CardRecomendados"
 
 export function BlogRecomendados({}){
-  return <div className={styles.blogContainer}>
+  return <div className={styles.blog}>
+    <div className={styles.blogContainer}>
     <div className={styles.titleBlog}>
     <Tipografia texto= "Selecciones de esta semana" isTitle isRegularWeight/>
     </div>
@@ -39,5 +40,6 @@ export function BlogRecomendados({}){
     link="link"
     />        
       </div>
+    </div>
   </div>
 }

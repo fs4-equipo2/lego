@@ -4,7 +4,8 @@ import styles from "./Blog.module.scss"
 import Tipografia from "../Tipografia/Tipografia"
 
 export function Blog({}){
-  return <div className={styles.blogContainer}>
+  return <div className={styles.blog}>
+  <div className={styles.blogContainer}>
     <div className={styles.titleBlog}>
     <Tipografia texto= "Descubre todos los detalles" isTitle isRegularWeight/>
     </div>
@@ -45,5 +46,6 @@ export function Blog({}){
         iconButton={<FaChevronRight />}
       />
       </div>
+  </div>
   </div>
 }

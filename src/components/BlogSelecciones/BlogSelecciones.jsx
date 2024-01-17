@@ -4,7 +4,7 @@ import Tipografia from "../Tipografia/Tipografia"
 import { CardSelecciones } from "../CardSelecciones/CardSelecciones"
 
 export function BlogSelecciones({}){
-  return <div className={styles.blogContainer}>
+  return <div className={styles.blog}><div className={styles.blogContainer}>
     <div className={styles.titleBlog}>
     <Tipografia texto= "Selecciones de esta semana" isTitle isRegularWeight/>
     </div>
@@ -31,5 +31,6 @@ export function BlogSelecciones({}){
         iconButton={<FaChevronRight />}
       />
       </div>
+  </div>
   </div>
 }
