@@ -8,7 +8,7 @@ export function BlogRecomendados({}){
   return <div className={styles.blog}>
     <div className={styles.blogContainer}>
     <div className={styles.titleBlog}>
-    <Tipografia texto= "Recomendado para ti" isTitle isRegularWeight/>
+    <Tipografia texto= "Recomendado para ti" isTitleLarge/>
     </div>
     <div className={styles.blogCards}>
     <CardRecomendados

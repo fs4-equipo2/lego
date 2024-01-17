@@ -7,7 +7,7 @@ export function Blog({}){
   return <div className={styles.blog}>
   <div className={styles.blogContainer}>
     <div className={styles.titleBlog}>
-    <Tipografia texto= "Descubre todos los detalles" isTitle isRegularWeight/>
+    <Tipografia texto= "Descubre todos los detalles" isTitleLarge/>
     </div>
     <div className={styles.blogCards}>
     <Card
