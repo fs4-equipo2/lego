@@ -21,6 +21,8 @@ import { IoLogoInstagram } from "react-icons/io5";
 import { FaYoutube } from "react-icons/fa";
 import { Stickers } from "./components/Stickers/Stickers";
 import { WelcomeMessage } from "./components/WelcomeMessage/WelcomeMessage";
+import Main from "./components/Main/Main";
+
 
 
 
@@ -28,6 +30,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Main />
       <Stickers />
       <BlogSelecciones/>
       <Blog/>
