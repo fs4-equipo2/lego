@@ -12,7 +12,25 @@ import { MixButton } from "../MixButton/MixButton";
 import { IconoJoin } from "../MixButton/IconoJoin";
 import LinksNavbar from "../LinksNavbar/LinksNavbar";
 import LinkSw from "../LinkSw/LinkSw";
+import { useStoreActions } from "easy-peasy";
+import axios from "axios";
 const Navbar = () => {
+  const { setUser } = useStoreActions((actions) => actions);
+
+  const handleLoggin = async () => {
+    try {
+      const response = await axios.get(
+        "https://random-data-api.com/api/users/random_user?size=1"
+      );
+
+      setUser({
+        isLoggedIn: true,
+        username: response.data[0].username,
+      });
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
   return (
     <>
       <div className={styles.containerPre}>
@@ -41,6 +59,7 @@ const Navbar = () => {
             label="Iniciar sesión"
             href=""
             icon={<TbLego />}
+            onClick={handleLoggin}
           />
         </div>
       </div>

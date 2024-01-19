@@ -1,15 +1,19 @@
-import styles from "./JoinButton.module.scss"
-import stylesTwo from "./loginButton.module.scss"
+import styles from "./JoinButton.module.scss";
+import stylesTwo from "./loginButton.module.scss";
 import IconoCara from "../logInButton/IconoCara";
 
-export const MixButton = ({ isLogin, label, icon, href }) => {
+export const MixButton = ({ isLogin, label, icon, onClick }) => {
   return (
     <>
-      <a className={isLogin ? stylesTwo.LogInButton : styles.joinButton} href={href} target="_blank">
+      <button
+        className={isLogin ? stylesTwo.LogInButton : styles.joinButton}
+        target="_blank"
+        onClick={onClick}
+      >
         {icon}
         {isLogin && <IconoCara />}
         <p>{label}</p>
-      </a>
+      </button>
     </>
   );
 };

@@ -1,24 +1,12 @@
 import React from "react";
 import { LegoLogo } from "./LegoLogo";
-import Button from "../Button/Button";
 import styles from "./Footer.module.scss";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaTwitter,
-  FaXTwitter,
-  FaYoutube,
-} from "react-icons/fa6";
+import { FaXTwitter, FaYoutube } from "react-icons/fa6";
 import Tipografia from "../Tipografia/Tipografia";
 import { Iconos } from "../Iconos/Iconos";
 import { CgFacebook } from "react-icons/cg";
 import { IoLogoInstagram } from "react-icons/io5";
-import { useStoreState } from "easy-peasy";
 const Footer = () => {
-  const { todos } = useStoreState((state) => state);
-
-  console.log(todos);
-  
   return (
     <footer className={styles.footer}>
       <div className={styles.top}>
