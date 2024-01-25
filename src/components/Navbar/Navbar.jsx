@@ -12,10 +12,14 @@ import { MixButton } from "../MixButton/MixButton";
 import { IconoJoin } from "../MixButton/IconoJoin";
 import LinksNavbar from "../LinksNavbar/LinksNavbar";
 import LinkSw from "../LinkSw/LinkSw";
-import { useStoreActions } from "easy-peasy";
 import axios from "axios";
+import Tipografia from "../Tipografia/Tipografia";
+import { useStoreActions, useStoreState } from "../../store";
 const Navbar = () => {
-  const { setUser } = useStoreActions((actions) => actions);
+  const { setUser } = useStoreActions((actions) => actions.user);
+  const { user } = useStoreState((state) => state.user);
+
+  const { productos } = useStoreState((state) => state.carrito);
 
   const handleLoggin = async () => {
     try {
@@ -54,13 +58,18 @@ const Navbar = () => {
             href=""
             icon={<IconoJoin />}
           />
-          <MixButton
-            isLogin={true}
-            label="Iniciar sesión"
-            href=""
-            icon={<TbLego />}
-            onClick={handleLoggin}
-          />
+          {!user.isLoggedIn && (
+            <MixButton
+              isLogin={true}
+              label="Iniciar sesión"
+              href=""
+              icon={<TbLego />}
+              onClick={handleLoggin}
+            />
+          )}
+          {user.isLoggedIn && (
+            <Tipografia texto={`Bienvenido ${user.username}`} />
+          )}
         </div>
       </div>
 
@@ -85,11 +94,14 @@ const Navbar = () => {
               iconLeft={<FaRegHeart />}
               handleClick={() => console.log("router.push(/login")}
             />
-            <Button
-              isBolsaCompra={true}
-              iconLeft={<MdOutlineShoppingBag />}
-              handleClick={() => console.log("router.push(/login")}
-            />
+            <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+              <Button
+                isBolsaCompra={true}
+                iconLeft={<MdOutlineShoppingBag />}
+                handleClick={() => console.log("router.push(/login")}
+              />
+              <Tipografia texto={`(${productos.length})`} />
+            </div>
           </div>
         </div>
       </div>

@@ -6,7 +6,9 @@ import Tipografia from "../Tipografia/Tipografia";
 import { Iconos } from "../Iconos/Iconos";
 import { CgFacebook } from "react-icons/cg";
 import { IoLogoInstagram } from "react-icons/io5";
+import { useStoreState } from "easy-peasy";
 const Footer = () => {
+  const { user } = useStoreState((state) => state);
   return (
     <footer className={styles.footer}>
       <div className={styles.top}>
@@ -14,6 +16,9 @@ const Footer = () => {
           <div>
             <div className={styles.LegoIcon}>
               <LegoLogo />
+              {user.isLoggedIn && (
+                <Tipografia texto={`Bienvenido ${user.username}`} />
+              )}
             </div>
             <div>
               <button>
