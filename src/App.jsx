@@ -1,8 +1,13 @@
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import { CardRecomendados } from "./components/CardRecomendados/CardRecomendados";
 import { Blog } from "./components/Blog/Blog";
 import { BlogSelecciones } from "./components/BlogSelecciones/BlogSelecciones";
-import { CardRecomendados } from "./components/CardRecomendados/CardRecomendados";
+import { BlogRecomendados } from "./components/BlogRecomendados/BlogRecomendados";
+import Footer from './components/Footer/Footer';
+import { Stickers } from "./components/Stickers/Stickers";
+import { WelcomeMessage } from "./components/WelcomeMessage/WelcomeMessage";
+import Main from "./components/Main/Main";
 function App() {
   const productos = [
     {
@@ -67,8 +72,15 @@ function App() {
           uid={producto.uid}
         />
       ))}
+      <Main />
+      <Stickers />
       <BlogSelecciones />
+      <BlogRecomendados/>
+      <Blog/>
+      <BlogSelecciones/>
+      <BlogRecomendados/>
       <Blog />
+      <WelcomeMessage />
       <Footer />
     </>
   );

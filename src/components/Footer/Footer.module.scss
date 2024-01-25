@@ -1,104 +1,229 @@
 footer {
-    background-color: #201D48;
-    display: flex;
-    flex-direction: column;
-   
+  background-color: #201d48;
+  display: flex;
+  flex-direction: column;
 
-  }
-  .title{
-    padding: 0.625rem 0.9375rem;
-    display: flex;
+  li {
+    padding: 0.625rem 0.9375rem 0.625rem 0;
   }
 
-  div >buttonUbi{
-    display: flex;
-    color: white;
-    gap:5px
-  }
-
-  li{
-    padding: 0.625rem 0.9375rem
-  }
-
-  li > a >h1:hover{
-    text-decoration: underline;
-  }
-
-  .LegoIcon > svg {
-    width: 97px;
-    height: 97px;
-    margin: 0.75rem;
-  }
-
-.top{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .top {
     padding: 2.5rem 1.25rem 1.25rem 1.25rem;
 
-}
+    .Container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
 
-.Container{
+      .firstColumn {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 1em;
+
+        li {
+          padding: 0.625rem 0;
+        }
+
+        .LegoIcon > svg {
+          width: 97px;
+          height: 97px;
+        }
+
+        .localizacion {
+          cursor: pointer;
+          color: white;
+
+          gap: 5px;
+          display: flex;
+          background: transparent;
+          border: 0;
+          padding: 0.625rem;
+          background-color: rgb(19, 17, 36);
+          align-items: center;
+          height: 1.1875rem;
+          width: 78px;
+
+          svg {
+            margin-right: 0.625rem;
+            width: 25px;
+            height: 19px;
+          }
+        }
+      }
+
+      .groupColumn {
+        gap: 5em;
+        display: flex;
+
+        .groupColumnBottom,
+        .groupColumnTop {
+          gap: 5em;
+          display: flex;
+          flex-direction: row;
+        }
+
+        .groupColumnTop {
+          .title {
+            padding: 0.625rem 0.9375rem;
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  .midResponsive {
+    display: none;
+  }
+
+  .mid {
+    padding: 2.5rem 1.25rem 1.25rem 1.25rem;
+
+    .email {
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      input {
+        height: 4rem;
+      }
+
+      a {
+        padding-bottom: 1.25rem;
+      }
+
+      .emailForm {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+
+        input {
+          height: 3.7em;
+          width: 13em;
+        }
+
+        button {
+          height: 4em;
+          background-color: rgb(253, 128, 36);
+          border-color: rgb(253, 128, 36);
+          border-radius: 0px 0.3125rem 0.3125rem 0px;
+          width: 4em;
+        }
+      }
+    }
+
+    .rrss {
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+
+      .iconos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        color: white;
+        gap: 20px;
+      }
+    }
+  }
+
+  .bot {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 2.5rem 1.25rem 1.25rem 1.25rem;
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 2rem;
+      padding-bottom: 2.5rem;
+    }
+  }
+
+  .Container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     max-width: 82.5rem;
     margin: 0 auto;
+  }
 }
 
-.mid{
-    padding: 2.5rem 1.25rem 1.25rem 1.25rem 
-}
-
-.bot{
+@media (max-width: 1200px) {
+  .groupColumn {
+    width: 100%;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    justify-content: space-around;
-    margin: 2.5rem 1.25rem 1.25rem 1.25rem 
+  }
 }
 
-.email{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
+@media (max-width: 900px) {
+  footer {
+    .top {
+      .Container {
+        .groupColumn {
+          display: none;
+        }
+      }
+    }
 
-.email > a{
-    padding-bottom: 1.25rem;
-}
+    .midResponsive {
+      display: flex;
 
-.email >input{
-    height: 4rem;
-}
+      .ContainerResponsive {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
 
+        .emailResponsive {
+          padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+          gap: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+    
+          input {
+            height: 4rem;
+          }
+    
+          a {
+            padding-bottom: 1.25rem;
+          }
+    
+          .emailFormResponsive {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+    
+            input {
+              height: 3.7em;
+              width: 100%;
+            }
+    
+            button {
+              height: 4em;
+              background-color: rgb(253, 128, 36);
+              border-color: rgb(253, 128, 36);
+              border-radius: 0px 0.3125rem 0.3125rem 0px;
+              width: 4em;
+            }
+          }
+  
+        }
+      }
+    }
 
-.links{
-    padding-bottom: 1.25rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.rrss{
-    display: flex;
-    flex-direction: column;
-}
-
-.rrss > a{
-    padding-bottom: 1.25rem;
-   
-}
-
-.iconos{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    color: white;
-}
-
-.links{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 2rem;
-    padding-bottom: 2.5rem;
+    .mid {
+      .email {
+        display: none;
+      }
+    }
+  }
 }

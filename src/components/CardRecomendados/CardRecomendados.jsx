@@ -1,5 +1,6 @@
 import { useStoreActions } from "../../store";
 import Button from "../Button/Button";
+import IconoEstrellas from "../CardPopulares/IconoEstrellas";
 import Tipografia from "../Tipografia/Tipografia";
 import styles from "./CardRecomendados.module.scss";
 
@@ -30,10 +31,16 @@ export function CardRecomendados({
   return (
     <div className={styles.cardContainer}>
       <div className={styles.imageContainer}>
-        <img src={src} className={styles.image} />
+        <a href={link}><img src={src} className={styles.image} /></a>
       </div>
+      <div className={styles.cardTitle}>
+      <a href={link}>
       <Tipografia texto={title} isBody isRegularWeight />
       <Tipografia texto={price} isBodyLarge isBoldWeight />
+
+      </a>
+      </div>      
+      <IconoEstrellas/>
 
       {button && (
         <Button isAñadirBolsa texto={button} handleClick={handleClick} />
