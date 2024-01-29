@@ -68,12 +68,12 @@ const Navbar = () => {
           />
           <MixButton
               isLogin={true}
-              label="Iniciar sesión (modal José)"
+              label={user.isLoggedIn ? `${user.username} 🟢` : "Iniciar sesión"}
               href=""
               icon={<TbLego />}
               onClick={openModalLogIn}
             />
-            <Modal isOpen={isOpenLogIn} closeModal={closeModalLogIn}>
+            <Modal isOpen={user.isLoggedIn ? false : isOpenLogIn} closeModal={closeModalLogIn}>
               <LogInModal />
             </Modal>
           {!user.isLoggedIn && (

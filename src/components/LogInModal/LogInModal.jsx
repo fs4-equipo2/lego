@@ -4,14 +4,22 @@ import styles from "./LogInModal.module.scss";
 import { LegoLogo } from "../Footer/LegoLogo";
 import { useForm } from "../../hooks/useForm";
 import { usersListData } from "./UsersData.tsx";
+import { useStoreActions } from "../../store";
 
 export const LogInModal = () => {
+
+  const { setUser } = useStoreActions((actions) => actions.user)
+
   const checkLogin = (lista, currentUser) => {
     const result = lista.filter((user) => {
       return JSON.stringify(user) === JSON.stringify(currentUser);
     });
-    if (result.length === 0 || result.length > 1) return false;
-    return true;
+    if (result.length === 0 || result.length > 1) {
+      return false;
+    } else {
+      setUser({username: result[0].username, isLoggedIn: true});
+      return true;
+    }
   };
 
   const initialForm = {
