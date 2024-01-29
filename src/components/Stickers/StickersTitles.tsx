@@ -1,4 +1,9 @@
-export const stickersTitles = [
+interface stickerFormat {
+    title: string,
+    imgSource: string,
+}
+
+export const stickersTitles: Array<stickerFormat> = [
     { title: "Novedades", imgSource: "../../../public/images/stickersImages/stickerNovedades.png"},
     { title: "Exclusivos", imgSource: "../../../public/images/stickersImages/stickerExclusivos.png"},
     { title: "Ofertas", imgSource: "../../../public/images/stickersImages/stickerOfertas.png"},

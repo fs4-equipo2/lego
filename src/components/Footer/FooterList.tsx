@@ -1,4 +1,11 @@
-export const column = {
+interface ColumnFormat {
+  title: string,
+  items: string[],
+};
+
+type LinksFormat = Array<string>; 
+
+export const column:ColumnFormat = {
   title: "",
   items: [
     "Tarjeta Regalo",
@@ -8,7 +15,7 @@ export const column = {
   ],
 };
 
-export const quienessomos = {
+export const quienessomos:ColumnFormat = {
   title: "QUIENÉS SOMOS",
   items: [
     "The LEGO Group",
@@ -21,7 +28,7 @@ export const quienessomos = {
   ],
 };
 
-export const atencionAlCliente = {
+export const atencionAlCliente:ColumnFormat = {
   title: "ATENCIÓN AL CLIENTE",
   items: [
     "Ponte en contacto con nosotros",
@@ -34,12 +41,12 @@ export const atencionAlCliente = {
   ],
 };
 
-export const atracciones = {
+export const atracciones:ColumnFormat = {
   title: "ATRACCIONES",
   items: ["LEGO® House", "LEGOLAND® Parks", "LEGOLAND Discovery Centers"],
 };
 
-export const masImformacion = {
+export const masImformacion:ColumnFormat = {
   title: "MÁS INFORMACIÓN",
   items: [
     "LEGO® LIFE",
@@ -50,7 +57,7 @@ export const masImformacion = {
   ],
 };
 
-export const links = [
+export const links:LinksFormat = [
   "Cookies",
   "Aviso legal",
   "Clausulas de uso",

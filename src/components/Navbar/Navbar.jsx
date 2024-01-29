@@ -15,26 +15,37 @@ import LinkSw from "../LinkSw/LinkSw";
 import axios from "axios";
 import Tipografia from "../Tipografia/Tipografia";
 import { useStoreActions, useStoreState } from "../../store";
+import { Modal } from "../Modal/Modal";
+import { LogInModal } from "../logInModal/logInModal";
+import { useModal } from "../../hooks/useModal";
+
 const Navbar = () => {
   const { setUser } = useStoreActions((actions) => actions.user);
   const { user } = useStoreState((state) => state.user);
 
   const { productos } = useStoreState((state) => state.carrito);
 
-  const handleLoggin = async () => {
-    try {
-      const response = await axios.get(
-        "https://random-data-api.com/api/users/random_user?size=1"
-      );
+  //Login ejemplo Manuel (usuario con API)
 
-      setUser({
-        isLoggedIn: true,
-        username: response.data[0].username,
-      });
-    } catch (error) {
-      console.error(error.message);
-    }
-  };
+  // const handleLoggin = async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       "https://random-data-api.com/api/users/random_user?size=1"
+  //     );
+
+  //     setUser({
+  //       isLoggedIn: true,
+  //       username: response.data[0].username,
+  //     });
+  //   } catch (error) {
+  //     console.error(error.message);
+  //   }
+  // };
+
+  // Prueba modal Login José (verificando usuario ingresado y base de datos)
+
+  const [isOpenLogIn, openModalLogIn, closeModalLogIn] = useModal(false)
+
   return (
     <>
       <div className={styles.containerPre}>
@@ -58,10 +69,20 @@ const Navbar = () => {
             href=""
             icon={<IconoJoin />}
           />
-          {!user.isLoggedIn && (
+          <MixButton
+              isLogin={true}
+              label={user.isLoggedIn ? `${user.username} 🟢` : "Iniciar sesión"}
+              href=""
+              icon={<TbLego />}
+              onClick={openModalLogIn}
+            />
+            <Modal isOpen={user.isLoggedIn ? false : isOpenLogIn} closeModal={closeModalLogIn}>
+              <LogInModal />
+            </Modal>
+          {/* {!user.isLoggedIn && (
             <MixButton
               isLogin={true}
-              label="Iniciar sesión"
+              label="Iniciar sesión (API)"
               href=""
               icon={<TbLego />}
               onClick={handleLoggin}
@@ -69,7 +90,7 @@ const Navbar = () => {
           )}
           {user.isLoggedIn && (
             <Tipografia texto={`Bienvenido ${user.username}`} />
-          )}
+          )} */}
         </div>
       </div>
 

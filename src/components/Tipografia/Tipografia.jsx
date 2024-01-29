@@ -33,6 +33,7 @@ const Tipografia = ({
   //Font-size & line-height
   isTitleXL,
   isTitleLarge,
+  isTitleBig,
   isTitleMedium,
   isTitleRegular,
   isTitleSmall,
@@ -53,6 +54,7 @@ const Tipografia = ({
     //Font-size
     titleXL: isTitleXL,
     titleLarge: isTitleLarge,
+    titleBig: isTitleBig,
     titleMedium: isTitleMedium,
     titleRegular: isTitleRegular,
     titleSmall: isTitleSmall,
