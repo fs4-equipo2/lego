@@ -15,6 +15,10 @@ import LinkSw from "../LinkSw/LinkSw";
 import axios from "axios";
 import Tipografia from "../Tipografia/Tipografia";
 import { useStoreActions, useStoreState } from "../../store";
+import { Modal } from "../Modal/Modal";
+import { LogInModal } from "../logInModal/logInModal";
+import { useModal } from "../../hooks/useModal";
+
 const Navbar = () => {
   const { setUser } = useStoreActions((actions) => actions.user);
   const { user } = useStoreState((state) => state.user);
@@ -35,6 +39,10 @@ const Navbar = () => {
       console.error(error.message);
     }
   };
+
+  // Prueba modal Login José
+  const [isOpenLogIn, openModalLogIn, closeModalLogIn] = useModal(false)
+
   return (
     <>
       <div className={styles.containerPre}>
@@ -58,10 +66,20 @@ const Navbar = () => {
             href=""
             icon={<IconoJoin />}
           />
+          <MixButton
+              isLogin={true}
+              label="Iniciar sesión (modal José)"
+              href=""
+              icon={<TbLego />}
+              onClick={openModalLogIn}
+            />
+            <Modal isOpen={isOpenLogIn} closeModal={closeModalLogIn}>
+              <LogInModal />
+            </Modal>
           {!user.isLoggedIn && (
             <MixButton
               isLogin={true}
-              label="Iniciar sesión"
+              label="Iniciar sesión (API)"
               href=""
               icon={<TbLego />}
               onClick={handleLoggin}
