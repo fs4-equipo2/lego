@@ -1,14 +1,57 @@
 .logInModalContainer {
-    padding: 50px;
+  margin: 2rem;
+  gap: 1rem;
 
-    button {
-        background-color: #006db7;
-        border-radius: 9999px;
-        padding: 8px 15px;
-    }
+  button {
+    background-color: #006db7;
+    border-radius: 9999px;
+    padding: 8px 15px;
+  }
+
+  .logInModalContainerBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 
     .logInModalContainerBodyTop > svg {
-        width: 45px;
-        height: 45px;
-      }
+      width: 45px;
+      height: 45px;
+    }
+
+    .logInModalContainerBodyBottom {
+        display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .logInModalContainerBodyBottomForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60vh;
+
+        .logInModalContainerBodyBottomFormBody {
+            display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        > button {
+            margin: 0 25%;
+            width: fit-content;
+        }
+
+        }
+
+    }
+
+    .logInModalContainerBodyBottomNewUser {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    }
+
+  }
 }

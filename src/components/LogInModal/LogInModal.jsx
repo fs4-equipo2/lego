@@ -59,7 +59,7 @@ export const LogInModal = () => {
                 isTitleBig
                 isBoldWeight
               />
-              <form onSubmit={onSubmitLogIn}>
+              <form className={styles.logInModalContainerBodyBottomFormBody} onSubmit={onSubmitLogIn}>
                 <div>
                   <label>
                     <Tipografia
@@ -122,9 +122,14 @@ export const LogInModal = () => {
               {!check.submit ? (
                 ""
               ) : check.error ? (
-                <h2>Datos inválidos ❌</h2>
+                <Tipografia
+                    color={"--red"}
+                    texto={"Tu nombre de usuario y/o contraseña no coinciden con nuestros registros."}
+                    isSubtitleRegular
+                    isMediumWeight
+                  />
               ) : (
-                <h2>Datos válidos ✅</h2>
+                ""
               )}
             </div>
             <div className={styles.logInModalContainerBodyBottomNewUser}>

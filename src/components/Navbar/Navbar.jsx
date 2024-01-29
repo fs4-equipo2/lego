@@ -25,22 +25,25 @@ const Navbar = () => {
 
   const { productos } = useStoreState((state) => state.carrito);
 
-  const handleLoggin = async () => {
-    try {
-      const response = await axios.get(
-        "https://random-data-api.com/api/users/random_user?size=1"
-      );
+  //Login ejemplo Manuel (usuario con API)
 
-      setUser({
-        isLoggedIn: true,
-        username: response.data[0].username,
-      });
-    } catch (error) {
-      console.error(error.message);
-    }
-  };
+  // const handleLoggin = async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       "https://random-data-api.com/api/users/random_user?size=1"
+  //     );
 
-  // Prueba modal Login José
+  //     setUser({
+  //       isLoggedIn: true,
+  //       username: response.data[0].username,
+  //     });
+  //   } catch (error) {
+  //     console.error(error.message);
+  //   }
+  // };
+
+  // Prueba modal Login José (verificando usuario ingresado y base de datos)
+
   const [isOpenLogIn, openModalLogIn, closeModalLogIn] = useModal(false)
 
   return (
@@ -76,7 +79,7 @@ const Navbar = () => {
             <Modal isOpen={user.isLoggedIn ? false : isOpenLogIn} closeModal={closeModalLogIn}>
               <LogInModal />
             </Modal>
-          {!user.isLoggedIn && (
+          {/* {!user.isLoggedIn && (
             <MixButton
               isLogin={true}
               label="Iniciar sesión (API)"
@@ -87,7 +90,7 @@ const Navbar = () => {
           )}
           {user.isLoggedIn && (
             <Tipografia texto={`Bienvenido ${user.username}`} />
-          )}
+          )} */}
         </div>
       </div>
 
