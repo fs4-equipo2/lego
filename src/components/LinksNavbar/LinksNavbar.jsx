@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import { FaChevronRight } from "react-icons/fa6";
 import { useOutsideAlerter } from "../../hooks/useOutsideAlerter";
 import Tipografia from "../Tipografia/Tipografia";
-import { SubMenuNavbar } from "../subMenuNavbar/SubMenuNavbar";
+import { SubMenuNavbar } from "../SubMenuNavbar/SubMenuNavbar";
 
 const LinksNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -90,43 +90,34 @@ const LinksNavbar = () => {
   });
 
   return (
-    <div ref={menuRef}>
-      {isMenuOpen && (
-        <div className={styles.menu}>
-          {isCompraVisible && (
-            <>
-              <div className={styles.compraClickeable}></div>
-              <div className={styles.compra}>
-              <SubMenuNavbar handleClicker={closeSubMenu} />
-            {/*   <div className={!isMenuOpen && <SubMenuNavbar handleClicker={closeSubMenu}  /> ? styles.subMenudos : styles.subMenuCompra}>
-                {subMenuCompra.map((item) => (
-                  <Tipografia
-                    key={item}
-                    color="--black"
-                    texto={item}
-                    isBodyXL
-                  />
-                ))}
-                </div> */}
-              </div>
-            </>
-          )}
+    <div>
+      <div ref={menuRef}>
+        {isMenuOpen && (
+          <div className={styles.menu}>
+            {isCompraVisible && (
+              <>
+                <div className={styles.compraClickeable}></div>
+                <div className={styles.compra}>
+                  <SubMenuNavbar handleClicker={closeSubMenu} />
+                </div>
+              </>
+            )}
 
-          {isDescubrirVisible && (
-            <>
-              <div className={styles.descubrirClickeable}>
+            {isDescubrirVisible && (
+              <>
+                <div className={styles.compraClickeable}>
+                  <div className={styles.compra}>
+                   <SubMenuNavbar handleClicker={closeSubMenu} />
+                  </div>
+                </div>
+              </>
+            )}
+
+            {/* AYUDA */}
+            {isAyudaVisible && (
+              <div className={styles.ayuda}>
                 <div></div>
-                {subMenuDescubrirClickeable.map((item) => (
-                  <Button
-                    key={item}
-                    isSubMenu
-                    texto={item}
-                    iconRight={<FaChevronRight />}
-                  />
-                ))}
-              </div>
-              <div className={styles.descubrir}>
-                {subMenuDescubrir.map((item) => (
+                {subMenuAyuda.map((item) => (
                   <Tipografia
                     key={item}
                     color="--black"
@@ -135,35 +126,26 @@ const LinksNavbar = () => {
                   />
                 ))}
               </div>
-            </>
-          )}
+            )}
+          </div>
+        )}
 
-          {isAyudaVisible && (
-            <div className={styles.ayuda}>
-              <div></div>
-              {subMenuAyuda.map((item) => (
-                <Tipografia key={item} color="--black" texto={item} isBodyXL />
-              ))}
-            </div>
-          )}
+        <div className={styles.links}>
+          <Button
+            isNavBar
+            texto="COMPRAR"
+            id="compra"
+            handleClick={handleClick}
+          />
+          <Button
+            isNavBar
+            texto="DESCUBRIR"
+            id="descubrir"
+            handleClick={handleClick}
+          />
+          <Button isNavBar texto="AYUDA" id="ayuda" handleClick={handleClick} />
+          <Button isBotonEspecial texto="NAVIDAD" />
         </div>
-      )}
-
-      <div className={styles.links}>
-        <Button
-          isNavBar
-          texto="COMPRAR"
-          id="compra"
-          handleClick={handleClick}
-        />
-        <Button
-          isNavBar
-          texto="DESCUBRIR"
-          id="descubrir"
-          handleClick={handleClick}
-        />
-        <Button isNavBar texto="AYUDA" id="ayuda" handleClick={handleClick} />
-        <Button isBotonEspecial texto="NAVIDAD" />
       </div>
     </div>
   );

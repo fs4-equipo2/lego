@@ -9,6 +9,7 @@ export function SubMenuNavbar({ handleClicker }) {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState(null);
   const [selectedItem, setSelectedItem] = useState(false);
+  const [isDescubrirVisible, setIsDescubrirVisible] = useState(false);
 
   const subMenuRef = useRef(null);
 
@@ -50,9 +51,8 @@ export function SubMenuNavbar({ handleClicker }) {
       "Star Wars",
       "Technic",
     ],
-    Edades: ["VER TODAS LAS EDADES", "1,5+", "4+", "6+", "9+", "13+", "18+"],
+    Edades: [ "1,5+", "4+", "6+", "9+", "13+", "18+"],
     Precios: [
-      "VER TODOS LOS RANGOS DE PRECIOS",
       "Menos de 20 €",
       "20 € - 50 €",
       "50 € - 100 €",
@@ -60,7 +60,6 @@ export function SubMenuNavbar({ handleClicker }) {
       "Más de 200 €",
     ],
     Articulos: [
-      "VER TODOS LOS ARTÍCULOS LEGO",
       "Accesorios",
       "Mochilas",
       "Libros",
@@ -75,7 +74,6 @@ export function SubMenuNavbar({ handleClicker }) {
       "Botellas de agua LEGO",
     ],
     Intereses: [
-      "VER TODOS LOS INTERESES",
       "Para fans adultos",
       "Animales",
       "Manualidades",
@@ -103,25 +101,33 @@ export function SubMenuNavbar({ handleClicker }) {
       "Vehículos",
     ],
     PickBuild: [
-      "PICK AND BUILD",
       "Pick a Brick",
       "Accesorios y kits de ladrillos",
     ],
   };
 
+  const subMenuDescubrirClick = { 
+    nuestrosValores: ["The LEGO Group", "Noticias LEGO", "Sostenibilidad"],
+    nuestrasApps: ["LEGO Builder", "App LEGO Life"],
+    nuestrasRevistas: ["Catálogos LEGO"], 
+};
+
   const handleClick = (subMenu) => {
     setIsSubMenuOpen(true);
     setActiveSubMenu(subMenu);
+    setIsDescubrirVisible(true)
   };
 
   const closeSubMenu = () => {
     setIsSubMenuOpen(false);
     setActiveSubMenu(null);
+    setIsDescubrirVisible(false)
   };
 
   useOutsideAlerter(subMenuRef, () => {
     setIsSubMenuOpen(false);
     closeSubMenu();
+
   });
 
   const subMenuCompra = [
@@ -134,6 +140,17 @@ export function SubMenuNavbar({ handleClicker }) {
     "Próximamente",
     "Encuentra la inspiración",
     "Última oportunidad para comprar",
+  ];
+
+  const subMenuDescubrir = [
+    "Todos los temas LEGO",
+    "Todos los intereses LEGO",
+    "Para fans adultos",
+    "Para familias",
+    "LEGO Fortnite",
+    "LEGO Insiders",
+    "LEGO Mosaic Maker",
+    "Ideas de regalos LEGO",
   ];
 
   return (
@@ -199,7 +216,82 @@ export function SubMenuNavbar({ handleClicker }) {
               />
             </div>
           )}
+      {/* EDADES */}
+      {isSubMenuOpen && activeSubMenu && (
+        <div className={styles.subMenu}>
+          {isSubMenuOpen && activeSubMenu === "Edades" && (
+            <div className={styles.titulo}>
+              <Button
+                texto={<h4>VER TODAS LAS EDADES</h4>}
+                handleClick={() => handleClick("Edades")}
+                isSubMenu
+              />
+            </div>
+          )}
 
+        </div>
+      )}
+            {/* PRECIOS */}
+            {isSubMenuOpen && activeSubMenu && (
+        <div className={styles.subMenu}>
+          {isSubMenuOpen && activeSubMenu === "Precios" && (
+            <div className={styles.titulo}>
+              <Button
+                texto={<h4>VER TODOS LOS RANGOS DE PRECIOS</h4>}
+                handleClick={() => handleClick("Precios")}
+                isSubMenu
+              />
+            </div>
+          )}
+
+        </div>
+      )}
+                {/* ARTICULOS */}
+                {isSubMenuOpen && activeSubMenu && (
+        <div className={styles.subMenu}>
+          {isSubMenuOpen && activeSubMenu === "Articulos" && (
+            <div className={styles.titulo}>
+              <Button
+                texto={<h4>VER TODOS LOS ARTÍCULOS LEGO</h4>}
+                handleClick={() => handleClick("Articulos")}
+                isSubMenu
+              />
+            </div>
+          )}
+
+        </div>
+      )}
+                    {/* INTERESES */}
+                    {isSubMenuOpen && activeSubMenu && (
+        <div className={styles.subMenu}>
+          {isSubMenuOpen && activeSubMenu === "Intereses" && (
+            <div className={styles.titulo}>
+              <Button
+                texto={<h4>VER TODOS LOS INTERESES</h4>}
+                handleClick={() => handleClick("Intereses")}
+                isSubMenu
+              />
+            </div>
+          )}
+
+        </div>
+      )}
+                         {/* PICK AND BUILD */}
+                         {isSubMenuOpen && activeSubMenu && (
+        <div className={styles.subMenu}>
+          {isSubMenuOpen && activeSubMenu === "PickBuild" && (
+            <div className={styles.titulo}>
+              <Button
+                texto={<h4>PICK AND BUILD</h4>}
+                handleClick={() => handleClick("PickBuild")}
+                isSubMenu
+              />
+            </div>
+          )}
+
+        </div>
+      )}
+            {/* Buttons */}
           <div className={styles.subCompra}>
             {subMenusCompraClick[activeSubMenu].map((item) => (
               <Button
@@ -215,6 +307,47 @@ export function SubMenuNavbar({ handleClicker }) {
           </div>
         </div>
       )}
+
+{/* DESCUBRIR MENU */}
+<div ref={subMenuRef}
+        className={
+          subMenuDescubrirClick[activeSubMenu] ? styles.subMenuContainer : "none"
+        }
+      >
+<div className={styles.descubrirButtons}>
+        {/* Botones principales */}
+        <Button
+          iconRight={<FaChevronRight />}
+          texto="Nuestros valores"
+          handleClick={() => handleClick("nuestrosValores")}
+          isSubMenu
+        />
+        <Button
+          iconRight={<FaChevronRight />}
+          texto="Nuestras apps"
+          handleClick={() => handleClick("nuestrasApps")}
+          isSubMenu
+        />
+        <Button
+          iconRight={<FaChevronRight />}
+          texto="Nuestras resvistas"
+          handleClick={() => handleClick("nuestrasRevistas")}
+          isSubMenu
+        />
+        </div>
+        <div className={styles.descubrir}>
+          {subMenuDescubrir &&
+            subMenuDescubrirClick[activeSubMenu]?.map((item) => (
+              <Tipografia
+                key={item}
+                color="--black"
+                texto={item}
+                isBodyXL
+              />
+            ))}
+        </div>
+
+    </div>
     </div>
   );
 }
