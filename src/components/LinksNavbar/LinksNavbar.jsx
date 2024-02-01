@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import { FaChevronRight } from "react-icons/fa6";
 import { useOutsideAlerter } from "../../hooks/useOutsideAlerter";
 import Tipografia from "../Tipografia/Tipografia";
-import { SubMenuNavbar } from "../SubMenuNavbar/SubMenuNavbar";
+import { SubMenuNavbar } from "../subMenuNavbar/SubMenuNavbar";
 
 const LinksNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

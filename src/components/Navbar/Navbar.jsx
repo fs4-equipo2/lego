@@ -16,7 +16,7 @@ import axios from "axios";
 import Tipografia from "../Tipografia/Tipografia";
 import { useStoreActions, useStoreState } from "../../store";
 import { Modal } from "../Modal/Modal";
-import { LogInModal } from "../logInModal/logInModal";
+import { LogInModal } from "../LogInModal/LogInModal";
 import { useModal } from "../../hooks/useModal";
 
 const Navbar = () => {
