@@ -7,6 +7,8 @@ import { usersListData } from "./UsersData.tsx";
 import { useStoreActions } from "../../store";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { HiOutlineUser } from "react-icons/hi2";
+import PasswordToggle from "../EyeIcon/EyeIcons.jsx";
 
 export const LogInModal = () => {
   const { setUser } = useStoreActions((actions) => actions.user);
@@ -34,7 +36,7 @@ export const LogInModal = () => {
     submit: false,
   });
 
-  const { formState, username, password, onInputChange } = useForm(initialForm);
+  const { formState, username, onInputChange } = useForm(initialForm);
 
   const notify = (error) => {
     if (error) {
@@ -100,14 +102,19 @@ export const LogInModal = () => {
                     isBoldWeight
                   />
                 </label>
-                <input
-                  id={styles.logInInput}
-                  type="text"
-                  placeholder="Nombre de usuario"
-                  value={username}
-                  name="username"
-                  onChange={onInputChange}
-                />
+                <div className={styles.inputWrap}>
+                  <input
+                    id={styles.logInInput}
+                    type="text"
+                    placeholder="Nombre de usuario"
+                    value={username}
+                    name="username"
+                    onChange={onInputChange}
+                  />
+                  <i id={styles.iconInput}>
+                    <HiOutlineUser />
+                  </i>
+                </div>
                 <a href="">
                   <Tipografia
                     color={"--blue"}
@@ -126,14 +133,9 @@ export const LogInModal = () => {
                     isBoldWeight
                   />
                 </label>
-                <input
-                  id={styles.logInInput}
-                  type="password"
-                  placeholder="contraseña"
-                  value={password}
-                  name="password"
-                  onChange={onInputChange}
-                />
+                <div className={styles.inputWrap}>
+                  <PasswordToggle />
+                </div>
                 <a href="">
                   <Tipografia
                     color={"--blue"}

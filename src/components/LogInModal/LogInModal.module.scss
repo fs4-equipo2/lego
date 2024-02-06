@@ -77,3 +77,16 @@
   padding: 10px;
   border-radius: 8px;
 }
+
+.inputWrap{
+  position: relative;
+}
+
+#iconInput{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+}
