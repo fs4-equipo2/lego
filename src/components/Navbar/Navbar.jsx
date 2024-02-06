@@ -16,9 +16,8 @@ import { useStoreActions, useStoreState } from "../../store";
 import { Modal } from "../Modal/Modal";
 import { LogInModal } from "../logInModal/logInModal";
 import { useModal } from "../../hooks/useModal";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useEffect } from "react";
 
 const Navbar = () => {
   const { user } = useStoreState((state) => state.user);
@@ -26,28 +25,6 @@ const Navbar = () => {
   const { productos } = useStoreState((state) => state.carrito);
 
   const [isOpenLogIn, openModalLogIn, closeModalLogIn] = useModal(false);
-
-  const notify = () => {
-    if (user.isLoggedIn) {
-      toast.success("Successful login!", {
-        position: "bottom-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-    } else {
-      ("");
-    }
-  };
-
-  useEffect(() => {
-    console.log(user.isLoggedIn);
-    notify();
-  }, [user.isLoggedIn]);
 
   return (
     <>
