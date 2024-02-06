@@ -6,48 +6,52 @@ import { FaChevronRight, FaRegHeart, FaShieldHeart } from "react-icons/fa6";
 import { SlMagnifier } from "react-icons/sl";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { FaArrowLeftLong } from "react-icons/fa6";
-import { LogInButton } from "../logInButton/logInButton";
 import { TbLego } from "react-icons/tb";
 import { MixButton } from "../MixButton/MixButton";
 import { IconoJoin } from "../MixButton/IconoJoin";
 import LinksNavbar from "../LinksNavbar/LinksNavbar";
 import LinkSw from "../LinkSw/LinkSw";
-import axios from "axios";
 import Tipografia from "../Tipografia/Tipografia";
 import { useStoreActions, useStoreState } from "../../store";
 import { Modal } from "../Modal/Modal";
 import { LogInModal } from "../logInModal/logInModal";
 import { useModal } from "../../hooks/useModal";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useEffect } from "react";
 
 const Navbar = () => {
-  const { setUser } = useStoreActions((actions) => actions.user);
   const { user } = useStoreState((state) => state.user);
-
+  const { setUser } = useStoreActions((actions) => actions.user);
   const { productos } = useStoreState((state) => state.carrito);
 
-  //Login ejemplo Manuel (usuario con API)
+  const [isOpenLogIn, openModalLogIn, closeModalLogIn] = useModal(false);
 
-  // const handleLoggin = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       "https://random-data-api.com/api/users/random_user?size=1"
-  //     );
+  const notify = () => {
+    if (user.isLoggedIn) {
+      toast.success("Successful login!", {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    } else {
+      ("");
+    }
+  };
 
-  //     setUser({
-  //       isLoggedIn: true,
-  //       username: response.data[0].username,
-  //     });
-  //   } catch (error) {
-  //     console.error(error.message);
-  //   }
-  // };
-
-  // Prueba modal Login José (verificando usuario ingresado y base de datos)
-
-  const [isOpenLogIn, openModalLogIn, closeModalLogIn] = useModal(false)
+  useEffect(() => {
+    console.log(user.isLoggedIn);
+    notify();
+  }, [user.isLoggedIn]);
 
   return (
     <>
+      <ToastContainer />
       <div className={styles.containerPre}>
         <Button
           texto={"ZONA DE JUEGOS"}
@@ -70,27 +74,18 @@ const Navbar = () => {
             icon={<IconoJoin />}
           />
           <MixButton
-              isLogin={true}
-              label={user.isLoggedIn ? `${user.username} 🟢` : "Iniciar sesión"}
-              href=""
-              icon={<TbLego />}
-              onClick={openModalLogIn}
-            />
-            <Modal isOpen={user.isLoggedIn ? false : isOpenLogIn} closeModal={closeModalLogIn}>
-              <LogInModal />
-            </Modal>
-          {/* {!user.isLoggedIn && (
-            <MixButton
-              isLogin={true}
-              label="Iniciar sesión (API)"
-              href=""
-              icon={<TbLego />}
-              onClick={handleLoggin}
-            />
-          )}
-          {user.isLoggedIn && (
-            <Tipografia texto={`Bienvenido ${user.username}`} />
-          )} */}
+            isLogin={true}
+            label={user.isLoggedIn ? `${user.username} 🟢` : "Iniciar sesión"}
+            href=""
+            icon={<TbLego />}
+            onClick={openModalLogIn}
+          />
+          <Modal
+            isOpen={user.isLoggedIn ? false : isOpenLogIn}
+            closeModal={closeModalLogIn}
+          >
+            <LogInModal />
+          </Modal>
         </div>
       </div>
 

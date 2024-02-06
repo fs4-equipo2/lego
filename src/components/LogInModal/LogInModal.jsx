@@ -5,6 +5,8 @@ import { LegoLogo } from "../Footer/LegoLogo";
 import { useForm } from "../../hooks/useForm";
 import { usersListData } from "./UsersData.tsx";
 import { useStoreActions } from "../../store";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const LogInModal = () => {
 
@@ -35,6 +37,21 @@ export const LogInModal = () => {
 
   const { formState, username, password, onInputChange } = useForm(initialForm);
 
+  const notify = (error) => {if(error){
+     (toast.error('Error', {
+    position: "bottom-right",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    }))}else{
+      ""
+    }
+    }
+
   const onSubmitLogIn = (event) => {
     event.preventDefault();
     setCheck({
@@ -42,10 +59,12 @@ export const LogInModal = () => {
       error: !checkLogin(usersListData, formState),
       submit: true,
     });
+    notify(!checkLogin(usersListData, formState));
   };
 
   return (
     <>
+     <ToastContainer />
       <div className={styles.logInModalContainer}>
         <div className={styles.logInModalContainerBody}>
           <div className={styles.logInModalContainerBodyTop}>
