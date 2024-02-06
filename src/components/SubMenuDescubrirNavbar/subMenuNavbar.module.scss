@@ -1,0 +1,36 @@
+.subMenuContainer{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.subMenu {
+  padding-bottom: 0px;
+  position: inherit;
+  background-color: transparent;
+  
+
+  button {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+
+.subDescubrir{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0px;
+  gap: 10px;
+  background-color: transparent;
+padding-left: 50px;
+}
+
+.descubrirButtons {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  gap: 20px;
+  
+}

@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
 import styles from "./LinksNavbar.module.scss";
 import Button from "../Button/Button";
-import { FaChevronRight } from "react-icons/fa6";
 import { useOutsideAlerter } from "../../hooks/useOutsideAlerter";
 import Tipografia from "../Tipografia/Tipografia";
-import { SubMenuNavbar } from "../subMenuNavbar/SubMenuNavbar";
+import { SubMenuCompraNavbar } from "../subMenuCompraNavbar/subMenuCompraNavbar";
+import { SubMenuDescubrirNavbar } from "../SubMenuDescubrirNavbar/SubMenuDescubrirNavbar";
 
 const LinksNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,35 +39,6 @@ const LinksNavbar = () => {
     }
   }
 
-  const subMenuCompra = [
-    "Exclusivos",
-    "Novedades",
-    "Los más vendidos",
-    "Decoración del hogar",
-    "Ofertas y rebajas",
-    "Tarjetas regalo",
-    "Próximamente",
-    "Encuentra la inspiración",
-    "Última oportunidad para comprar",
-  ];
-
-  const subMenuDescubrirClickeable = [
-    "Nuestros valores",
-    "Nuestras apps",
-    "Nuestras revistas",
-  ];
-
-  const subMenuDescubrir = [
-    "Todos los temas LEGO",
-    "Todos los intereses LEGO",
-    "Para fans adultos",
-    "Para familias",
-    "LEGO Fortnite",
-    "LEGO Insiders",
-    "LEGO Mosaic Maker",
-    "Ideas de regalos LEGO",
-  ];
-
   const subMenuAyuda = [
     "Comprobar el estado de un pedido",
     "Envíos y devoluciones",
@@ -98,16 +69,16 @@ const LinksNavbar = () => {
               <>
                 <div className={styles.compraClickeable}></div>
                 <div className={styles.compra}>
-                  <SubMenuNavbar handleClicker={closeSubMenu} />
+                  <SubMenuCompraNavbar handleClicker={closeSubMenu} />
                 </div>
               </>
             )}
 
             {isDescubrirVisible && (
               <>
-                <div className={styles.compraClickeable}>
-                  <div className={styles.compra}>
-                   <SubMenuNavbar handleClicker={closeSubMenu} />
+                <div className={styles.descubrirClickeable}>
+                  <div className={styles.descubrir}>
+                    <SubMenuDescubrirNavbar handleClicker={closeSubMenu} />
                   </div>
                 </div>
               </>
@@ -115,17 +86,20 @@ const LinksNavbar = () => {
 
             {/* AYUDA */}
             {isAyudaVisible && (
-              <div className={styles.ayuda}>
-                <div></div>
-                {subMenuAyuda.map((item) => (
-                  <Tipografia
-                    key={item}
-                    color="--black"
-                    texto={item}
-                    isBodyXL
-                  />
-                ))}
-              </div>
+              <>
+                <div className={styles.descubrirClickeable}>
+                  <div className={styles.ayuda}>
+                    {subMenuAyuda.map((item) => (
+                      <Tipografia
+                        key={item}
+                        color="--black"
+                        texto={item}
+                        isBodyXL
+                      />
+                    ))}
+                  </div>
+                </div>
+              </>
             )}
           </div>
         )}
