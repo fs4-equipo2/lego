@@ -28,7 +28,9 @@
     }
 
     .logInModalContainerBodyBottom {
+      width: 385px;
       display: flex;
+      align-items: center;
       flex-direction: column;
       gap: 1rem;
 
@@ -64,6 +66,7 @@
         padding-bottom: 5px;
         display: flex;
         flex-direction: column;
+        width: inherit;
         align-items: center;
         gap: 1rem;
         border-bottom: 6px solid darkgray;
