@@ -36,7 +36,7 @@ export const LogInModal = () => {
     submit: false,
   });
 
-  const { formState, username, onInputChange } = useForm(initialForm);
+  const { formState, username, password, onInputChange } = useForm(initialForm);
 
   const notify = (error) => {
     if (error) {
@@ -134,7 +134,7 @@ export const LogInModal = () => {
                   />
                 </label>
                 <div className={styles.inputWrap}>
-                  <PasswordToggle />
+                  <PasswordToggle onPassChange={onInputChange} password={password} />
                 </div>
                 <a href="">
                   <Tipografia
