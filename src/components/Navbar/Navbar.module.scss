@@ -30,6 +30,13 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
+
+  .utilityBar {
+    width: 0.0625rem;
+    height: 1.25rem;
+    background: rgb(117, 117, 117);
+  }
+
 }
 
 .containerLeft {

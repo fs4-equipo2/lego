@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Navbar.module.scss";
 import Logo from "../../assets/iconos/Logo";
 import Button from "../Button/Button";
-import { FaChevronRight, FaRegHeart, FaShieldHeart } from "react-icons/fa6";
+import { FaRegHeart } from "react-icons/fa6";
 import { SlMagnifier } from "react-icons/sl";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { FaArrowLeftLong } from "react-icons/fa6";
@@ -16,7 +16,7 @@ import { useStoreActions, useStoreState } from "../../store";
 import { Modal } from "../Modal/Modal";
 import { LogInModal } from "../LogInModal/LogInModal";
 import { useModal } from "../../hooks/useModal";
-import { ToastContainer} from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = () => {
@@ -50,6 +50,7 @@ const Navbar = () => {
             href=""
             icon={<IconoJoin />}
           />
+          <span className={styles.utilityBar}></span>
           <MixButton
             isLogin={true}
             label={user.isLoggedIn ? `${user.username} 🟢` : "Iniciar sesión"}

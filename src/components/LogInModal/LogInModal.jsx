@@ -134,7 +134,10 @@ export const LogInModal = () => {
                   />
                 </label>
                 <div className={styles.inputWrap}>
-                  <PasswordToggle onPassChange={onInputChange} password={password} />
+                  <PasswordToggle
+                    onPassChange={onInputChange}
+                    password={password}
+                  />
                 </div>
                 <a href="">
                   <Tipografia

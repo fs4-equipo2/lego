@@ -1,15 +1,14 @@
 import { useState } from "react";
 import { GoEyeClosed } from "react-icons/go";
 import { GoEye } from "react-icons/go";
-import styles from "../LogInModal/LogInModal.module.scss"
+import styles from "../LogInModal/LogInModal.module.scss";
 
 const EyeIcons = {
   open: <GoEye />,
   closed: <GoEyeClosed />,
 };
 
-const PasswordToggle = ({onPassChange, password}) => {
-
+const PasswordToggle = ({ onPassChange, password }) => {
   const [isEyeOpen, setIsEyeOpen] = useState(false);
 
   const togglePassword = () => {
@@ -26,7 +25,8 @@ const PasswordToggle = ({onPassChange, password}) => {
         name="password"
         onChange={onPassChange}
       />
-      <i id={styles.iconInput}
+      <i
+        id={styles.iconInput}
         className={`${isEyeOpen ? "open" : ""}`}
         onClick={togglePassword}
       >
