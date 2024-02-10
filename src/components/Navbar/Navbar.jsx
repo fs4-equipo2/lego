@@ -49,6 +49,7 @@ const Navbar = () => {
             href=""
             icon={<IconoJoin />}
           />
+          <span className={styles.utilityBar}></span>
           <MixButton
             isLogin={true}
             label={user.isLoggedIn ? `${user.username} 🟢` : "Iniciar sesión"}

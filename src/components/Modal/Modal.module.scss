@@ -1,34 +1,31 @@
 .modal {
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgba(0,0,0,0.55);
-    display: none;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.55);
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal.isOpen {
-    display: flex;
+  display: flex;
 }
 
 .modalContainer {
+  position: relative;
+  min-width: fit-content;
+  min-height: fit-content;
+  overflow-y: auto;
+  background: linear-gradient(#ced3d5, #b1c8d5);
+  padding: 1rem;
 
-    position: relative;
-    min-width: fit-content;
-    min-height: fit-content;
-    overflow-y: auto;
-    background-color: #fff;
-    padding: 1rem;
-
-    .logInModalContainerClose {
-        position: absolute;
-        background-color: white;
-        top: 1rem;
-        right: 1rem;
-    }
-
+  .logInModalContainerClose {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
 }
