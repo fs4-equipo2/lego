@@ -12,7 +12,7 @@ import { IconoJoin } from "../MixButton/IconoJoin";
 import LinksNavbar from "../LinksNavbar/LinksNavbar";
 import LinkSw from "../LinkSw/LinkSw";
 import Tipografia from "../Tipografia/Tipografia";
-import { useStoreActions, useStoreState } from "../../store";
+import { useStoreState } from "../../store";
 import { Modal } from "../Modal/Modal";
 import { LogInModal } from "../LogInModal/LogInModal";
 import { useModal } from "../../hooks/useModal";
@@ -21,7 +21,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = () => {
   const { user } = useStoreState((state) => state.user);
-  const { setUser } = useStoreActions((actions) => actions.user);
   const { productos } = useStoreState((state) => state.carrito);
 
   const [isOpenLogIn, openModalLogIn, closeModalLogIn] = useModal(false);
