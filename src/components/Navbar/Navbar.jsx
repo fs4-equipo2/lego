@@ -79,19 +79,19 @@ const Navbar = () => {
             <Button
               isBuscador={true}
               iconLeft={<SlMagnifier />}
-              handleClick={() => console.log("router.push(/login")}
+              handleClick={() => console.log("router.push(/buscar")}
             />
             {/* <input placeholder="Search" /> */}
             <Button
               isDeseos={true}
               iconLeft={<FaRegHeart />}
-              handleClick={() => console.log("router.push(/login")}
+              handleClick={() => console.log("router.push(/deseos")}
             />
             <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
               <Button
                 isBolsaCompra={true}
                 iconLeft={<MdOutlineShoppingBag />}
-                handleClick={() => console.log("router.push(/login")}
+                handleClick={() => console.log("router.push(/compra")}
               />
               <Tipografia texto={`(${productos.length})`} />
             </div>
