@@ -3,10 +3,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .blogContainer{
-    max-width: 100rem;
+    width: 100rem;
     display: flex;
     flex-direction: column;
 }
@@ -20,15 +21,3 @@
     align-items: center;
     justify-content: space-between;
 }
-.progressBar {
-    width: 90%;
-    height: 10px;
-    background-color: #ccc;
-    cursor: pointer;
-  }
-  
-  /* Estilos para el indicador de progreso */
-  .progress {
-    height: 100%;
-    background-color: gray;
-  }

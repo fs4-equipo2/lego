@@ -14,11 +14,6 @@ function App() {
       <Main />
       <Stickers />
       <BlogSelecciones />
-      
-    
-      <PracticaCarrusel />
-      <br></br>
-      <br></br>
       <Blog />
       <BlogSelecciones />
       <BlogRecomendados />
