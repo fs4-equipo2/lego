@@ -18,6 +18,7 @@ import { LogInModal } from "../LogInModal/LogInModal";
 import { useModal } from "../../hooks/useModal";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { user } = useStoreState((state) => state.user);
@@ -88,11 +89,13 @@ const Navbar = () => {
               handleClick={() => console.log("router.push(/deseos")}
             />
             <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-              <Button
-                isBolsaCompra={true}
-                iconLeft={<MdOutlineShoppingBag />}
-                handleClick={() => console.log("router.push(/compra")}
-              />
+              <Link to="/cart">
+                <Button
+                  isBolsaCompra={true}
+                  iconLeft={<MdOutlineShoppingBag />}
+                  handleClick={() => console.log("router.push(/compra")}
+                />
+              </Link>
               <Tipografia texto={`(${productos.length})`} />
             </div>
           </div>

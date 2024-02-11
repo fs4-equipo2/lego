@@ -1,0 +1,27 @@
+.cartPageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .bagIcon {
+        height: 1.375rem;
+        width: 1.375rem;
+        color: #0067b2;
+    }
+
+    .iniciarCompraLink {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #logInSubmitBtn {
+        background-color: #006db7;
+        border-radius: 9999px;
+        padding: 8px 15px;
+    }
+
+    svg {
+        height: 12px;
+    }
+}
