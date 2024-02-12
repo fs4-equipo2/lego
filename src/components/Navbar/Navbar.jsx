@@ -72,7 +72,6 @@ const Navbar = () => {
             <Logo />
             <div className={styles.buttonContainer}>
               <LinksNavbar />
-              {/*<SubMenuNavbar />*/}
             </div>
           </div>
           <div className={styles.containerRight}>
