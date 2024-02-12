@@ -1,27 +1,68 @@
-.cartPageContainer {
+.cartPageNoProductsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .bagIcon {
+    height: 1.375rem;
+    width: 1.375rem;
+    color: #0067b2;
+  }
+
+  .iniciarCompraLink {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+  }
 
-    .bagIcon {
-        height: 1.375rem;
-        width: 1.375rem;
-        color: #0067b2;
-    }
+  #logInSubmitBtn {
+    background-color: #006db7;
+    border-radius: 9999px;
+    padding: 8px 15px;
+  }
 
-    .iniciarCompraLink {
+  svg {
+    height: 12px;
+  }
+}
+
+.cartPageProductsContainer {
+  display: flex;
+  flex-direction: column;
+
+  .cartPageProductsResumen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .detallesProductosContainer {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
+        flex-direction: column;
+        gap: 1.5rem;
+      .cardsProductsCont {
+        display: flex;
+        flex-direction: column;
 
-    #logInSubmitBtn {
-        background-color: #006db7;
-        border-radius: 9999px;
-        padding: 8px 15px;
-    }
+        .cardsProductsList{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            .cardProductCont {
+                gap: 1rem;
+                display: flex;
+                flex-direction: row;
 
-    svg {
-        height: 12px;
+                .cardProductImg {
+                  width: 5rem;
+                }
+              }
+        }
+      }
+
+      .detallesPedidoContainer {
+        display: flex;
+        flex-direction: column;
+      }
     }
+  }
 }

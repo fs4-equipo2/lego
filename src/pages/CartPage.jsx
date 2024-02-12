@@ -6,10 +6,11 @@ import { LogInModal } from "../components/LogInModal/LogInModal";
 import Tipografia from "../components/Tipografia/Tipografia";
 import styles from "./CartPage.module.scss";
 import { useModal } from "../hooks/useModal";
+import { BlogRecomendados } from "../components/BlogRecomendados/BlogRecomendados";
 
 export const CartPage = () => {
   const { user } = useStoreState((state) => state.user);
-  const { productos } = useStoreState((state) => state.carrito);
+  const { productos, precioTotal } = useStoreState((state) => state.carrito);
 
   const [isOpenLogIn, openModalLogIn, closeModalLogIn] = useModal(false);
 
@@ -17,7 +18,7 @@ export const CartPage = () => {
     <>
       {productos.length === 0 && (
         <>
-          <div className={styles.cartPageContainer}>
+          <div className={styles.cartPageNoProductsContainer}>
             <MdOutlineShoppingBag className={styles.bagIcon} />
             <Tipografia
               color={"--grey-xtra"}
@@ -31,23 +32,24 @@ export const CartPage = () => {
               isBodyMedium
               isRegularWeight
             />
-            {!user.isLoggedIn &&
-            <>
-            <button id={styles.logInSubmitBtn} onClick={openModalLogIn}>
-              <Tipografia
-                color={"--white"}
-                texto={"Inicia sesión"}
-                isSubtitleRegular
-                isMediumWeight
-              />
-            </button>
-            <Modal
-              isOpen={user.isLoggedIn ? false : isOpenLogIn}
-              closeModal={closeModalLogIn}
-            >
-              <LogInModal />
-            </Modal>
-            </>}
+            {!user.isLoggedIn && (
+              <>
+                <button id={styles.logInSubmitBtn} onClick={openModalLogIn}>
+                  <Tipografia
+                    color={"--white"}
+                    texto={"Inicia sesión"}
+                    isSubtitleRegular
+                    isMediumWeight
+                  />
+                </button>
+                <Modal
+                  isOpen={user.isLoggedIn ? false : isOpenLogIn}
+                  closeModal={closeModalLogIn}
+                >
+                  <LogInModal />
+                </Modal>
+              </>
+            )}
             <Link to="/">
               <div className={styles.iniciarCompraLink}>
                 <Tipografia
@@ -71,7 +73,74 @@ export const CartPage = () => {
           </div>
         </>
       )}
-      {productos.length > 0 && <h3>Productos</h3>}
+      {productos.length > 0 && (
+        <>
+          <div className={styles.cartPageProductsContainer}>
+            <Tipografia
+              color={"--grey-xtra"}
+              texto={`Mi bolsa (${productos.length})`}
+              isSubtitleXL
+              isRegularWeight
+            />
+            <div className={styles.cartPageProductsResumen}>
+              <div className={styles.detallesProductosContainer}>
+                <Tipografia
+                  color={"--green"}
+                  texto={"Ya disponible"}
+                  isSubtitleRegular
+                  isBoldWeight
+                />
+                <div className={styles.cardsProductsCont}>
+                  <ul className={styles.cardsProductsList}>
+                    {productos.map((producto, index) => {
+                      return (
+                        <li key={index}>
+                          <div className={styles.cardProductCont}>
+                            <img className={styles.cardProductImg} src={producto.src} />
+                            <Tipografia
+                              color={"--grey-xtra"}
+                              texto={`${producto.title}`}
+                              subtitleXL
+                              isRegularWeight
+                            />
+                            <Tipografia
+                              color={"--grey-xtra"}
+                              texto={`${producto.content}€`}
+                              subtitleXL
+                              isRegularWeight
+                            />
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+              <div className={styles.detallesPedidoContainer}>
+                <Tipografia
+                  color={"--grey-xtra"}
+                  texto={"Resumen del pedido"}
+                  subtitleXL
+                  isRegularWeight
+                />
+                <Tipografia
+                  color={"--grey-xtra"}
+                  texto={"Importe total"}
+                  isSubtitleRegular
+                  isBoldWeight
+                />
+                <Tipografia
+                  color={"--grey-xtra"}
+                  texto={`${precioTotal}€`}
+                  isSubtitleRegular
+                  isBoldWeight
+                />
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+      <BlogRecomendados />
     </>
   );
 };
