@@ -1,68 +1,149 @@
-.cartPageNoProductsContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.cartPageContainer {
+  padding: 1rem;
 
-  .bagIcon {
-    height: 1.375rem;
-    width: 1.375rem;
-    color: #0067b2;
-  }
-
-  .iniciarCompraLink {
+  .cartPageNoProductsContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+
+    .bagIcon {
+      height: 1.375rem;
+      width: 1.375rem;
+      color: #0067b2;
+    }
+
+    .iniciarCompraLink {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    #logInSubmitBtn {
+      background-color: #006db7;
+      border-radius: 9999px;
+      padding: 8px 15px;
+    }
+
+    svg {
+      height: 12px;
+    }
   }
 
-  #logInSubmitBtn {
-    background-color: #006db7;
-    border-radius: 9999px;
-    padding: 8px 15px;
-  }
-
-  svg {
-    height: 12px;
-  }
-}
-
-.cartPageProductsContainer {
-  display: flex;
-  flex-direction: column;
-
-  .cartPageProductsResumen {
+  .cartPageProductsContainer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
 
-    .detallesProductosContainer {
+    .cartPageProductsResumen {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .detallesProductosContainer {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
-      .cardsProductsCont {
-        display: flex;
-        flex-direction: column;
+        width: 75%;
 
-        .cardsProductsList{
+        .cardsProductsCont {
+          display: flex;
+          flex-direction: column;
+
+          .cardsProductsList {
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
-            .cardProductCont {
-                gap: 1rem;
-                display: flex;
-                flex-direction: row;
 
-                .cardProductImg {
-                  width: 5rem;
+            .cardProductCont {
+              gap: 2rem;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+
+              .productImg {
+                width: 10rem;
+              }
+
+              .cardProductDetails {
+                display: flex;
+                flex-direction: column;
+                width: -webkit-fill-available;
+                gap: 5px;
+
+                .cardProductFirstRow {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  gap: 20px;
+
+                  #productDeleteBtn {
+                    width: 17px;
+                    height: 22px;
+                    color: #0067b2;
+                  }
+
+                }
+
+                .cardProductPrice {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: space-between;
+                  gap: 15px;
+
+                  .cardProductBtns {
+                    display: flex;
+                    flex-direction: row;
+
+                    #productCantidad {
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      border-bottom: thin solid rgb(224, 224, 224);
+                      border-top: thin solid rgb(224, 224, 224);
+                      height: 2.5rem;
+                      width: 4rem;
+                    }
+
+                    #productBtn {
+                      border: thin solid rgb(224, 224, 224);
+                      width: 2.5rem;
+                      height: 2.5rem;
+                    }
+                  }
+
+                  .cardProductDeseos {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 0.6rem;
+
+                    #productHeartBtn {
+                      height: 16px;
+                      width: 16px;
+                    }
+                  }
+
                 }
               }
+            }
+          }
         }
       }
+    }
 
-      .detallesPedidoContainer {
+    .detallesPedidoContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 20%;
+
+      .detallesPedidoImporte {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
       }
     }
+
   }
 }

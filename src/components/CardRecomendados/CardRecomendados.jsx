@@ -26,7 +26,7 @@ export function CardRecomendados({
       link,
       uid,
     });
-    calcularPrecioTotal(content);
+    calcularPrecioTotal();
   }
 
   function mostrarPrecioComa(precio){

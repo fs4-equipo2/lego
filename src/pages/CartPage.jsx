@@ -1,5 +1,7 @@
 import { MdOutlineShoppingBag } from "react-icons/md";
-import { useStoreState } from "../store";
+import { FaRegTrashCan } from "react-icons/fa6";
+import { FaRegHeart } from "react-icons/fa6";
+import { useStoreState, useStoreActions } from "../store";
 import { Link } from "react-router-dom";
 import { Modal } from "../components/Modal/Modal";
 import { LogInModal } from "../components/LogInModal/LogInModal";
@@ -12,10 +14,28 @@ export const CartPage = () => {
   const { user } = useStoreState((state) => state.user);
   const { productos, precioTotal } = useStoreState((state) => state.carrito);
 
+  const { deleteProducto, addProducto, removeProducto, calcularPrecioTotal } =
+    useStoreActions((actions) => actions.carrito);
+
   const [isOpenLogIn, openModalLogIn, closeModalLogIn] = useModal(false);
 
+  const handleDeleteProducto = (producto) => {
+    deleteProducto(producto);
+    calcularPrecioTotal();
+  };
+
+  const handleAddProducto = (producto) => {
+    addProducto(producto);
+    calcularPrecioTotal();
+  };
+
+  const handleRemoveProducto = (producto) => {
+    removeProducto(producto);
+    calcularPrecioTotal();
+  };
+
   return (
-    <>
+    <div className={styles.cartPageContainer}>
       {productos.length === 0 && (
         <>
           <div className={styles.cartPageNoProductsContainer}>
@@ -96,19 +116,78 @@ export const CartPage = () => {
                       return (
                         <li key={index}>
                           <div className={styles.cardProductCont}>
-                            <img className={styles.cardProductImg} src={producto.src} />
-                            <Tipografia
-                              color={"--grey-xtra"}
-                              texto={`${producto.title}`}
-                              subtitleXL
-                              isRegularWeight
+                            <img
+                              className={styles.productImg}
+                              src={producto.src}
                             />
-                            <Tipografia
-                              color={"--grey-xtra"}
-                              texto={`${producto.content}€`}
-                              subtitleXL
-                              isRegularWeight
-                            />
+                            <div className={styles.cardProductDetails}>
+                              <div className={styles.cardProductFirstRow}>
+                                <Tipografia
+                                  color={"--grey-xtra"}
+                                  texto={`${producto.title}`}
+                                  isBodyXL
+                                  isBoldWeight
+                                />
+                                <button
+                                  onClick={() => handleDeleteProducto(producto)}
+                                >
+                                  <FaRegTrashCan id={styles.productDeleteBtn} />
+                                </button>
+                              </div>
+                              <div className={styles.cardProductPrice}>
+                                <Tipografia
+                                  color={"--grey-xtra"}
+                                  texto={`${producto.content}€`}
+                                  isSubtitleRegular
+                                  isBoldWeight
+                                />
+
+                                <div className={styles.cardProductBtns}>
+                                  <button
+                                    onClick={() =>
+                                      handleRemoveProducto(producto)
+                                    }
+                                    id={styles.productBtn}
+                                  >
+                                    <Tipografia
+                                      color={"--grey-xtra"}
+                                      texto={"-"}
+                                      isTitleRegular
+                                      isRegularWeight
+                                    />
+                                  </button>
+                                  <div id={styles.productCantidad}>
+                                    <Tipografia
+                                      color={"--grey-xtra"}
+                                      texto={`${producto.cantidad}`}
+                                      isSubtitleXL
+                                      isRegularWeight
+                                    />
+                                  </div>
+                                  <button
+                                    onClick={() => handleAddProducto(producto)}
+                                    id={styles.productBtn}
+                                  >
+                                    <Tipografia
+                                      color={"--grey-xtra"}
+                                      texto={"+"}
+                                      isTitleRegular
+                                      isRegularWeight
+                                    />
+                                  </button>
+                                </div>
+
+                                <button className={styles.cardProductDeseos}>
+                                  <FaRegHeart id={styles.productHeartBtn} />
+                                  <Tipografia
+                                    color={"--grey-xtra"}
+                                    texto={"Añadir a la lista"}
+                                    isBodyRegular
+                                    isBigWeight
+                                  />
+                                </button>
+                              </div>
+                            </div>
                           </div>
                         </li>
                       );
@@ -117,30 +196,34 @@ export const CartPage = () => {
                 </div>
               </div>
               <div className={styles.detallesPedidoContainer}>
-                <Tipografia
-                  color={"--grey-xtra"}
-                  texto={"Resumen del pedido"}
-                  subtitleXL
-                  isRegularWeight
-                />
-                <Tipografia
-                  color={"--grey-xtra"}
-                  texto={"Importe total"}
-                  isSubtitleRegular
-                  isBoldWeight
-                />
-                <Tipografia
-                  color={"--grey-xtra"}
-                  texto={`${precioTotal}€`}
-                  isSubtitleRegular
-                  isBoldWeight
-                />
+                <div className={styles.detallesPedidoTitle}>
+                  <Tipografia
+                    color={"--grey-xtra"}
+                    texto={"Resumen del pedido"}
+                    subtitleXL
+                    isRegularWeight
+                  />
+                </div>
+                <div className={styles.detallesPedidoImporte}>
+                  <Tipografia
+                    color={"--grey-xtra"}
+                    texto={"Importe total:"}
+                    isSubtitleRegular
+                    isBoldWeight
+                  />
+                  <Tipografia
+                    color={"--grey-xtra"}
+                    texto={`${precioTotal}€`}
+                    isSubtitleXL
+                    isBoldWeight
+                  />
+                </div>
               </div>
             </div>
           </div>
         </>
       )}
       <BlogRecomendados />
-    </>
+    </div>
   );
 };
