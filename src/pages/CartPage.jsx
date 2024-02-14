@@ -1,5 +1,6 @@
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { FaRegTrashCan } from "react-icons/fa6";
+import { BsShieldCheck } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa6";
 import { useStoreState, useStoreActions } from "../store";
 import { Link } from "react-router-dom";
@@ -217,6 +218,19 @@ export const CartPage = () => {
                     isSubtitleXL
                     isBoldWeight
                   />
+                </div>
+                <div className={styles.btnPagoFinal}>
+                <Link to="/checkout">
+                    <button>
+                    <BsShieldCheck />
+                    <Tipografia
+                    color={"--grey-xtra"}
+                    texto={"Tramitar pago de forma segura"}
+                    isSubtitleXL
+                    isBoldWeight
+                  />
+                    </button>
+                </Link>
                 </div>
               </div>
             </div>

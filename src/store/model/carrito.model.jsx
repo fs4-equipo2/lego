@@ -32,7 +32,6 @@ export const CarritoModel = {
       return producto.content * producto.cantidad
     });
     const sumaTotal = preciosTotales.reduce((total, producto) => total + producto, 0);
-    console.log(sumaTotal);
     state.precioTotal = sumaTotal.toFixed(2);
   }),
 };
