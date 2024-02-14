@@ -2,6 +2,8 @@ import { useStoreState } from "../store";
 import styles from "./CheckoutPage.module.scss";
 import Tipografia from "../components/Tipografia/Tipografia";
 import { loadStripe } from "@stripe/stripe-js";
+import axios from "axios";
+import { useState } from "react";
 import {
   Elements,
   CardElement,
@@ -14,16 +16,40 @@ const stripePromise = loadStripe(
 );
 
 const CheckoutForm = () => {
+  const { precioTotal } = useStoreState((state) => state.carrito);
+
   const stripe = useStripe();
   const elements = useElements();
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.preventDefaul();
+    e.preventDefault();
 
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: "card",
       card: elements.getElement(CardElement),
     });
+    setLoading(true);
+
+    if (!error) {
+      console.log(paymentMethod);
+      const { id } = paymentMethod;
+      try {
+        const { data } = await axios.post(
+          "http://localhost:3001/api/checkout",
+          {
+            id,
+            amount: precioTotal*100, //cents
+          }
+        );
+        console.log(data);
+
+        elements.getElement(CardElement).clear();
+      } catch (error) {
+        console.log(error);
+      }
+      setLoading(false);
+    }
   };
 
   return (
@@ -32,10 +58,6 @@ const CheckoutForm = () => {
       <button>Buy</button>
     </form>
   );
-};
-
-const handleSubmit = (e) => {
-  e.preventDefault();
 };
 
 export const CheckoutPage = () => {
