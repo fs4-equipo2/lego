@@ -9,11 +9,6 @@ const app = express();
 app.use(cors({ origin: "http://localhost:5173" }));
 app.use(express.json());
 
-// app.post("/api/checkout", (req, res) => {
-//   console.log(req.body);
-//   res.send(`received`);
-// });
-
 app.post("/api/checkout", async (req, res) => {
   // you can get more data to find in a database, and so on
   const { id, amount } = req.body;
@@ -28,7 +23,7 @@ app.post("/api/checkout", async (req, res) => {
 
       automatic_payment_methods: {
         enabled: true,
-        allow_redirects: 'never',
+        allow_redirects: 'always',
       },
       return_url: "http://localhost:5173/payment",
 
@@ -42,6 +37,7 @@ app.post("/api/checkout", async (req, res) => {
     return res.json({ message: error.raw.message });
   }
 });
+
 
 app.listen(3001, () => {
   console.log("Server on port", 3001);

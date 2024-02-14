@@ -2,6 +2,6 @@
 
 export const PaymentResult = () => {
   return (
-    <div>Resulta de la compra</div>
+    <div>Resultado de la compra</div>
   )
 }

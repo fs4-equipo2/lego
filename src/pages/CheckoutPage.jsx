@@ -4,6 +4,7 @@ import Tipografia from "../components/Tipografia/Tipografia";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import {
   Elements,
   CardElement,
@@ -39,7 +40,7 @@ const CheckoutForm = () => {
           "http://localhost:3001/api/checkout",
           {
             id,
-            amount: precioTotal*100, //cents
+            amount: Math.trunc((precioTotal*100)), //cents
           }
         );
         console.log(data);
