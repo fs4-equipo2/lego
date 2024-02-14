@@ -4,7 +4,6 @@ import Tipografia from "../components/Tipografia/Tipografia";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
 import {
   Elements,
   CardElement,
