@@ -1,4 +1,4 @@
-import React, { useRef, useState} from 'react';
+import React, { useEffect, useRef, useState} from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -8,29 +8,48 @@ import { CardRecomendados } from '../CardRecomendados/CardRecomendados';
 
 
 const PracticaCarrusel = () => {
-    const sliderRef = useRef(null);
+    
     const [progressWidth, setProgressWidth] = useState(0);
-
-  // Función para manejar el clic en la barra de progreso
-    const handleProgressClick = () => {
-        const slidesToShow = sliderRef.current.props.slidesToShow;
-    if (sliderRef.current) {
-      sliderRef.current.slickPrev(); // Desplaza el carrusel una "card" a la derecha
-      const currentSlide = sliderRef.current.innerSlider.state.currentSlide; // Obtén el índice de la "card" actual
-      const totalSlides = sliderRef.current.props.children.length; // Obtén el número total de "cards"
-      const progressBarWidth = ((currentSlide + slidesToShow) / totalSlides) * 100; // Calcula el ancho de la barra de progreso
-      setProgressWidth(progressBarWidth); // Actualiza el estado del ancho de la barra de progreso
-    }
+    const sliderRef = useRef(null);
+  
+    // Calcula el progreso basado en el slide actual, el total de slides y los slides que se muestran
+    const calculateProgress = () => {
+      if (!sliderRef.current) return;
+  
+      const currentSlide = sliderRef.current.innerSlider.state.currentSlide;
+      const totalSlides = sliderRef.current.props.children.length;
+      const slidesToShow = sliderRef.current.props.slidesToShow;
+      // Asegúrate de que el cálculo evita divisiones por cero en casos extremos
+      const progress = totalSlides > slidesToShow ? ((currentSlide / (totalSlides - slidesToShow)) * 100).toFixed(2) : 100;
+  
+      setProgressWidth(progress);
     };
+  
+    useEffect(() => {
+      // Esto ajusta el progreso inicialmente al cargar.
+      calculateProgress();
+    }, []); // Dependencias vacías para que se ejecute solo una vez al montar el componente
 
-
+    const handleProgressBarClick = (event) => {
+        const progressBar = event.currentTarget; // Elemento de la barra de progreso
+        const clickX = event.clientX - progressBar.getBoundingClientRect().left; // Posición X del clic relativa al inicio de la barra
+        const progressBarWidth = progressBar.offsetWidth; // Ancho total de la barra de progreso
+        const clickPositionRatio = clickX / progressBarWidth; // Ratio de la posición del clic sobre el ancho total
+    
+        const totalSlides = sliderRef.current.props.children.length;
+        const slidesToShow = sliderRef.current.props.slidesToShow;
+        const slideToGo = Math.round(clickPositionRatio * (totalSlides - slidesToShow));
+    
+        sliderRef.current.slickGoTo(slideToGo); // Mueve el carrusel al slide calculado
+      };
+  
     const settings = {
-        dots: false,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        vertical: false
+      dots: false,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      afterChange: () => calculateProgress(),
     };
 
     return (
@@ -114,8 +133,8 @@ const PracticaCarrusel = () => {
                             /> 
                         </div>
                 </Slider>
-                <div className={styles.progressBar} onClick={handleProgressClick}>
-                    <div className={styles.progress} style={{ width: `${progressWidth}%` }}></div>
+                <div className={styles.progressBar} onClick={handleProgressBarClick}>
+                    <div className={styles.progress} style={{width: `${progressWidth}%`}}></div>
                 </div>
                 
             </div>
