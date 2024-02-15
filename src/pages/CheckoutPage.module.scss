@@ -1,0 +1,44 @@
+.checkoutPagePayContainer {
+  margin: 1rem;
+  padding: 1rem;
+  width: auto;
+
+  .checkoutPagePayForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 30%;
+
+    .checkoutPagePayInput {
+      padding: 0.5rem;
+      border: thin solid rgb(224, 224, 224);
+    }
+
+    .checkoutPagePayBtn {
+      background-color: #006db7;
+      border-radius: 9999px;
+      padding: 8px 15px;
+      align-self: center;
+    }
+  }
+}
+
+.checkoutPageProductsContainer {
+  margin: 1rem;
+  padding: 1rem;
+
+  .cardsProductsCont {
+    .cardsProductsList {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      .cardProductCont {
+        display: flex;
+        flex-direction: row;
+        .productImg {
+          width: 10rem;
+        }
+      }
+    }
+  }
+}

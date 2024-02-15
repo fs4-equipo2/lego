@@ -39,7 +39,7 @@ const CheckoutForm = () => {
           "http://localhost:3001/api/checkout",
           {
             id,
-            amount: Math.trunc((precioTotal*100)), //cents
+            amount: Math.trunc(precioTotal * 100), //cents
           }
         );
         console.log(data);
@@ -53,81 +53,93 @@ const CheckoutForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <CardElement />
-      <button>Buy</button>
+    <form onSubmit={handleSubmit} className={styles.checkoutPagePayForm}>
+      <label>Tarjeta de pago</label>
+      <CardElement className={styles.checkoutPagePayInput} />
+      <button disabled={loading} className={styles.checkoutPagePayBtn}>
+        <Tipografia
+          color={"--white"}
+          texto={"Confirmar pedido y efectuar pago"}
+          isSubtitleRegular
+          isMediumWeight
+        />
+      </button>
     </form>
   );
 };
 
 export const CheckoutPage = () => {
-  const { productos } = useStoreState((state) => state.carrito);
+  const { productos, precioTotal } = useStoreState((state) => state.carrito);
 
   return (
     <>
-      <div>
+      <div className={styles.checkoutPagePayContainer}>
         <Elements stripe={stripePromise}>
           <CheckoutForm />
         </Elements>
+        <div>
+          <Tipografia
+            color={"--grey-xtra"}
+            texto={`Total: ${precioTotal}€`}
+            isSubtitleXL
+            isRegularWeight
+          />
+        </div>
       </div>
       <div>
         {productos.length > 0 && (
           <>
-            <div className={styles.cartPageProductsContainer}>
+            <div className={styles.checkoutPageProductsContainer}>
               <Tipografia
                 color={"--grey-xtra"}
                 texto={`Mi bolsa (${productos.length})`}
                 isSubtitleXL
                 isRegularWeight
               />
-              <div className={styles.cartPageProductsResumen}>
-                <div className={styles.detallesProductosContainer}>
-                  <div className={styles.cardsProductsCont}>
-                    <ul className={styles.cardsProductsList}>
-                      {productos.map((producto, index) => {
-                        return (
-                          <li key={index}>
-                            <div className={styles.cardProductCont}>
-                              <img
-                                className={styles.productImg}
-                                src={producto.src}
+              <div className={styles.cardsProductsCont}>
+                <ul className={styles.cardsProductsList}>
+                  {productos.map((producto, index) => {
+                    return (
+                      <li key={index}>
+                        <div className={styles.cardProductCont}>
+                          <img
+                            className={styles.productImg}
+                            src={producto.src}
+                          />
+                          <div className={styles.cardProductDetails}>
+                            <div className={styles.cardProductFirstRow}>
+                              <Tipografia
+                                color={"--grey-xtra"}
+                                texto={`${producto.title}`}
+                                isBodyXL
+                                isBoldWeight
                               />
-                              <div className={styles.cardProductDetails}>
-                                <div className={styles.cardProductFirstRow}>
-                                  <Tipografia
-                                    color={"--grey-xtra"}
-                                    texto={`${producto.title}`}
-                                    isBodyXL
-                                    isBoldWeight
-                                  />
-                                </div>
-                                <div className={styles.cardProductPrice}>
-                                  <Tipografia
-                                    color={"--grey-xtra"}
-                                    texto={`${producto.content}€`}
-                                    isSubtitleRegular
-                                    isBoldWeight
-                                  />
+                            </div>
+                            <div className={styles.cardProductPrice}>
+                              <Tipografia
+                                color={"--grey-xtra"}
+                                texto={`${producto.content}€`}
+                                isSubtitleRegular
+                                isBoldWeight
+                              />
 
-                                  <div className={styles.cardProductBtns}>
-                                    <div id={styles.productCantidad}>
-                                      <Tipografia
-                                        color={"--grey-xtra"}
-                                        texto={`${producto.cantidad}`}
-                                        isSubtitleXL
-                                        isRegularWeight
-                                      />
-                                    </div>
-                                  </div>
+                              <div className={styles.cardProductBtns}>
+                                <div id={styles.productCantidad}>
+                                  <Tipografia
+                                    color={"--grey-xtra"}
+                                    texto={`${producto.cantidad}`}
+                                    isSubtitleXL
+                                    isRegularWeight
+                                  />
                                 </div>
                               </div>
                             </div>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
-                </div>
+                          </div>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
             </div>
           </>
