@@ -11,9 +11,8 @@ import {
   useElements,
 } from "@stripe/react-stripe-js";
 
-const stripePromise = loadStripe(
-  "pk_test_51OjIyELGvMNxGwCHxbnPhsfEdIYMbTZLoSuFH4zxBMxPJf0aiC2t3Xr6fq78PQAka6q9R0ME8cw1I0FTOv4kCi4n00lbQ3OXCk"
-);
+
+const stripePromise = loadStripe("pk_test_51OjIyELGvMNxGwCHxbnPhsfEdIYMbTZLoSuFH4zxBMxPJf0aiC2t3Xr6fq78PQAka6q9R0ME8cw1I0FTOv4kCi4n00lbQ3OXCk");
 
 const CheckoutForm = () => {
   const { precioTotal } = useStoreState((state) => state.carrito);
