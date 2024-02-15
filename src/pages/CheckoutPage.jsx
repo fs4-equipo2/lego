@@ -17,6 +17,7 @@ const stripePromise = loadStripe(
 
 const CheckoutForm = () => {
   const { precioTotal } = useStoreState((state) => state.carrito);
+  const { user } = useStoreState((state) => state.user);
 
   const stripe = useStripe();
   const elements = useElements();
@@ -32,7 +33,7 @@ const CheckoutForm = () => {
     setLoading(true);
 
     if (!error) {
-      console.log(paymentMethod);
+      console.log("Pay front:", paymentMethod);
       const { id } = paymentMethod;
       try {
         const { data } = await axios.post(
@@ -42,7 +43,15 @@ const CheckoutForm = () => {
             amount: Math.trunc(precioTotal * 100), //cents
           }
         );
-        console.log(data);
+        console.log("Data: ", data);
+
+        if (data.status === 200) {
+          // Redirigir al usuario a la página de pago
+          console.log("El status es 200");
+          window.location.href = "http://localhost:5173/payment";
+        } else {
+          console.log("Error en el pago");
+        }
 
         elements.getElement(CardElement).clear();
       } catch (error) {
@@ -70,6 +79,7 @@ const CheckoutForm = () => {
 
 export const CheckoutPage = () => {
   const { productos, precioTotal } = useStoreState((state) => state.carrito);
+  const { user } = useStoreState((state) => state.user);
 
   return (
     <>

@@ -1,6 +1,10 @@
+require("dotenv").config();
+
 const express = require("express");
 const Stripe = require("stripe");
-const stripe = new Stripe("sk_test_51OjIyELGvMNxGwCHh103wwAbfpquYb37J8bChffYfvn4TEnd6LjoGY6q73K8wtSMqkdrKk14IarSAn3nuZ33yRrV00ETrObTJj");
+// const stripe = new Stripe("sk_test_51OjIyELGvMNxGwCHh103wwAbfpquYb37J8bChffYfvn4TEnd6LjoGY6q73K8wtSMqkdrKk14IarSAn3nuZ33yRrV00ETrObTJj");
+const stripeKey = process.env.STRIPE_SECRET;
+const stripe = new Stripe(stripeKey);
 
 const cors = require("cors");
 
@@ -29,9 +33,12 @@ app.post("/api/checkout", async (req, res) => {
 
     });
 
-    console.log(payment);
+    console.log(payment.status);
 
-    return res.status(200).json({ message: "Successful Payment" });
+    const statusRespuesta = payment.status === "succeeded" ? 200 : "Error";
+
+    return res.status(200).json({ message: "Successful Payment", status: statusRespuesta });
+
   } catch (error) {
     console.log(error);
     return res.json({ message: error.raw.message });
