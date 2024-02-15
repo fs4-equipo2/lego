@@ -70,7 +70,9 @@ const Navbar = () => {
       <div className={styles.containerPadreNav}>
         <div className={styles.containerNav}>
           <div className={styles.containerLeft}>
+          <Link to="/">
             <Logo />
+          </Link>
             <div className={styles.buttonContainer}>
               <LinksNavbar />
               {/*<SubMenuNavbar />*/}
