@@ -111,7 +111,7 @@ export const LogInModal = () => {
                     name="username"
                     onChange={onInputChange}
                   />
-                  <i id={styles.iconInput}>
+                  <i id={styles.iconInputUsername}>
                     <HiOutlineUser />
                   </i>
                 </div>

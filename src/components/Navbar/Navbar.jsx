@@ -95,7 +95,6 @@ const Navbar = () => {
                 <Button
                   isBolsaCompra={true}
                   iconLeft={<MdOutlineShoppingBag />}
-                  handleClick={() => console.log("router.push(/compra")}
                 />
               </Link>
               <Tipografia texto={`(${productos.length})`} />
