@@ -126,45 +126,45 @@ const BlogRecomendados = () => {
                         </div>
                         <div>
                             <CardRecomendados
-                            src="https://www.lego.com/cdn/cs/set/assets/bltc6d87e5e7bacb3ae/21333.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=2"
-                            title="Vincent van Gogh: La Noche Estrellada"
-                            content="169,99€"
+                            src="https://www.lego.com/cdn/cs/set/assets/blteb14e8c6c9e027df/40524.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1"
+                            title="Girasoles"
+                            content="14,99€"
                             button="Añadir a la bolsa"
                             link="link"
                             /> 
                         </div>
                         <div>
                             <CardRecomendados
-                            src="https://www.lego.com/cdn/cs/set/assets/bltc6d87e5e7bacb3ae/21333.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=2"
-                            title="Vincent van Gogh: La Noche Estrellada"
-                            content="169,99€"
+                            src="https://www.lego.com/cdn/cs/set/assets/blte32d946cf23b2e5c/21342.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1"
+                            title="Colección de insectos"
+                            content="79,99€"
                             button="Añadir a la bolsa"
                             link="link"
                             /> 
                         </div>
                         <div>
                             <CardRecomendados
-                            src="https://www.lego.com/cdn/cs/set/assets/bltc6d87e5e7bacb3ae/21333.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=2"
-                            title="Vincent van Gogh: La Noche Estrellada"
-                            content="169,99€"
+                            src="https://www.lego.com/cdn/cs/set/assets/bltf876ca701fbacd4a/40725.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1"
+                            title="Flores de Cerezo"
+                            content="14,99€"
                             button="Añadir a la bolsa"
                             link="link"
                             /> 
                         </div>
                         <div>
                             <CardRecomendados
-                            src="https://www.lego.com/cdn/cs/set/assets/bltc6d87e5e7bacb3ae/21333.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=2"
-                            title="Vincent van Gogh: La Noche Estrellada"
-                            content="169,99€"
+                            src="https://www.lego.com/cdn/cs/set/assets/blt88bd1fb644a30a73/76282.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1"
+                            title="Rocket y Bebé Groot"
+                            content="59,99€"
                             button="Añadir a la bolsa"
                             link="link"
                             /> 
                         </div>
                         <div>
                             <CardRecomendados
-                            src="https://www.lego.com/cdn/cs/set/assets/bltc6d87e5e7bacb3ae/21333.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=2"
-                            title="Vincent van Gogh: La Noche Estrellada"
-                            content="169,99€"
+                            src="https://www.lego.com/cdn/cs/set/assets/blt08ba1f2bb5e8f2fb/10326.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1"
+                            title="Museo de Historia Natural"
+                            content="299,99€"
                             button="Añadir a la bolsa"
                             link="link"
                             /> 
