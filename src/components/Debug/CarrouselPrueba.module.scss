@@ -1,0 +1,17 @@
+.barra-cards {
+    width: 100%;
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+  }
+  
+  .cards {
+    display: flex; /* Flexbox para alinear las cards horizontalmente */
+  }
+  
+  .card {
+    flex: 0 0 auto; /* Evita que las cards se expandan y mantienen su tamaño original */
+    width: 200px; /* Ancho de cada card */
+    height: 150px; /* Altura de cada card */
+    margin-right: 10px; /* Margen derecho entre las cards */
+    background-color: #f0f0f0; /* Color de fondo de las cards (puedes personalizarlo) */
+  }
+  
