@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Navbar.module.scss";
 import Logo from "../../assets/iconos/Logo";
 import Button from "../Button/Button";
-import { FaChevronRight, FaRegHeart, FaShieldHeart } from "react-icons/fa6";
+import { FaRegHeart } from "react-icons/fa6";
 import { SlMagnifier } from "react-icons/sl";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { FaArrowLeftLong } from "react-icons/fa6";
@@ -12,42 +12,18 @@ import { IconoJoin } from "../MixButton/IconoJoin";
 import LinksNavbar from "../LinksNavbar/LinksNavbar";
 import LinkSw from "../LinkSw/LinkSw";
 import Tipografia from "../Tipografia/Tipografia";
-import { useStoreActions, useStoreState } from "../../store";
+import { useStoreState } from "../../store";
 import { Modal } from "../Modal/Modal";
-import { LogInModal } from "../logInModal/logInModal";
+import { LogInModal } from "../LogInModal/LogInModal";
 import { useModal } from "../../hooks/useModal";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useEffect } from "react";
 
 const Navbar = () => {
   const { user } = useStoreState((state) => state.user);
-  const { setUser } = useStoreActions((actions) => actions.user);
   const { productos } = useStoreState((state) => state.carrito);
 
   const [isOpenLogIn, openModalLogIn, closeModalLogIn] = useModal(false);
-
-  const notify = () => {
-    if (user.isLoggedIn) {
-      toast.success("Successful login!", {
-        position: "bottom-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-    } else {
-      ("");
-    }
-  };
-
-  useEffect(() => {
-    console.log(user.isLoggedIn);
-    notify();
-  }, [user.isLoggedIn]);
 
   return (
     <>
@@ -73,6 +49,7 @@ const Navbar = () => {
             href=""
             icon={<IconoJoin />}
           />
+          <span className={styles.utilityBar}></span>
           <MixButton
             isLogin={true}
             label={user.isLoggedIn ? `${user.username} 🟢` : "Iniciar sesión"}

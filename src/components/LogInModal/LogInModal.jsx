@@ -5,12 +5,13 @@ import { LegoLogo } from "../Footer/LegoLogo";
 import { useForm } from "../../hooks/useForm";
 import { usersListData } from "./UsersData.tsx";
 import { useStoreActions } from "../../store";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { HiOutlineUser } from "react-icons/hi2";
+import PasswordToggle from "../EyeIcon/EyeIcons.jsx";
 
 export const LogInModal = () => {
-
-  const { setUser } = useStoreActions((actions) => actions.user)
+  const { setUser } = useStoreActions((actions) => actions.user);
 
   const checkLogin = (lista, currentUser) => {
     const result = lista.filter((user) => {
@@ -19,7 +20,7 @@ export const LogInModal = () => {
     if (result.length === 0 || result.length > 1) {
       return false;
     } else {
-      setUser({username: result[0].username, isLoggedIn: true});
+      setUser({ username: result[0].username, isLoggedIn: true });
       return true;
     }
   };
@@ -37,20 +38,31 @@ export const LogInModal = () => {
 
   const { formState, username, password, onInputChange } = useForm(initialForm);
 
-  const notify = (error) => {if(error){
-     (toast.error('Error', {
-    position: "bottom-right",
-    autoClose: 3000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "light",
-    }))}else{
-      ""
+  const notify = (error) => {
+    if (error) {
+      toast.error("Error", {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    } else {
+      toast.success("Successful login!", {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
-    }
+  };
 
   const onSubmitLogIn = (event) => {
     event.preventDefault();
@@ -64,93 +76,102 @@ export const LogInModal = () => {
 
   return (
     <>
-     <ToastContainer />
+      <ToastContainer />
       <div className={styles.logInModalContainer}>
         <div className={styles.logInModalContainerBody}>
           <div className={styles.logInModalContainerBodyTop}>
             <LegoLogo />
+            <Tipografia
+              color={"--grey-xtra"}
+              texto={"Inicia sesión"}
+              isTitleBig
+              isBoldWeight
+            />
           </div>
           <div className={styles.logInModalContainerBodyBottom}>
-            <div className={styles.logInModalContainerBodyBottomForm}>
-              <Tipografia
-                color={"--grey-xtra"}
-                texto={"Inicia sesión"}
-                isTitleBig
-                isBoldWeight
-              />
-              <form className={styles.logInModalContainerBodyBottomFormBody} onSubmit={onSubmitLogIn}>
-                <div>
-                  <label>
-                    <Tipografia
-                      color={"--grey-xtra"}
-                      texto={"Nombre de usuario"}
-                      isSubtitleRegular
-                      isBoldWeight
-                    />
-                  </label>
+            <form
+              className={styles.logInModalContainerBodyBottomFormBody}
+              onSubmit={onSubmitLogIn}
+            >
+              <div>
+                <label>
+                  <Tipografia
+                    color={"--grey-xtra"}
+                    texto={"Nombre de usuario"}
+                    isSubtitleRegular
+                    isBoldWeight
+                  />
+                </label>
+                <div className={styles.inputWrap}>
                   <input
+                    id={styles.logInInput}
                     type="text"
                     placeholder="Nombre de usuario"
                     value={username}
                     name="username"
                     onChange={onInputChange}
                   />
-                  <a href="">
-                    <Tipografia
-                      color={"--blue"}
-                      texto={"¿Olvidaste el nombre de usuario?"}
-                      isSubtitleRegular
-                      isBoldWeight
-                    />
-                  </a>
+                  <i id={styles.iconInput}>
+                    <HiOutlineUser />
+                  </i>
                 </div>
-                <div>
-                  <label>
-                    <Tipografia
-                      color={"--grey-xtra"}
-                      texto={"Contraseña"}
-                      isSubtitleRegular
-                      isBoldWeight
-                    />
-                  </label>
-                  <input
-                    type="password"
-                    placeholder="contraseña"
-                    value={password}
-                    name="password"
-                    onChange={onInputChange}
-                  />
-                  <a href="">
-                    <Tipografia
-                      color={"--blue"}
-                      texto={"¿Olvidaste la contraseña?"}
-                      isSubtitleRegular
-                      isBoldWeight
-                    />
-                  </a>
-                </div>
-                <button type="submit">
+                <a href="">
                   <Tipografia
-                    color={"--white"}
-                    texto={"Inicia sesión"}
+                    color={"--blue"}
+                    texto={"¿Olvidaste el nombre de usuario?"}
                     isSubtitleRegular
-                    isMediumWeight
+                    isBoldWeight
                   />
-                </button>
-              </form>
-              {!check.submit ? (
-                ""
-              ) : check.error ? (
+                </a>
+              </div>
+              <div>
+                <label>
+                  <Tipografia
+                    color={"--grey-xtra"}
+                    texto={"Contraseña"}
+                    isSubtitleRegular
+                    isBoldWeight
+                  />
+                </label>
+                <div className={styles.inputWrap}>
+                  <PasswordToggle
+                    onPassChange={onInputChange}
+                    password={password}
+                  />
+                </div>
+                <a href="">
+                  <Tipografia
+                    color={"--blue"}
+                    texto={"¿Olvidaste la contraseña?"}
+                    isSubtitleRegular
+                    isBoldWeight
+                  />
+                </a>
+              </div>
+              <button id={styles.logInSubmitBtn} type="submit">
                 <Tipografia
-                    color={"--red"}
-                    texto={"Tu nombre de usuario y/o contraseña no coinciden con nuestros registros."}
-                    isSubtitleRegular
-                    isMediumWeight
-                  />
-              ) : (
-                ""
-              )}
-            </div>
+                  color={"--white"}
+                  texto={"Inicia sesión"}
+                  isSubtitleRegular
+                  isMediumWeight
+                />
+              </button>
+            </form>
+            {!check.submit ? (
+              ""
+            ) : check.error ? (
+              <Tipografia
+                color={"--red"}
+                texto={
+                  "Tu nombre de usuario y/o contraseña no coinciden con nuestros registros."
+                }
+                isSubtitleRegular
+                isMediumWeight
+              />
+            ) : (
+              ""
+            )}
+
             <div className={styles.logInModalContainerBodyBottomNewUser}>
               <Tipografia
                 color={"--grey-xtra"}
