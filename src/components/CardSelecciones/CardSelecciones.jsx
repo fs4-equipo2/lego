@@ -9,7 +9,7 @@ export function CardSelecciones({ src, title, content, button, link, iconButton 
         <img src={src} className={styles.image} />
       </div>
       <div className={styles.cardText}>
-      <Tipografia texto={title} isTitleMedium />
+      <Tipografia texto={title} isTitleMedium isBoldWeight/>
       <Tipografia texto={content} isBodyMedium />
       </div>
 
