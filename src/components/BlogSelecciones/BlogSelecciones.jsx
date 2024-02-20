@@ -27,6 +27,7 @@ export function BlogSelecciones({}){
       {
         breakpoint: 390,
         settings: {
+            draggable: true,
             slidesToShow: 1,
         },
     }
