@@ -18,7 +18,7 @@ export function BlogSelecciones({}){
       {
         breakpoint: 768,
         settings: {
-          dots: true,
+          dots: false,
           draggable: true,
           arrows: true,
           slidesToShow: 2,
@@ -61,8 +61,6 @@ export function BlogSelecciones({}){
                         button="A la tienda"
                         iconButton={<FaChevronRight />}
                       />
-                      
-                      
                       </Slider>
                       </div>
                   </div>
