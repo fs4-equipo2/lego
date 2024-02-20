@@ -26,8 +26,8 @@ const Footer = () => {
         <div className={styles.Container}>
           <div className={styles.firstColumn}>
             <div className={styles.LegoIcon}>
-            <Link to="/">
-              <LegoLogo />
+              <Link to="/">
+                <LegoLogo />
               </Link>
             </div>
             <div>

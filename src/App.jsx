@@ -3,7 +3,7 @@ import Footer from "./components/Footer/Footer";
 import { Routes, Route } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
 import { CartPage } from "./pages/CartPage";
-import { CheckoutPageFinal } from "./pages/CheckoutPageFinal";
+import { CheckoutPage } from "./pages/CheckoutPage";
 import { PaymentResultCancel } from "./pages/PaymentResultCancel";
 import { PaymentResultOK } from "./pages/PaymentResultOK";
 
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/cart" element={<CartPage />} />
-        <Route path="/checkout" element={<CheckoutPageFinal />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/payment-cancel" element={<PaymentResultCancel />} />
         <Route path="/payment-ok" element={<PaymentResultOK />} />
       </Routes>

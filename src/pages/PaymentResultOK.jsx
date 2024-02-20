@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Tipografia from "../components/Tipografia/Tipografia";
 import { useStoreState, useStoreActions } from "../store";
 import styles from "./PaymentResult.module.scss";
@@ -16,7 +17,7 @@ export const PaymentResultOK = () => {
   };
 
   return (
-    <>
+    <div className={styles.payGeneral}>
       <div className={styles.payResultCont}>
         <Tipografia
           texto="¡Tu compra ha sido exitosa!"
@@ -31,6 +32,18 @@ export const PaymentResultOK = () => {
           alt="Lego icon happy"
         />
       </div>
-    </>
+      <div>
+        <button className={styles.checkoutPagePayBtn}>
+          <Link to="/">
+            <Tipografia
+              color={"--white"}
+              texto={"Volver a la página principal"}
+              isSubtitleRegular
+              isMediumWeight
+            />
+          </Link>
+        </button>
+      </div>
+    </div>
   );
 };

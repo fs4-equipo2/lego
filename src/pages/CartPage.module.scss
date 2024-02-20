@@ -1,10 +1,15 @@
 .cartPageContainer {
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0;
+  margin: 0 auto;
+  max-width: 82.5rem;
+
 
   .cartPageNoProductsContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0.5rem;
+    margin: 6.25rem;
 
     .bagIcon {
       height: 1.375rem;
@@ -27,11 +32,16 @@
     svg {
       height: 12px;
     }
+
+    a {
+      margin: 0.5rem;
+    }
   }
 
   .cartPageProductsContainer {
     display: flex;
     flex-direction: column;
+    margin:1rem 0.5rem;
 
     .cartPageProductsResumen {
       display: flex;
@@ -42,7 +52,7 @@
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
-        width: 75%;
+        width: 60%;
 
         .cardsProductsCont {
           display: flex;
@@ -135,8 +145,35 @@
     .detallesPedidoContainer {
       display: flex;
       flex-direction: column;
-      gap: 5px;
-      width: 20%;
+      gap: 10px;
+      width: 35%;
+      justify-content: center;
+      
+      .btnPagoFinal {
+        display: flex;
+        flex-direction: row;
+        gap:10px;
+        align-items: center;
+        justify-content: center;
+        border: solid 1px black;
+        border-radius: 62rem;
+        position: relative;
+        padding: 0 2rem;
+        flex-grow: 1;
+        background-color: rgba(235,113,20,255);
+      }
+
+      svg {
+        padding:5px 0;
+        left: 48%;
+
+      }
+
+      .pago {
+
+        left: 10%;
+      }
+
 
       .detallesPedidoImporte {
         display: flex;

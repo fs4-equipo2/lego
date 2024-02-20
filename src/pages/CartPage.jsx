@@ -101,7 +101,7 @@ export const CartPage = () => {
               color={"--grey-xtra"}
               texto={`Mi bolsa (${productos.length})`}
               isSubtitleXL
-              isRegularWeight
+              isBoldWeight
             />
             <div className={styles.cartPageProductsResumen}>
               <div className={styles.detallesProductosContainer}>
@@ -127,7 +127,7 @@ export const CartPage = () => {
                                   color={"--grey-xtra"}
                                   texto={`${producto.title}`}
                                   isBodyXL
-                                  isBoldWeight
+                                  isMediumWeight
                                 />
                                 <button
                                   onClick={() => handleDeleteProducto(producto)}
@@ -219,17 +219,17 @@ export const CartPage = () => {
                     isBoldWeight
                   />
                 </div>
-                <div className={styles.btnPagoFinal}>
+                <div>
                 <Link to="/checkout">
-                    <button>
-                    <BsShieldCheck />
-                    <Tipografia
-                    color={"--grey-xtra"}
-                    texto={"Tramitar pago de forma segura"}
-                    isSubtitleXL
-                    isBoldWeight
-                  />
-                    </button>
+                  <div className={styles.btnPagoFinal}>
+                      <BsShieldCheck />
+                        <Tipografia
+                        color={"--grey-xtra"}
+                        texto={"Tramitar pago de forma segura"}
+                        isSubtitleXL
+                        isBoldWeight
+                    />
+                  </div>    
                 </Link>
                 </div>
               </div>
@@ -237,7 +237,7 @@ export const CartPage = () => {
           </div>
         </>
       )}
-      <BlogRecomendados />
+      {/* <BlogRecomendados /> */}
     </div>
   );
 };

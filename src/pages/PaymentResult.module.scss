@@ -1,4 +1,10 @@
-.payResultCont {
+.payGeneral {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .payResultCont {
     margin: 5rem;
     display: flex;
     flex-direction: row;
@@ -7,7 +13,17 @@
     gap: 5rem;
 
     .payResultImg {
-        width: 10rem;
-        height: auto;
+      width: 10rem;
+      height: auto;
     }
+  }
+
+  .checkoutPagePayBtn {
+    background-color: #006db7;
+    border-radius: 9999px;
+    margin-bottom: 1.75rem;
+    padding: 8px 15px;
+    align-self: center;
+    justify-self: center;
+  }
 }
