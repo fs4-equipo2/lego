@@ -7,6 +7,7 @@ import { Stickers } from "./components/Stickers/Stickers";
 import { WelcomeMessage } from "./components/WelcomeMessage/WelcomeMessage";
 import Main from "./components/Main/Main";
 import PracticaCarrusel from "./components/BlogRecomendados/PracticaCarrusel";
+
 function App() {
   return (
     <>

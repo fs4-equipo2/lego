@@ -2,11 +2,11 @@
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
 }
 
 .blogContainer{
-    max-width: 100rem;
+    width: 100rem;
     display: flex;
     flex-direction: column;
 }
@@ -32,3 +32,21 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.55);
   }
+
+  @media (max-width: 768px){
+    .blogContainer{
+        width: 100%;
+    }
+    .blogCards {
+        .slick-slide {
+          width: 100%;
+        }
+        .slick-list {
+          margin: 0 auto;
+        }
+        .slick-track {
+          display: flex;
+        }
+      }
+  }
+  

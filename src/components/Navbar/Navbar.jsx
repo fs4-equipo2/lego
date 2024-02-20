@@ -14,11 +14,11 @@ import LinkSw from "../LinkSw/LinkSw";
 import Tipografia from "../Tipografia/Tipografia";
 import { useStoreActions, useStoreState } from "../../store";
 import { Modal } from "../Modal/Modal";
-import { LogInModal } from "../logInModal/logInModal";
 import { useModal } from "../../hooks/useModal";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
+import { LogInModal } from "../LogInModal/LogInModal";
 
 const Navbar = () => {
   const { user } = useStoreState((state) => state.user);

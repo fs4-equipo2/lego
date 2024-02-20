@@ -4,20 +4,22 @@
     flex-direction: column;
     align-items: center;
 }
-
 .blogContainer{
-    max-width: 100rem;
+    width: 100rem;
     background-color: rgb(37, 129, 128);
     display: flex;
     flex-direction: column;
+
 }
 .titleBlog{
     margin: 15px;
+    margin-left: 180px;
     color: var(--white);
 }
 .blogCards{
+    width: 80%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-self: center;
     justify-content: space-between;
 }

@@ -43,12 +43,50 @@ const PracticaCarrusel = () => {
         sliderRef.current.slickGoTo(slideToGo); // Mueve el carrusel al slide calculado
       };
   
+
+      function SampleNextArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+          <div
+            className={className}
+            style={{ ...style, display: "block", background: "black" }}
+            onClick={onClick}
+          />
+        );
+      }
+      function SamplePrevArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+          <div
+            className={className}
+            style={{ ...style, display: "block", background: "black" }}
+            onClick={onClick}
+          />
+        );
+      }
+
     const settings = {
       dots: false,
       infinite: false,
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 1,
+      responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            },
+        },
+        {
+            breakpoint: 390,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            },
+        }
+      ],
       afterChange: () => calculateProgress(),
     };
 
