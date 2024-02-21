@@ -18,6 +18,7 @@ import { LogInModal } from "../LogInModal/LogInModal";
 import { useModal } from "../../hooks/useModal";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { user } = useStoreState((state) => state.user);
@@ -69,7 +70,9 @@ const Navbar = () => {
       <div className={styles.containerPadreNav}>
         <div className={styles.containerNav}>
           <div className={styles.containerLeft}>
+          <Link to="/">
             <Logo />
+          </Link>
             <div className={styles.buttonContainer}>
               <LinksNavbar />
               {/*<SubMenuNavbar />*/}
@@ -79,20 +82,21 @@ const Navbar = () => {
             <Button
               isBuscador={true}
               iconLeft={<SlMagnifier />}
-              handleClick={() => console.log("router.push(/login")}
+              handleClick={() => console.log("router.push(/buscar")}
             />
             {/* <input placeholder="Search" /> */}
             <Button
               isDeseos={true}
               iconLeft={<FaRegHeart />}
-              handleClick={() => console.log("router.push(/login")}
+              handleClick={() => console.log("router.push(/deseos")}
             />
             <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-              <Button
-                isBolsaCompra={true}
-                iconLeft={<MdOutlineShoppingBag />}
-                handleClick={() => console.log("router.push(/login")}
-              />
+              <Link to="/cart">
+                <Button
+                  isBolsaCompra={true}
+                  iconLeft={<MdOutlineShoppingBag />}
+                />
+              </Link>
               <Tipografia texto={`(${productos.length})`} />
             </div>
           </div>

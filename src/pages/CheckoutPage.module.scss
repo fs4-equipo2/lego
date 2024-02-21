@@ -1,0 +1,77 @@
+.checkoutPageGeneral {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 82.5rem;
+  background-color: #f8f8f8;
+
+  .checkoutPageProductsContainer {
+    margin: 1rem 1rem 1rem 0;
+    padding: 1rem 1rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .cardsProductsCont {
+      padding: 0.625rem;
+      background-color: white;
+
+      .cardsProductsList {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .cardProductCont {
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+          .productImg {
+            width: 10rem;
+          }
+        }
+      }
+    }
+  }
+
+  .checkoutPagePayContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    width: auto;
+
+    .checkoutPagePayBtn {
+      background-color: #006db7;
+      border-radius: 9999px;
+      padding: 8px 15px;
+      align-self: center;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .checkoutPageGeneral {
+    display: flex;
+    flex-direction: column;
+
+    .checkoutPagePayContainer {
+      display: flex;
+      align-items: center;
+
+      > button {
+        width: fit-content;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .productImg {
+    width: 7rem;
+    height: auto;
+  }
+}
+
+@media (max-width: 900px) {
+}
