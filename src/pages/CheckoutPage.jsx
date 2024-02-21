@@ -85,14 +85,12 @@ export const CheckoutPage = () => {
         )}
       </div>
       <div className={styles.checkoutPagePayContainer}>
-        <div>
           <Tipografia
             color={"--grey-xtra"}
             texto={`Total: ${precioTotal}€`}
             isSubtitleXL
             isBoldWeight
           />
-        </div>
         <button onClick={handleFinalPayment} className={styles.checkoutPagePayBtn}>
         <Tipografia
           color={"--white"}

@@ -69,6 +69,7 @@
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
+            overflow: hidden;
 
             .cardProductCont {
               gap: 2rem;
@@ -160,6 +161,13 @@
         border-bottom: 1px solid rgb(224, 224, 224);
       }
 
+      .detallesPedidoImporte {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.9375rem 1.25rem;
+      }
+
       .btnPagoFinal {
         display: flex;
         flex-direction: row;
@@ -182,18 +190,13 @@
       .pago {
         left: 10%;
       }
-
-      .detallesPedidoImporte {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-      }
     }
   }
 }
 
 @media (max-width: 1200px) {
   .cartPageProductsContainer {
+
     .cartPageProductsResumen {
       margin: 0 auto;
       display: flex;
@@ -202,7 +205,21 @@
       width: 100%;
 
       .detallesProductosContainer {
-        width: 100%;
+        width: 100%!important;
+
+        .productImg {
+          width: 8rem!important;
+        }
+
+        .cardProductFirstRow {
+          justify-content: start!important;
+          width: auto;
+
+          > p {
+            width: 12rem;
+          }
+
+        }
 
         .cardProductDeseos {
           visibility: hidden;
@@ -211,6 +228,11 @@
 
       .detallesPedidoContainer {
         width: 100%;
+
+        .btnPagoFinal {
+          width: 50%;
+          margin: 0 auto;
+        }
       }
     }
   }
