@@ -90,7 +90,7 @@ export const CheckoutPage = () => {
             color={"--grey-xtra"}
             texto={`Total: ${precioTotal}€`}
             isSubtitleXL
-            isRegularWeight
+            isBoldWeight
           />
         </div>
         <button onClick={handleFinalPayment} className={styles.checkoutPagePayBtn}>

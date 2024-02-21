@@ -4,6 +4,7 @@
   justify-content: space-between;
   margin: 0 auto;
   max-width: 82.5rem;
+  background-color: #f8f8f8;
 
    .checkoutPageProductsContainer {
     margin: 1rem 1rem 1rem 0;
@@ -13,6 +14,9 @@
     gap: 1rem;
 
     .cardsProductsCont {
+      padding: 0.625rem;
+      background-color: white;
+
       .cardsProductsList {
         display: flex;
         flex-direction: column;
@@ -45,4 +49,12 @@
         align-self: center;
       }
     }
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 900px) {
+
 }

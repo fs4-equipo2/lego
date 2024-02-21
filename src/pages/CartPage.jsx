@@ -100,17 +100,19 @@ export const CartPage = () => {
             <Tipografia
               color={"--grey-xtra"}
               texto={`Mi bolsa (${productos.length})`}
-              isSubtitleXL
-              isBoldWeight
+              isTitleMediumPlus
+              isMediumWeight
             />
             <div className={styles.cartPageProductsResumen}>
               <div className={styles.detallesProductosContainer}>
-                <Tipografia
-                  color={"--green"}
-                  texto={"Ya disponible"}
-                  isSubtitleRegular
-                  isBoldWeight
-                />
+                <div className={styles.detallesProductosTitle}>
+                  <Tipografia
+                    color={"--green"}
+                    texto={"Ya disponible"}
+                    isSubtitleRegular
+                    isBoldWeight
+                  />
+                </div>
                 <div className={styles.cardsProductsCont}>
                   <ul className={styles.cardsProductsList}>
                     {productos.map((producto, index) => {
@@ -202,7 +204,7 @@ export const CartPage = () => {
                     color={"--grey-xtra"}
                     texto={"Resumen del pedido"}
                     subtitleXL
-                    isRegularWeight
+                    isBoldWeight
                   />
                 </div>
                 <div className={styles.detallesPedidoImporte}>
@@ -220,24 +222,24 @@ export const CartPage = () => {
                   />
                 </div>
                 <div>
-                <Link to="/checkout">
-                  <div className={styles.btnPagoFinal}>
+                  <Link to="/checkout">
+                    <div className={styles.btnPagoFinal}>
                       <BsShieldCheck />
-                        <Tipografia
+                      <Tipografia
                         color={"--grey-xtra"}
                         texto={"Tramitar pago de forma segura"}
                         isSubtitleXL
                         isBoldWeight
-                    />
-                  </div>    
-                </Link>
+                      />
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </>
       )}
-      {/* <BlogRecomendados /> */}
+      <BlogRecomendados />
     </div>
   );
 };

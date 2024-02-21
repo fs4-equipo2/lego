@@ -2,7 +2,7 @@
   padding: 1rem 1rem 1rem 0;
   margin: 0 auto;
   max-width: 82.5rem;
-
+  background-color: #f8f8f8;
 
   .cartPageNoProductsContainer {
     display: flex;
@@ -41,18 +41,25 @@
   .cartPageProductsContainer {
     display: flex;
     flex-direction: column;
-    margin:1rem 0.5rem;
+    margin: 1rem 0.5rem;
 
     .cartPageProductsResumen {
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
+      gap: 1.25rem;
 
       .detallesProductosContainer {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
         width: 60%;
+        padding: 0.625rem;
+        background-color: white;
+
+        .detallesProductosTitle {
+          padding: 0.9375rem 1.25rem;
+          border-bottom: 1px solid rgb(224, 224, 224);
+        }
 
         .cardsProductsCont {
           display: flex;
@@ -91,7 +98,6 @@
                     height: 22px;
                     color: #0067b2;
                   }
-
                 }
 
                 .cardProductPrice {
@@ -133,7 +139,6 @@
                       width: 16px;
                     }
                   }
-
                 }
               }
             }
@@ -147,12 +152,18 @@
       flex-direction: column;
       gap: 10px;
       width: 35%;
-      justify-content: center;
-      
+      background-color: white;
+      padding: 0.625rem;
+
+      .detallesPedidoTitle {
+        padding: 0.9375rem 1.25rem;
+        border-bottom: 1px solid rgb(224, 224, 224);
+      }
+
       .btnPagoFinal {
         display: flex;
         flex-direction: row;
-        gap:10px;
+        gap: 10px;
         align-items: center;
         justify-content: center;
         border: solid 1px black;
@@ -160,20 +171,17 @@
         position: relative;
         padding: 0 2rem;
         flex-grow: 1;
-        background-color: rgba(235,113,20,255);
+        background-color: rgba(235, 113, 20, 255);
       }
 
       svg {
-        padding:5px 0;
+        padding: 5px 0;
         left: 48%;
-
       }
 
       .pago {
-
         left: 10%;
       }
-
 
       .detallesPedidoImporte {
         display: flex;
@@ -181,6 +189,32 @@
         justify-content: space-between;
       }
     }
-
   }
+}
+
+@media (max-width: 1200px) {
+  .cartPageProductsContainer {
+    .cartPageProductsResumen {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+
+      .detallesProductosContainer {
+        width: 100%;
+
+        .cardProductDeseos {
+          visibility: hidden;
+        }
+      }
+
+      .detallesPedidoContainer {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
 }
