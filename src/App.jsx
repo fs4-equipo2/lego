@@ -7,6 +7,12 @@ import { CheckoutPage } from "./pages/CheckoutPage";
 import { PaymentResultCancel } from "./pages/PaymentResultCancel";
 import { PaymentResultOK } from "./pages/PaymentResultOK";
 
+import { Blog } from "./components/Blog/Blog";
+import { BlogSelecciones } from "./components/BlogSelecciones/BlogSelecciones";
+import { Stickers } from "./components/Stickers/Stickers";
+import { WelcomeMessage } from "./components/WelcomeMessage/WelcomeMessage";
+import Main from "./components/Main/Main";
+import BlogRecomendados from "./components/BlogRecomendados/BlogRecomendados";
 function App() {
   return (
     <>

@@ -1,0 +1,14 @@
+.blog{ 
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+
+}
+
+.blogContainer{
+    background-color: aqua;
+    display: flex;
+    align-self: center;
+    max-width: 80rem;
+    flex: 1;
+}
