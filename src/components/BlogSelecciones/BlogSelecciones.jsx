@@ -16,6 +16,15 @@ export function BlogSelecciones({}){
     arrows: false,
     responsive: [
       {
+        breakpoint: 900,
+        settings: {
+          dots: false,
+          draggable: true,
+          arrows: true,
+          slidesToShow: 2,
+        }
+      }, 
+      {
         breakpoint: 768,
         settings: {
           dots: false,

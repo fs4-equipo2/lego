@@ -73,6 +73,24 @@ const BlogRecomendados = () => {
       slidesToScroll: 1,
       responsive: [
         {
+          breakpoint: 1200,
+          settings: {
+            dots: false,
+            draggable: true,
+            arrows: true,
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 900,
+          settings: {
+            dots: false,
+            draggable: true,
+            arrows: true,
+            slidesToShow: 2,
+          }
+        },
+        {
             breakpoint: 768,
             settings: {
                 slidesToShow: 2,
