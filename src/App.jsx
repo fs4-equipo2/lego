@@ -6,6 +6,7 @@ import { Stickers } from "./components/Stickers/Stickers";
 import { WelcomeMessage } from "./components/WelcomeMessage/WelcomeMessage";
 import Main from "./components/Main/Main";
 import BlogRecomendados from "./components/BlogRecomendados/BlogRecomendados";
+import { CardPopulares } from "./components/CardPopulares/CardPopulares";
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
       <Main />
       <Stickers />
       <BlogSelecciones />
+      <BlogRecomendados />
       <Blog />
       <BlogSelecciones />
       <BlogRecomendados />
