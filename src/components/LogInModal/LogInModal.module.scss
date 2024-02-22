@@ -14,44 +14,82 @@
     align-items: center;
     gap: 1rem;
 
+    .logInModalContainerBodyTop {
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
     .logInModalContainerBodyTop > svg {
       width: 45px;
       height: 45px;
     }
 
     .logInModalContainerBodyBottom {
-        display: flex;
-    flex-direction: column;
-    gap: 1rem;
+      width: auto;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 1rem;
 
-    .logInModalContainerBodyBottomForm {
+      .logInModalContainerBodyBottomFormBody {
+        background-color: white;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 60vh;
-
-        .logInModalContainerBodyBottomFormBody {
-            display: flex;
         flex-direction: column;
         gap: 1rem;
+        padding-bottom: 5px;
+        width: 60vh;
+        border-bottom: 6px solid darkgray;
 
         > button {
-            margin: 0 25%;
-            width: fit-content;
+          margin: 0 25%;
+          width: fit-content;
         }
 
+        #logInInput {
+          width: calc(100%);
+          height: 3rem;
+          box-sizing: border-box;
+          padding: 0.8rem 1rem;
+          border: 2px solid #646464;
+          border-radius: 8px;
         }
+        #logInSubmitBtn {
+          align-self: center;
+        }
+      }
 
-    }
-
-    .logInModalContainerBodyBottomNewUser {
+      .logInModalContainerBodyBottomNewUser {
+        background-color: white;
+        padding-bottom: 5px;
         display: flex;
         flex-direction: column;
+        width: 60vh;
         align-items: center;
         gap: 1rem;
+        border-bottom: 6px solid darkgray;
+      }
     }
-
-    }
-
   }
+}
+
+.logInModalContainerBodyBottomFormBody,
+.logInModalContainerBodyBottomNewUser {
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.inputWrap {
+  position: relative;
+}
+
+#iconInputUsername, #iconInputPass {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
 }

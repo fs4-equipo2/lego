@@ -7,7 +7,7 @@ import styles from "./CardRecomendados.module.scss";
 export function CardRecomendados({
   src,
   title,
-  price,
+  content,
   button,
   link,
   handleClick,
@@ -21,13 +21,18 @@ export function CardRecomendados({
     addProducto({
       src,
       title,
-      price,
+      content,
       button,
       link,
       uid,
     });
-    calcularPrecioTotal(price);
+    calcularPrecioTotal();
   }
+
+  function mostrarPrecioComa(precio){
+    return `${Math.floor(precio)},${(precio - Math.floor(precio)).toFixed(2)*100}€`
+  }
+
   return (
     <div className={styles.cardContainer}>
       <div className={styles.imageContainer}>
@@ -36,10 +41,10 @@ export function CardRecomendados({
       <div className={styles.cardTitle}>
       <a href={link}>
       <Tipografia texto={title} isBody isRegularWeight />
-      <Tipografia texto={price} isBodyLarge isBoldWeight />
+      <Tipografia texto={mostrarPrecioComa(content)} isBodyLarge isBoldWeight />
 
       </a>
-      </div>      
+      </div>
       <IconoEstrellas/>
 
       {button && (

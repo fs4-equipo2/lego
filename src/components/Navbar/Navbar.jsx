@@ -2,52 +2,33 @@ import React from "react";
 import styles from "./Navbar.module.scss";
 import Logo from "../../assets/iconos/Logo";
 import Button from "../Button/Button";
-import { FaChevronRight, FaRegHeart, FaShieldHeart } from "react-icons/fa6";
+import { FaRegHeart } from "react-icons/fa6";
 import { SlMagnifier } from "react-icons/sl";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { FaArrowLeftLong } from "react-icons/fa6";
-import { LogInButton } from "../logInButton/logInButton";
 import { TbLego } from "react-icons/tb";
 import { MixButton } from "../MixButton/MixButton";
 import { IconoJoin } from "../MixButton/IconoJoin";
 import LinksNavbar from "../LinksNavbar/LinksNavbar";
 import LinkSw from "../LinkSw/LinkSw";
-import axios from "axios";
 import Tipografia from "../Tipografia/Tipografia";
-import { useStoreActions, useStoreState } from "../../store";
+import { useStoreState } from "../../store";
 import { Modal } from "../Modal/Modal";
 import { LogInModal } from "../LogInModal/LogInModal";
 import { useModal } from "../../hooks/useModal";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const { setUser } = useStoreActions((actions) => actions.user);
   const { user } = useStoreState((state) => state.user);
-
   const { productos } = useStoreState((state) => state.carrito);
 
-  //Login ejemplo Manuel (usuario con API)
-
-  // const handleLoggin = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       "https://random-data-api.com/api/users/random_user?size=1"
-  //     );
-
-  //     setUser({
-  //       isLoggedIn: true,
-  //       username: response.data[0].username,
-  //     });
-  //   } catch (error) {
-  //     console.error(error.message);
-  //   }
-  // };
-
-  // Prueba modal Login José (verificando usuario ingresado y base de datos)
-
-  const [isOpenLogIn, openModalLogIn, closeModalLogIn] = useModal(false)
+  const [isOpenLogIn, openModalLogIn, closeModalLogIn] = useModal(false);
 
   return (
     <>
+      <ToastContainer />
       <div className={styles.containerPre}>
         <Button
           texto={"ZONA DE JUEGOS"}
@@ -69,35 +50,29 @@ const Navbar = () => {
             href=""
             icon={<IconoJoin />}
           />
+          <span className={styles.utilityBar}></span>
           <MixButton
-              isLogin={true}
-              label={user.isLoggedIn ? `${user.username} 🟢` : "Iniciar sesión"}
-              href=""
-              icon={<TbLego />}
-              onClick={openModalLogIn}
-            />
-            <Modal isOpen={user.isLoggedIn ? false : isOpenLogIn} closeModal={closeModalLogIn}>
-              <LogInModal />
-            </Modal>
-          {/* {!user.isLoggedIn && (
-            <MixButton
-              isLogin={true}
-              label="Iniciar sesión (API)"
-              href=""
-              icon={<TbLego />}
-              onClick={handleLoggin}
-            />
-          )}
-          {user.isLoggedIn && (
-            <Tipografia texto={`Bienvenido ${user.username}`} />
-          )} */}
+            isLogin={true}
+            label={user.isLoggedIn ? `${user.username} 🟢` : "Iniciar sesión"}
+            href=""
+            icon={<TbLego />}
+            onClick={openModalLogIn}
+          />
+          <Modal
+            isOpen={user.isLoggedIn ? false : isOpenLogIn}
+            closeModal={closeModalLogIn}
+          >
+            <LogInModal />
+          </Modal>
         </div>
       </div>
 
       <div className={styles.containerPadreNav}>
         <div className={styles.containerNav}>
           <div className={styles.containerLeft}>
+          <Link to="/">
             <Logo />
+          </Link>
             <div className={styles.buttonContainer}>
               <LinksNavbar />
               {/*<SubMenuNavbar />*/}
@@ -107,20 +82,21 @@ const Navbar = () => {
             <Button
               isBuscador={true}
               iconLeft={<SlMagnifier />}
-              handleClick={() => console.log("router.push(/login")}
+              handleClick={() => console.log("router.push(/buscar")}
             />
             {/* <input placeholder="Search" /> */}
             <Button
               isDeseos={true}
               iconLeft={<FaRegHeart />}
-              handleClick={() => console.log("router.push(/login")}
+              handleClick={() => console.log("router.push(/deseos")}
             />
             <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-              <Button
-                isBolsaCompra={true}
-                iconLeft={<MdOutlineShoppingBag />}
-                handleClick={() => console.log("router.push(/login")}
-              />
+              <Link to="/cart">
+                <Button
+                  isBolsaCompra={true}
+                  iconLeft={<MdOutlineShoppingBag />}
+                />
+              </Link>
               <Tipografia texto={`(${productos.length})`} />
             </div>
           </div>

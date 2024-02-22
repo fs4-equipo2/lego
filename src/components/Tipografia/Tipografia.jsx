@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
  * @param {string} color - Color del Texto tomado de las variables globales
  * @param {string} texto - Texto personalizado a renderizar
  * @param {boolean} isTitleXL - Texto usado en títulos de secciones
- * @param {boolean} isTitleLarge - Texto usado en los títulos generales de las secciones con Cards 
+ * @param {boolean} isTitleLarge - Texto usado en los títulos generales de las secciones con Cards
  * @param {boolean} isTitleMedium - Texto usado en los títulos de las Cards
  * @param {boolean} isTitleRegular - Texto usado en el cuerpo de las secciones
  * @param {boolean} isTitleSmall - Texto usado en el título de los Stickers
@@ -21,7 +21,7 @@ const cx = classNames.bind(styles);
  * @param {boolean} isBodyMedium - Texto usado en los subtítulos de las cards
  * @param {boolean} isBodyRegular - Texto usado en botones prenavbar
  * @param {boolean} isBodySmall - Texto usado en los avisos de las cards junto a las imágenes
- * @param {boolean} isRegularWeight - Texto normal 
+ * @param {boolean} isRegularWeight - Texto normal
  * @param {boolean} isMediumWeight - Texto en negrita (font-weight: 500)
  * @param {boolean} isBoldWeight - Texto en negrita (font-weight: 700)
  * @returns
@@ -34,6 +34,7 @@ const Tipografia = ({
   isTitleXL,
   isTitleLarge,
   isTitleBig,
+  isTitleMediumPlus,
   isTitleMedium,
   isTitleRegular,
   isTitleSmall,
@@ -48,6 +49,7 @@ const Tipografia = ({
   //Font-weight
   isRegularWeight,
   isMediumWeight,
+  isBigWeight,
   isBoldWeight,
 }) => {
   const classNames = cx({
@@ -55,6 +57,7 @@ const Tipografia = ({
     titleXL: isTitleXL,
     titleLarge: isTitleLarge,
     titleBig: isTitleBig,
+    titleMediumPlus: isTitleMediumPlus,
     titleMedium: isTitleMedium,
     titleRegular: isTitleRegular,
     titleSmall: isTitleSmall,
@@ -69,6 +72,7 @@ const Tipografia = ({
     //Font-weight
     regularWeight: isRegularWeight,
     mediumWeight: isMediumWeight,
+    bigWeight: isBigWeight,
     boldWeight: isBoldWeight,
   });
   return (
