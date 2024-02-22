@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 import { FaChevronRight } from "react-icons/fa6";
 import Tipografia from "../Tipografia/Tipografia";
 
-export function SubMenuNavbar({ handleClicker }) {
+export function SubMenuCompraNavbar ({ handleClicker }) {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState(null);
   const [selectedItem, setSelectedItem] = useState(false);
@@ -50,9 +50,8 @@ export function SubMenuNavbar({ handleClicker }) {
       "Star Wars",
       "Technic",
     ],
-    Edades: ["VER TODAS LAS EDADES", "1,5+", "4+", "6+", "9+", "13+", "18+"],
+    Edades: [ "1,5+", "4+", "6+", "9+", "13+", "18+"],
     Precios: [
-      "VER TODOS LOS RANGOS DE PRECIOS",
       "Menos de 20 €",
       "20 € - 50 €",
       "50 € - 100 €",
@@ -60,7 +59,6 @@ export function SubMenuNavbar({ handleClicker }) {
       "Más de 200 €",
     ],
     Articulos: [
-      "VER TODOS LOS ARTÍCULOS LEGO",
       "Accesorios",
       "Mochilas",
       "Libros",
@@ -75,7 +73,6 @@ export function SubMenuNavbar({ handleClicker }) {
       "Botellas de agua LEGO",
     ],
     Intereses: [
-      "VER TODOS LOS INTERESES",
       "Para fans adultos",
       "Animales",
       "Manualidades",
@@ -103,7 +100,6 @@ export function SubMenuNavbar({ handleClicker }) {
       "Vehículos",
     ],
     PickBuild: [
-      "PICK AND BUILD",
       "Pick a Brick",
       "Accesorios y kits de ladrillos",
     ],
@@ -122,6 +118,7 @@ export function SubMenuNavbar({ handleClicker }) {
   useOutsideAlerter(subMenuRef, () => {
     setIsSubMenuOpen(false);
     closeSubMenu();
+
   });
 
   const subMenuCompra = [
@@ -199,7 +196,82 @@ export function SubMenuNavbar({ handleClicker }) {
               />
             </div>
           )}
+      {/* EDADES */}
+      {isSubMenuOpen && activeSubMenu && (
+        <div className={styles.subMenu}>
+          {isSubMenuOpen && activeSubMenu === "Edades" && (
+            <div className={styles.titulo}>
+              <Button
+                texto={<h4>VER TODAS LAS EDADES</h4>}
+                handleClick={() => handleClick("Edades")}
+                isSubMenu
+              />
+            </div>
+          )}
 
+        </div>
+      )}
+            {/* PRECIOS */}
+            {isSubMenuOpen && activeSubMenu && (
+        <div className={styles.subMenu}>
+          {isSubMenuOpen && activeSubMenu === "Precios" && (
+            <div className={styles.titulo}>
+              <Button
+                texto={<h4>VER TODOS LOS RANGOS DE PRECIOS</h4>}
+                handleClick={() => handleClick("Precios")}
+                isSubMenu
+              />
+            </div>
+          )}
+
+        </div>
+      )}
+                {/* ARTICULOS */}
+                {isSubMenuOpen && activeSubMenu && (
+        <div className={styles.subMenu}>
+          {isSubMenuOpen && activeSubMenu === "Articulos" && (
+            <div className={styles.titulo}>
+              <Button
+                texto={<h4>VER TODOS LOS ARTÍCULOS LEGO</h4>}
+                handleClick={() => handleClick("Articulos")}
+                isSubMenu
+              />
+            </div>
+          )}
+
+        </div>
+      )}
+                    {/* INTERESES */}
+                    {isSubMenuOpen && activeSubMenu && (
+        <div className={styles.subMenu}>
+          {isSubMenuOpen && activeSubMenu === "Intereses" && (
+            <div className={styles.titulo}>
+              <Button
+                texto={<h4>VER TODOS LOS INTERESES</h4>}
+                handleClick={() => handleClick("Intereses")}
+                isSubMenu
+              />
+            </div>
+          )}
+
+        </div>
+      )}
+                         {/* PICK AND BUILD */}
+                         {isSubMenuOpen && activeSubMenu && (
+        <div className={styles.subMenu}>
+          {isSubMenuOpen && activeSubMenu === "PickBuild" && (
+            <div className={styles.titulo}>
+              <Button
+                texto={<h4>PICK AND BUILD</h4>}
+                handleClick={() => handleClick("PickBuild")}
+                isSubMenu
+              />
+            </div>
+          )}
+
+        </div>
+      )}
+            {/* Buttons */}
           <div className={styles.subCompra}>
             {subMenusCompraClick[activeSubMenu].map((item) => (
               <Button
@@ -215,6 +287,7 @@ export function SubMenuNavbar({ handleClicker }) {
           </div>
         </div>
       )}
+
     </div>
   );
 }
