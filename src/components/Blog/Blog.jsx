@@ -46,34 +46,28 @@ export function Blog({}){
       <div className={styles.blog}>
           <div className={styles.blogContainer}>
               <div className={styles.titleBlog}>
-                  <Tipografia texto= "Descubre todos los detalles" isTitleLarge/>
+                  <Tipografia texto= "Descubre todos los detalles" isTitleLarge color= {"--black"}/>
               </div>
                 <div className={styles.slider}>
                   <Slider {...settings}>
                       <Card
-                          src="https://www.lego.com/cdn/cs/set/assets/blta24a8b661f0f0388/75368_75369_7537HERO-Mobile.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1"
-                          title="Las mejores ideas de pequeños regalos de Navidad"
-                          content="La Navidad no tiene por qué suponer un gasto excesivo. 
-                          Echa un vistazo a nuestra selección de las mejores ideas de pequeños 
-                          regalos de Navidad LEGO® y encuentra el detalle perfecto."
+                          src="https://www.lego.com/cdn/cs/set/assets/blt63257db0ac5a030d/240124_Design_brief_Article_assets_Project_Vault_Card_Content.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1"
+                          title="10 cosas que debes saber sobre el set Plaza Mayor Medieval LEGO® Icons"
+                          content="Retrocede en el tiempo con nuestro nuevo set LEGO® Icons Plaza Mayor Medieval, repleto de historias, personajes y detalles sorprendentes…"
                           button="Lee más"
                           iconButton={<FaChevronRight />}
                         />
                         <Card
-                          src="https://www.lego.com/cdn/cs/set/assets/blt014723f35f4a3a01/2023_Hero_Banner_-_Mobile.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1"
-                          title="Los mejores regalos de Navidad para adolescentes y jóvenes adultos"
-                          content="En nuestra fantástica colección LEGO® encontrarás el regalo de Navidad perfecto 
-                          para adolescentes y jóvenes adultos, desde iconos del pop y Vespas hasta flores silvestres 
-                          y el globo terráqueo."
+                          src="https://www.lego.com/cdn/cs/set/assets/blte387febf93d7f981/231120_Design_brief_Project_Zoom_article_Card_Content.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1"
+                          title="Cómo fue que recreamos el icónico auto McLaren F1® de Ayrton Senna"
+                          content="Hablamos con la diseñadora del nuevo set LEGO® Icons McLaren MP4/4 y Ayrton Senna…"
                           button="Lee más"
                           iconButton={<FaChevronRight />}
                         />
                         <Card
-                          src="https://www.lego.com/cdn/cs/set/assets/blt891c0c1fd6c1fe11/76266_OG.png?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1"
-                          title="12 mejores juguetes LEGO® de superhéroes para esta Navidad"
-                          content="Estos doce juguetes de superhéroes son todo lo que necesitas para llenar de 
-                          acción la Navidad este año. ¡Perfectos para fans de Marvel y entusiastas de los sets 
-                          LEGO® de todas las edades!"
+                          src="https://www.lego.com/cdn/cs/set/assets/blt7fd4bfb4124065e2/Hero_Banner_-_Mobile.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1"
+                          title="Los mejores regalos para parejas"
+                          content="Descubre nuestros mejores regalos LEGO® para parejas y demuéstrales lo mucho que te importan con un set LEGO que puedan compartir."
                           button="Lee más"
                           iconButton={<FaChevronRight />}
                         />

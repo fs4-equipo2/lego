@@ -165,7 +165,7 @@
 
 /* Parte de Martin empieza aquí */
 .añadirBolsa {
-  width: 100%;
+  width: calc(100% - 10px);
   background-color: var(--orange);
   
   display: flex; 
