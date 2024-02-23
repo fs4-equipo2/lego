@@ -51,21 +51,21 @@ const BlogMasSelecciones = () => {
                 <div className={styles.slider}>
                 <Slider {...settings}>                  
                     <CardSelecciones
-                        src="src\assets\images\1913-Novelty-012024-HP-Block-Standard-40725-CherryBlossoms (1).webp"
+                        src="public\images\imagesCards\CherryBlossoms_Selecciones.webp"
                         title="Flores de Cerezo"
                         content="Crea belleza que nunca se marchita con un nuevo set de flores LEGO®"
                         button="A la tienda"
                         iconButton={<FaChevronRight />}
                       />
                       <CardSelecciones
-                        src="src\assets\images\1913-Novelty-012024-HP-Block-Standard-42619-Friends-Bus (1).jpeg"
+                        src="public\images\imagesCards\FriendsBus_Selecciones.jpeg"
                         title="Autobús de gran gira musical"
                         content="Lánzate a la carretera con un nuevo set de LEGO® Friends."
                         button="A la tienda"
                         iconButton={<FaChevronRight />}
                       />
                       <CardSelecciones
-                        src="src\assets\images\1913-Novelty-012024-HP-Block-Standard-71431-SuperMario-BowserCar (1).jpeg"
+                        src="public\images\imagesCards\BowserCar_Selecciones.jpeg"
                         title="Coche monstruoso de Bowser"
                         content="Aumenta la diversión con un nuevo set de expansión de LEGO® Super Mario"
                         button="A la tienda"
