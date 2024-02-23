@@ -7,13 +7,14 @@ import BlogPopulares from "../components/BlogPopulares/BlogPopulares.jsx";
 import BlogMasSets from "../components/BlogMasSets/BlogMasSets.jsx";
 import BlogMasSelecciones from "../components/BlogMasSelecciones/BlogMasSelecciones.jsx";
 import { BlogUnete } from "../components/BlogUnete/BlogUnete.jsx";
-// import {BlogSelecciones} from "../components/BlogSelecciones/BlogSelecciones.jsx"
+import {BlogSelecciones} from "../components/BlogSelecciones/BlogSelecciones.jsx"
+
 export const HomePage = () => {
   return (
     <>
       <Main />
       <Stickers />
-      {/* <BlogSelecciones /> */}
+      <BlogSelecciones /> 
       <BlogPopulares/>
       <BlogUnete/>
       <BlogRecomendados />
@@ -24,7 +25,6 @@ export const HomePage = () => {
       <br/>
       <br/>
       <Blog />
-      <WelcomeMessage />
       <br/>
       <WelcomeMessage />
     </>

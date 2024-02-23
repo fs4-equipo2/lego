@@ -5,7 +5,7 @@ import { CardSelecciones } from "../CardSelecciones/CardSelecciones"
 import React from "react"
 import Slider from "react-slick"
 
-const BlogSelecciones = () => {
+export const BlogSelecciones = () => {
   const settings = {
     dots: false,
     infinite: false,
