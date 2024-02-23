@@ -9,8 +9,8 @@ export function Card({ src, title, content, button, link, iconButton }) {
         <img src={src} className={styles.image} />
       </div>
       <div className={styles.cardText}>
-      <Tipografia texto={title} isTitleMedium />
-      <Tipografia texto={content} isBodyMedium/>
+      <Tipografia texto={title} isTitleMedium color= {"--black"}/>
+      <Tipografia texto={content} isBodyMedium color= {"--black"}/>
       </div>
       {button && <Button isLeeMas texto={button} iconRight={iconButton}  />}
       {link && <Button />}

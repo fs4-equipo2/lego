@@ -1,8 +1,5 @@
 import styles from "./Button.module.scss";
 import classNames from "classnames/bind";
-//  Botón PreNavbar @CantosCDenise
-//  Botón Navbar @CantosCDenise
-//  Botón redes - Footer @MartinGergov
 const cx = classNames.bind(styles);
 
 /**

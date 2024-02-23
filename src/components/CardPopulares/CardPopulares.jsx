@@ -1,20 +1,55 @@
+import { useStoreActions } from "../../store";
 import Button from "../Button/Button";
+import IconoEstrellas from "../CardPopulares/IconoEstrellas";
 import Tipografia from "../Tipografia/Tipografia";
 import styles from "./CardPopulares.module.scss";
 
-export function CardPopulares({ src, title, content, button, link }) {
+export function CardPopulares({
+  src,
+  title,
+  content,
+  button,
+  link,
+  handleClick,
+  uid,
+}) {
+  const { addProducto, calcularPrecioTotal } = useStoreActions(
+    (actions) => actions.carrito
+  );
+
+  function handleClick() {
+    addProducto({
+      src,
+      title,
+      content,
+      button,
+      link,
+      uid,
+    });
+    calcularPrecioTotal();
+  }
+
+  function mostrarPrecioComa(precio){
+    return `${Math.floor(precio)},${(precio - Math.floor(precio)).toFixed(2)*100}€`
+  }
+
   return (
     <div className={styles.cardContainer}>
       <div className={styles.imageContainer}>
-        <img src={src} className={styles.image} />
+        <a href={link}><img src={src} className={styles.image} /></a>
       </div>
-      <div className={styles.cardContent}>
-      <Tipografia texto={title} isBodyLarge isRegularWeight />
-      <Tipografia texto={content} isBodyLarge isBoldWeight />
+      <div className={styles.cardTitle}>
+      <a href={link}>
+        <Tipografia texto={title} isBody isRegularWeight />
+      </a>
+      </div>
+      <IconoEstrellas/>
+      <Tipografia texto={mostrarPrecioComa(content)} isBody isBoldWeight />
 
-      {button && <Button isAñadirBolsa texto={button}  />}
+      {button && (
+        <Button isAñadirBolsa texto={button} handleClick={handleClick} />
+      )}
       {link && <Button />}
-      </div>
     </div>
   );
 }

@@ -42,10 +42,10 @@ export function CardRecomendados({
       <a href={link}>
       <Tipografia texto={title} isBody isRegularWeight />
       <Tipografia texto={mostrarPrecioComa(content)} isBodyLarge isBoldWeight />
-
       </a>
       </div>
       <IconoEstrellas/>
+      <Tipografia texto={mostrarPrecioComa(content)} isBody isBoldWeight />
 
       {button && (
         <Button isAñadirBolsa texto={button} handleClick={handleClick} />

@@ -1,11 +1,11 @@
 import { FaChevronRight } from "react-icons/fa6"
-import styles from "./BlogSelecciones.module.scss"
+import styles from "./BlogMasSelecciones.module.scss"
 import Tipografia from "../Tipografia/Tipografia"
 import { CardSelecciones } from "../CardSelecciones/CardSelecciones"
 import React from "react"
 import Slider from "react-slick"
 
-const BlogSelecciones = () => {
+const BlogMasSelecciones = () => {
   const settings = {
     dots: false,
     infinite: false,
@@ -51,23 +51,23 @@ const BlogSelecciones = () => {
                 <div className={styles.slider}>
                 <Slider {...settings}>                  
                     <CardSelecciones
-                        src="https://www.lego.com/cdn/cs/set/assets/blta7af47b8d4f21a91/21347-Exclusive-2402-PS-Block-Standard.jpg?fit=crop"
-                        title="Nuevo set Cabina telefónica roja de Londres"
-                        content="Da vida a un icono de la cultura con un nuevo set inspirado por un fan."
+                        src="public\images\imagesCards\CherryBlossoms_Selecciones.webp"
+                        title="Flores de Cerezo"
+                        content="Crea belleza que nunca se marchita con un nuevo set de flores LEGO®"
                         button="A la tienda"
                         iconButton={<FaChevronRight />}
                       />
                       <CardSelecciones
-                        src="https://www.lego.com/cdn/cs/set/assets/bltf66caa857f738bb1/10327-HT-202402-Block-Standard.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1"
-                        title="Recrea una emblemática aeronave de Dune"
-                        content="El nuevo set Dune: Atreides Royal Ornithopter de LEGO® Icons hará las delicias de los fans."
+                        src="public\images\imagesCards\FriendsBus_Selecciones.jpeg"
+                        title="Autobús de gran gira musical"
+                        content="Lánzate a la carretera con un nuevo set de LEGO® Friends."
                         button="A la tienda"
                         iconButton={<FaChevronRight />}
                       />
                       <CardSelecciones
-                        src="https://www.lego.com/cdn/cs/set/assets/blt6f9c8133ee750c04/21346-HT-202402-Block-Standard.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1"
-                        title="Decoración para el hogar con un toque personal"
-                        content="Comparte preciados recuerdos con el nuevo set Árbol de la familia de LEGO® Ideas."
+                        src="public\images\imagesCards\BowserCar_Selecciones.jpeg"
+                        title="Coche monstruoso de Bowser"
+                        content="Aumenta la diversión con un nuevo set de expansión de LEGO® Super Mario"
                         button="A la tienda"
                         iconButton={<FaChevronRight />}
                       />
@@ -78,4 +78,4 @@ const BlogSelecciones = () => {
   )
 }
 
-export default BlogSelecciones;
+export default BlogMasSelecciones;
