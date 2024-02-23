@@ -7,24 +7,24 @@ import Tipografia from "../Tipografia/Tipografia";
 import { CardRecomendados } from '../CardRecomendados/CardRecomendados';
 
 
-const BlogRecomendados = () => {
-    
+export const BlogRecomendados = () => {
+
     const [progressWidth, setProgressWidth] = useState(0);
     const sliderRef = useRef(null);
-  
+
     // Calcula el progreso basado en el slide actual, el total de slides y los slides que se muestran
     const calculateProgress = () => {
       if (!sliderRef.current) return;
-  
+
       const currentSlide = sliderRef.current.innerSlider.state.currentSlide;
       const totalSlides = sliderRef.current.props.children.length;
       const slidesToShow = sliderRef.current.props.slidesToShow;
       // Asegúrate de que el cálculo evita divisiones por cero en casos extremos
       const progress = totalSlides > slidesToShow ? ((currentSlide / (totalSlides - slidesToShow)) * 100).toFixed(2) : 100;
-  
+
       setProgressWidth(progress);
     };
-  
+
     useEffect(() => {
       // Esto ajusta el progreso inicialmente al cargar.
       calculateProgress();
@@ -35,14 +35,14 @@ const BlogRecomendados = () => {
         const clickX = event.clientX - progressBar.getBoundingClientRect().left; // Posición X del clic relativa al inicio de la barra
         const progressBarWidth = progressBar.offsetWidth; // Ancho total de la barra de progreso
         const clickPositionRatio = clickX / progressBarWidth; // Ratio de la posición del clic sobre el ancho total
-    
+
         const totalSlides = sliderRef.current.props.children.length;
         const slidesToShow = sliderRef.current.props.slidesToShow;
         const slideToGo = Math.round(clickPositionRatio * (totalSlides - slidesToShow));
-    
+
         sliderRef.current.slickGoTo(slideToGo); // Mueve el carrusel al slide calculado
       };
-  
+
 
       function SampleNextArrow(props) {
         const { className, style, onClick } = props;
@@ -122,6 +122,7 @@ const BlogRecomendados = () => {
                             content={59.99}
                             button="Añadir a la bolsa"
                             link="link"
+                            uid={"d0c7c95f-dee0-4943-a6ba-c15c09219f13"}
                             />
                         </div>
                         <div>
@@ -131,7 +132,8 @@ const BlogRecomendados = () => {
                             content={29.99}
                             button="Añadir a la bolsa"
                             link="link"
-                            /> 
+                            uid={"3c45b251-aced-41fe-8457-11525a685259"}
+                            />
                         </div>
                         <div>
                             <CardRecomendados
@@ -140,7 +142,8 @@ const BlogRecomendados = () => {
                             content={169.99}
                             button="Añadir a la bolsa"
                             link="link"
-                            /> 
+                            uid={"c1152094-f69f-42ae-9992-181a378712b8"}
+                            />
                         </div>
                         <div>
                             <CardRecomendados
@@ -149,7 +152,8 @@ const BlogRecomendados = () => {
                             content={14.99}
                             button="Añadir a la bolsa"
                             link="link"
-                            /> 
+                            uid={"78e026d1-49fa-41c0-a071-3fdc7cf86521"}
+                            />
                         </div>
                         <div>
                             <CardRecomendados
@@ -158,7 +162,8 @@ const BlogRecomendados = () => {
                             content={79.99}
                             button="Añadir a la bolsa"
                             link="link"
-                            /> 
+                            uid={"f530869a-f3cb-4190-b45e-8093e510b853"}
+                            />
                         </div>
                         <div>
                             <CardRecomendados
@@ -167,7 +172,8 @@ const BlogRecomendados = () => {
                             content={14.99}
                             button="Añadir a la bolsa"
                             link="link"
-                            /> 
+                            uid={"5f04e8f2-2d05-42b2-8536-9340c01fccc7"}
+                            />
                         </div>
                         <div>
                             <CardRecomendados
@@ -176,7 +182,8 @@ const BlogRecomendados = () => {
                             content={59.99}
                             button="Añadir a la bolsa"
                             link="link"
-                            /> 
+                            uid={"ca423afb-4eae-427a-a190-3a67380ff231"}
+                            />
                         </div>
                         <div>
                             <CardRecomendados
@@ -185,17 +192,15 @@ const BlogRecomendados = () => {
                             content={299.99}
                             button="Añadir a la bolsa"
                             link="link"
-                            /> 
+                            uid={"3a8e8b4c-2759-4518-8deb-d433de4b1d1b"}
+                            />
                         </div>
                 </Slider>
                 <div className={styles.progressBar} onClick={handleProgressBarClick}>
                     <div className={styles.progress} style={{width: `${progressWidth}%`}}></div>
                 </div>
-                
+
             </div>
         </div>
     )
-
 };
-
-export default BlogRecomendados;

@@ -40,7 +40,7 @@ export const LogInModal = () => {
 
   const notify = (error) => {
     if (error) {
-      toast.error("Error", {
+      toast.error("Authentication error", {
         position: "bottom-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -111,7 +111,7 @@ export const LogInModal = () => {
                     name="username"
                     onChange={onInputChange}
                   />
-                  <i id={styles.iconInput}>
+                  <i id={styles.iconInputUsername}>
                     <HiOutlineUser />
                   </i>
                 </div>

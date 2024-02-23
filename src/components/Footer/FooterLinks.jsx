@@ -5,7 +5,7 @@ export const FooterLinks = ({ links }) => {
   return (
     <>
     {links && links.map((link, index) => (
-        <a key={index} href=" " className={styles.linkItem}>
+        <a key={index} href="" className={styles.linkItem}>
         <Tipografia
           color={"--white"}
           texto={link}

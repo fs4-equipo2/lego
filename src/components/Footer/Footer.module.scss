@@ -188,25 +188,25 @@ footer {
           display: flex;
           flex-direction: column;
           justify-content: space-around;
-    
+
           input {
             height: 4rem;
           }
-    
+
           a {
             padding-bottom: 1.25rem;
           }
-    
+
           .emailFormResponsive {
             display: flex;
             flex-direction: row;
             align-content: center;
-    
+
             input {
               height: 3.7em;
               width: 100%;
             }
-    
+
             button {
               height: 4em;
               background-color: rgb(253, 128, 36);
@@ -215,7 +215,7 @@ footer {
               width: 4em;
             }
           }
-  
+
         }
       }
     }

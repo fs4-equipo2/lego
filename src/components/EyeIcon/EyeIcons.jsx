@@ -26,7 +26,7 @@ const PasswordToggle = ({ onPassChange, password }) => {
         onChange={onPassChange}
       />
       <i
-        id={styles.iconInput}
+        id={styles.iconInputPass}
         className={`${isEyeOpen ? "open" : ""}`}
         onClick={togglePassword}
       >
