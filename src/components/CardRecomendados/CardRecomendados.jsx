@@ -41,7 +41,6 @@ export function CardRecomendados({
         <div className={styles.cardTitle}>
           <a href={link}>
             <Tipografia texto={title} isBody isRegularWeight />
-            <Tipografia texto={mostrarPrecioComa(content)} isBodyLarge isBoldWeight />
           </a>
         </div>
       <IconoEstrellas/>
