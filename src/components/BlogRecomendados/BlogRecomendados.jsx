@@ -189,7 +189,7 @@ export const BlogRecomendados = () => {
                             <CardRecomendados
                             src="https://www.lego.com/cdn/cs/set/assets/bltd2d5f472a43f0580/31149.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1"
                             title="Flores en Regadera"
-                            content={299.99}
+                            content={29.99}
                             button="Añadir a la bolsa"
                             link="link"
                             uid={"3a8e8b4c-2759-4518-8deb-d433de4b1d1b"}
