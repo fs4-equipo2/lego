@@ -38,12 +38,12 @@ export function CardRecomendados({
       <div className={styles.imageContainer}>
         <a href={link}><img src={src} className={styles.image} /></a>
       </div>
-      <div className={styles.cardTitle}>
-      <a href={link}>
-      <Tipografia texto={title} isBody isRegularWeight />
-      <Tipografia texto={mostrarPrecioComa(content)} isBodyLarge isBoldWeight />
-      </a>
-      </div>
+        <div className={styles.cardTitle}>
+          <a href={link}>
+            <Tipografia texto={title} isBody isRegularWeight />
+            <Tipografia texto={mostrarPrecioComa(content)} isBodyLarge isBoldWeight />
+          </a>
+        </div>
       <IconoEstrellas/>
       <Tipografia texto={mostrarPrecioComa(content)} isBody isBoldWeight />
 
