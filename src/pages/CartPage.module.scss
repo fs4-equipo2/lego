@@ -79,7 +79,10 @@
               justify-content: space-between;
 
               .productImg {
-                width: 10rem;
+                width: auto;
+                max-width: 10rem;
+                height: auto;
+                max-height: 10rem;
               }
 
               .cardProductDetails {

@@ -26,7 +26,10 @@
           flex-direction: row;
           gap: 1rem;
           .productImg {
-            width: 10rem;
+            width: auto;
+            max-width: 10rem;
+            height: auto;
+            max-height: 10rem;
           }
         }
       }
@@ -68,8 +71,10 @@
   }
 
   .productImg {
-    width: 7rem;
+    width: auto;
+    max-width: 7rem;
     height: auto;
+    max-height: 7rem;
   }
 }
 

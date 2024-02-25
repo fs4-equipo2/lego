@@ -9,23 +9,23 @@ import { CardPopulares } from '../CardPopulares/CardPopulares';
 
 
 const BlogPopulares = () => {
-    
+
     const [progressWidth, setProgressWidth] = useState(0);
     const sliderRef = useRef(null);
-  
+
     // Calcula el progreso basado en el slide actual, el total de slides y los slides que se muestran
     const calculateProgress = () => {
       if (!sliderRef.current) return;
-  
+
       const currentSlide = sliderRef.current.innerSlider.state.currentSlide;
       const totalSlides = sliderRef.current.props.children.length;
       const slidesToShow = sliderRef.current.props.slidesToShow;
       // Asegúrate de que el cálculo evita divisiones por cero en casos extremos
       const progress = totalSlides > slidesToShow ? ((currentSlide / (totalSlides - slidesToShow)) * 100).toFixed(2) : 100;
-  
+
       setProgressWidth(progress);
     };
-  
+
     useEffect(() => {
       // Esto ajusta el progreso inicialmente al cargar.
       calculateProgress();
@@ -36,14 +36,14 @@ const BlogPopulares = () => {
         const clickX = event.clientX - progressBar.getBoundingClientRect().left; // Posición X del clic relativa al inicio de la barra
         const progressBarWidth = progressBar.offsetWidth; // Ancho total de la barra de progreso
         const clickPositionRatio = clickX / progressBarWidth; // Ratio de la posición del clic sobre el ancho total
-    
+
         const totalSlides = sliderRef.current.props.children.length;
         const slidesToShow = sliderRef.current.props.slidesToShow;
         const slideToGo = Math.round(clickPositionRatio * (totalSlides - slidesToShow));
-    
+
         sliderRef.current.slickGoTo(slideToGo); // Mueve el carrusel al slide calculado
       };
-  
+
 
       function NewArrow(props){
         const { className, style, onClick} = props;
@@ -116,6 +116,7 @@ const BlogPopulares = () => {
                             content={64.99}
                             button="Añadir a la bolsa"
                             link="link"
+                            uid={"2826dfe3-6d8c-40b6-ba0b-d8d8351eab9b"}
                             />
                         </div>
                         <div>
@@ -125,7 +126,8 @@ const BlogPopulares = () => {
                             content={199.99}
                             button="Añadir a la bolsa"
                             link="link"
-                            /> 
+                            uid={"5487ed7b-7d62-47a0-a64f-6b5d2822f982"}
+                            />
                         </div>
                         <div>
                             <CardPopulares
@@ -134,7 +136,8 @@ const BlogPopulares = () => {
                             content={79.99}
                             button="Añadir a la bolsa"
                             link="link"
-                            /> 
+                            uid={"caf8274b-657c-4c80-a332-507b41365c02"}
+                            />
                         </div>
                         <div>
                             <CardPopulares
@@ -143,7 +146,8 @@ const BlogPopulares = () => {
                             content={64.99}
                             button="Añadir a la bolsa"
                             link="link"
-                            /> 
+                            uid={"c30cdbfb-99e2-4ee9-83ca-6349057362c5"}
+                            />
                         </div>
                         <div>
                             <CardPopulares
@@ -152,7 +156,8 @@ const BlogPopulares = () => {
                             content={79.99}
                             button="Añadir a la bolsa"
                             link="link"
-                            /> 
+                            uid={"5ae3bfdd-e80e-418d-9582-8c5e45cad2c0"}
+                            />
                         </div>
                         <div>
                             <CardPopulares
@@ -161,7 +166,8 @@ const BlogPopulares = () => {
                             content={14.99}
                             button="Añadir a la bolsa"
                             link="link"
-                            /> 
+                            uid={"83f34815-a11c-4ebf-93fa-b5dba7868e55"}
+                            />
                         </div>
                         <div>
                             <CardPopulares
@@ -170,7 +176,8 @@ const BlogPopulares = () => {
                             content={59.99}
                             button="Añadir a la bolsa"
                             link="link"
-                            /> 
+                            uid={"cfdf6bb2-98d7-4edb-8294-9b9cb364bda3"}
+                            />
                         </div>
                         <div>
                             <CardPopulares
@@ -179,7 +186,8 @@ const BlogPopulares = () => {
                             content={299.99}
                             button="Añadir a la bolsa"
                             link="link"
-                            /> 
+                            uid={"7dbd25ad-964d-45f4-83ac-71e0cd7d2d64"}
+                            />
                         </div>
                 </Slider>
                 <div className={styles.progressBar} onClick={handleProgressBarClick}>
