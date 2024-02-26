@@ -61,7 +61,7 @@ const LinksNavbar = () => {
   });
 
   return (
-    <div>
+    <>
       <div ref={menuRef}>
         {isMenuOpen && (
           <div className={styles.menu}>
@@ -121,7 +121,7 @@ const LinksNavbar = () => {
           <Button isBotonEspecial texto="NAVIDAD" />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
