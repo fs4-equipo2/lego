@@ -22,6 +22,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 import { useModalSidebar } from "../../hooks/useModalSidebar";
+import LinksNavbarResponsive from "../LinksNavbar/LinksNavbarResponsive";
 
 const Navbar = () => {
   const { user } = useStoreState((state) => state.user);
@@ -86,13 +87,7 @@ const Navbar = () => {
             isOpen={isOpenSidebar}
             closeModal={closeModalSidebar}
           >
-            <Tipografia
-                  color={"--black"}
-                  texto={"MENÚ"}
-                  isTitleRegular
-                  isRegularWeight
-                />
-            <LinksNavbar />
+            <LinksNavbarResponsive />
           </ModalSidebar>
             </div>
           <Link to="/">
