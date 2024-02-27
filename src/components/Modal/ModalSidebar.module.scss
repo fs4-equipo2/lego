@@ -19,13 +19,13 @@
   position: relative;
   overflow-y: auto;
   background-color: white;
-  padding: 1rem;
   width: 50vw;
   height: 100vh;
 
   .logInModalContainerClose {
     position: absolute;
-    top: 1rem;
     right: 1rem;
+    border-left: 2px solid rgb(224, 224, 224);
+    padding: 12px 0 12px 12px;
   }
 }

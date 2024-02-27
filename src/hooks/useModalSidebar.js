@@ -1,14 +1,14 @@
 import { useState } from 'react';
 
 export const useModalSidebar = (initialValue = false) => {
-  const [isOpenSidebar, setIsOpen] = useState(initialValue);
+  const [isOpenSidebar, setIsOpenSideBar] = useState(initialValue);
 
   const openModalSidebar = () => {
-    setIsOpen(true)
+    setIsOpenSideBar(true)
   }
 
   const closeModalSidebar = () => {
-    setIsOpen(false)
+    setIsOpenSideBar(false)
   }
 
   return [isOpenSidebar, openModalSidebar, closeModalSidebar];

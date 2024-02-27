@@ -5,13 +5,14 @@ import { useOutsideAlerter } from "../../hooks/useOutsideAlerter";
 import Tipografia from "../Tipografia/Tipografia";
 import { SubMenuCompraNavbar } from "../subMenuCompraNavbar/subMenuCompraNavbar";
 import { SubMenuDescubrirNavbar } from "../SubMenuDescubrirNavbar/SubMenuDescubrirNavbar";
+import { FaChevronLeft } from "react-icons/fa6";
 
 const LinksNavbarResponsive = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Todo el menú
   const [isCompraVisible, setIsCompraVisible] = useState(false); // Secciones
   const [isDescubrirVisible, setIsDescubrirVisible] = useState(false); // Secciones
-  const [isAyudaVisible, setIsAyudaVisible] = useState(false);  // Secciones
-  const [isReturnMenu, setIsReturnMenu] = useState(false) //Flecha retorno
+  const [isAyudaVisible, setIsAyudaVisible] = useState(false); // Secciones
+  const [isReturnMenu, setIsReturnMenu] = useState(false); //Flecha retorno
 
   const menuRef = useRef(null);
 
@@ -44,6 +45,11 @@ const LinksNavbarResponsive = () => {
     }
   }
 
+  const handleReturnMenu = () => {
+    setIsReturnMenu(false);
+    setIsMenuOpen(false);
+  };
+
   const subMenuAyuda = [
     "Comprobar el estado de un pedido",
     "Envíos y devoluciones",
@@ -68,17 +74,24 @@ const LinksNavbarResponsive = () => {
   return (
     <>
       <div ref={menuRef}>
-      {/* <Tipografia
-                  color={"--black"}
-                  texto={"MENÚ"}
-                  isTitleRegular
-                  isRegularWeight
-                />
-                <hr /> */}
+        <div
+          className={
+            isReturnMenu
+              ? `${styles.menuTitlePointer} ${styles.menuTitle}`
+              : styles.menuTitle
+          }
+          onClick={handleReturnMenu}
+        >
+          {isReturnMenu && <FaChevronLeft />}
+          <Tipografia color={"--black"} texto={"MENÚ"} isBodyXL isBoldWeight />
+        </div>
         {isMenuOpen && (
           <div className={styles.menu}>
-            {isCompraVisible && (
+            {isCompraVisible && isReturnMenu && (
               <>
+                <div className={styles.menuSelectionTitle}>
+                  <Tipografia color="--white" texto={"COMPRAR"} isBodyMedium />
+                </div>
                 <div className={styles.compraClickeable}></div>
                 <div className={styles.compra}>
                   <SubMenuCompraNavbar handleClicker={closeSubMenu} />
@@ -86,8 +99,11 @@ const LinksNavbarResponsive = () => {
               </>
             )}
 
-            {isDescubrirVisible && (
+            {isDescubrirVisible && isReturnMenu && (
               <>
+                <div className={styles.menuSelectionTitle}>
+                  <Tipografia color="--white" texto={"DESCUBRIR"} isBodyMedium />
+                </div>
                 <div className={styles.descubrirClickeable}>
                   <div className={styles.descubrir}>
                     <SubMenuDescubrirNavbar handleClicker={closeSubMenu} />
@@ -97,8 +113,11 @@ const LinksNavbarResponsive = () => {
             )}
 
             {/* AYUDA */}
-            {isAyudaVisible && (
+            {isAyudaVisible && isReturnMenu && (
               <>
+                <div className={styles.menuSelectionTitle}>
+                  <Tipografia color="--white" texto={"AYUDA"} isBodyMedium />
+                </div>
                 <div className={styles.descubrirClickeable}>
                   <div className={styles.ayuda}>
                     {subMenuAyuda.map((item) => (
@@ -116,21 +135,28 @@ const LinksNavbarResponsive = () => {
           </div>
         )}
 
-        <div className={styles.links}>
-          <Button
-            isNavBar
-            texto="COMPRAR"
-            id="compra"
-            handleClick={handleClick}
-          />
-          <Button
-            isNavBar
-            texto="DESCUBRIR"
-            id="descubrir"
-            handleClick={handleClick}
-          />
-          <Button isNavBar texto="AYUDA" id="ayuda" handleClick={handleClick} />
-        </div>
+        {!isReturnMenu && (
+          <div className={styles.links}>
+            <Button
+              isNavBar
+              texto="COMPRAR"
+              id="compra"
+              handleClick={handleClick}
+            />
+            <Button
+              isNavBar
+              texto="DESCUBRIR"
+              id="descubrir"
+              handleClick={handleClick}
+            />
+            <Button
+              isNavBar
+              texto="AYUDA"
+              id="ayuda"
+              handleClick={handleClick}
+            />
+          </div>
+        )}
       </div>
     </>
   );

@@ -76,26 +76,25 @@ const Navbar = () => {
         <div className={styles.containerNav}>
           <div className={styles.containerLeft}>
             <div className={styles.hamburguerMenu} onClick={openModalSidebar}>
-            <HiMenuAlt4 />
-            <Tipografia
-                  color={"--black"}
-                  texto={"MENU"}
-                  isBodyRegular
-                  isRegularWeight
+              <HiMenuAlt4 />
+              <Tipografia
+                color={"--black"}
+                texto={"MENU"}
+                isBodyRegular
+                isRegularWeight
                 />
+                </div>
               <ModalSidebar
-            isOpen={isOpenSidebar}
-            closeModal={closeModalSidebar}
-          >
-            <LinksNavbarResponsive />
-          </ModalSidebar>
-            </div>
-          <Link to="/">
-            <Logo />
-          </Link>
+                isOpen={isOpenSidebar}
+                closeModal={closeModalSidebar}
+              >
+                <LinksNavbarResponsive />
+              </ModalSidebar>
+            <Link to="/">
+              <Logo />
+            </Link>
             <div className={styles.buttonContainer}>
               <LinksNavbar />
-              {/*<SubMenuNavbar />*/}
             </div>
           </div>
           <div className={styles.containerRight}>
