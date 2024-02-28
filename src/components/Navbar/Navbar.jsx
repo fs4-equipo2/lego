@@ -88,7 +88,7 @@ const Navbar = () => {
                 isOpen={isOpenSidebar}
                 closeModal={closeModalSidebar}
               >
-                <LinksNavbarResponsive />
+                <LinksNavbarResponsive handleCloseModal={closeModalSidebar}/>
               </ModalSidebar>
             <Link to="/">
               <Logo />

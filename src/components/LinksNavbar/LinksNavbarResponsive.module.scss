@@ -2,8 +2,48 @@
   // position: relative;
   z-index: 10;
   display: flex;
-  gap: 60px;
-  padding-left: 1.25rem;
+  justify-content: center;
+  gap: auto;
+  padding: 0 1.25rem;
+}
+
+.zonaJuegosBoton {
+  display: flex;
+  justify-content: start;
+
+  #zonaJuegosBotonID {
+    padding: 10px 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.linksResponInicio {
+  cursor: pointer;
+}
+
+.listaDeseoBoton,
+.carritoBoton {
+  cursor: pointer;
+}
+
+.localizacionBoton {
+  cursor: pointer;
+
+  gap: 5px;
+  display: flex;
+  background: transparent;
+  border: 0;
+  align-items: center;
+  height: 1.1875rem;
+  width: 78px;
+
+  svg {
+    margin-right: 0.625rem;
+    width: 25px;
+    height: 19px;
+  }
 }
 
 .menuTitle {
@@ -99,9 +139,27 @@
 
 @media (max-width: 800px) {
   .links {
+    height: 85vh;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    justify-content: space-between;
+
+    .seccionesSidebarContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .linksResponInicio,
+    .seccionesSidebarContainer,
+    .loginBoton,
+    .uneteBoton,
+    .listaDeseoBoton,
+    .carritoBoton,
+    .localizacionCont {
+      border-bottom: 1px solid rgb(224, 224, 224);
+      padding-bottom: 10px;
+    }
   }
 }
