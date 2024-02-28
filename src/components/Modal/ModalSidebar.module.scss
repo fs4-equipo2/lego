@@ -29,3 +29,18 @@
     padding: 12px 0 12px 12px;
   }
 }
+
+
+@media (min-width: 1400px) {
+  .modal {
+    display: none;
+  }
+  .modalContainer {
+    display: none,
+  }  
+
+  .modal.isOpen {
+    display: none;
+  }
+
+}

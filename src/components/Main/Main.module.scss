@@ -17,6 +17,8 @@
 
 .backgroundMain {
   width: 100%;
+  z-index: -100;
+  position: relative;
 }
 
 // div por encima de la imagen
@@ -41,6 +43,7 @@
 .legoMain{
     height: 55px;
     width: 55px;
+    z-index: -10;
 }
 
 .legoMain svg{
