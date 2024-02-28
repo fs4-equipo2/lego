@@ -178,11 +178,9 @@ export function SubMenuCompraNavbar ({ handleClicker }) {
           handleClick={() => handleClick("PickBuild")}
           isSubMenu
         />
-        <div className={styles.comprarButtons}>
           {subMenuCompra.map((item) => (
             <Tipografia key={item} color="--black" texto={item} isBodyXL />
           ))}
-        </div>
       </div>
 {/* TITULO POR MENU */}
       {isSubMenuOpen && activeSubMenu && (

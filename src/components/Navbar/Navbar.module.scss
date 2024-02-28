@@ -44,6 +44,11 @@
   flex-direction: row;
   align-items: center;
   gap: 40px;
+
+  .hamburguerMenu {
+    display: none;
+  }
+
 }
 
 .buttonContainer {
@@ -66,3 +71,16 @@ background-color: var(--white);
 color: var(--red);
 }
 
+@media (max-width: 800px) {
+  .buttonContainer {
+    display: none;
+  }
+
+  .hamburguerMenu {
+    display: flex!important;
+    flex-direction: column!important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}

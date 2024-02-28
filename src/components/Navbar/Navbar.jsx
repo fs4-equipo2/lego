@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Navbar.module.scss";
 import Logo from "../../assets/iconos/Logo";
 import Button from "../Button/Button";
+import { HiMenuAlt4 } from "react-icons/hi";
 import { FaRegHeart } from "react-icons/fa6";
 import { SlMagnifier } from "react-icons/sl";
 import { MdOutlineShoppingBag } from "react-icons/md";
@@ -14,17 +15,21 @@ import LinkSw from "../LinkSw/LinkSw";
 import Tipografia from "../Tipografia/Tipografia";
 import { useStoreState } from "../../store";
 import { Modal } from "../Modal/Modal";
+import { ModalSidebar } from "../Modal/ModalSidebar";
 import { LogInModal } from "../LogInModal/LogInModal";
 import { useModal } from "../../hooks/useModal";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
+import { useModalSidebar } from "../../hooks/useModalSidebar";
+import LinksNavbarResponsive from "../LinksNavbar/LinksNavbarResponsive";
 
 const Navbar = () => {
   const { user } = useStoreState((state) => state.user);
   const { productos } = useStoreState((state) => state.carrito);
 
   const [isOpenLogIn, openModalLogIn, closeModalLogIn] = useModal(false);
+  const [isOpenSidebar, openModalSidebar, closeModalSidebar] = useModalSidebar(false);
 
   return (
     <>
@@ -70,12 +75,26 @@ const Navbar = () => {
       <div className={styles.containerPadreNav}>
         <div className={styles.containerNav}>
           <div className={styles.containerLeft}>
-          <Link to="/">
-            <Logo />
-          </Link>
+            <div className={styles.hamburguerMenu} onClick={openModalSidebar}>
+              <HiMenuAlt4 />
+              <Tipografia
+                color={"--black"}
+                texto={"MENU"}
+                isBodyRegular
+                isRegularWeight
+                />
+                </div>
+              <ModalSidebar
+                isOpen={isOpenSidebar}
+                closeModal={closeModalSidebar}
+              >
+                <LinksNavbarResponsive handleCloseModal={closeModalSidebar}/>
+              </ModalSidebar>
+            <Link to="/">
+              <Logo />
+            </Link>
             <div className={styles.buttonContainer}>
               <LinksNavbar />
-              {/*<SubMenuNavbar />*/}
             </div>
           </div>
           <div className={styles.containerRight}>

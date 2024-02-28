@@ -1,0 +1,31 @@
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.55);
+  display: none;
+  justify-content: start;
+  align-items: start;
+}
+
+.modal.isOpen {
+  display: flex;
+}
+
+.modalContainer {
+  position: relative;
+  overflow-y: auto;
+  background-color: white;
+  width: 60vw;
+  height: 100vh;
+
+  .logInModalContainerClose {
+    position: absolute;
+    right: 1rem;
+    border-left: 2px solid rgb(224, 224, 224);
+    padding: 12px 0 12px 12px;
+  }
+}

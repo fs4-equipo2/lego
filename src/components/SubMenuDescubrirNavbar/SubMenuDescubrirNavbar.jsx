@@ -13,10 +13,10 @@ export function SubMenuDescubrirNavbar ({ handleClicker }) {
 
   const subMenuRef = useRef(null);
 
-  const subMenuDescubrirClick = { 
+  const subMenuDescubrirClick = {
     nuestrosValores: ["The LEGO Group", "Noticias LEGO", "Sostenibilidad"],
     nuestrasApps: ["LEGO Builder", "App LEGO Life"],
-    nuestrasRevistas: ["Catálogos LEGO"], 
+    nuestrasRevistas: ["Catálogos LEGO"],
 };
 
   const handleClick = (subMenu) => {
@@ -68,11 +68,9 @@ export function SubMenuDescubrirNavbar ({ handleClicker }) {
           handleClick={() => handleClick("nuestrasRevistas")}
           isSubMenu
         />
-              <div className={styles.descubrirButtons}>
           {subMenuDescubrir.map((item) => (
             <Tipografia key={item} color="--black" texto={item} isBodyXL />
           ))}
-        </div>
       </div>
 
       <div className={styles.subDescubrir}>
@@ -88,4 +86,4 @@ export function SubMenuDescubrirNavbar ({ handleClicker }) {
       </div>
       </div>
   );
-}  
+}
