@@ -35,6 +35,12 @@
     background-color: rgba(0, 0, 0, 0.55);
   }
 
+  @media (max-width: 1440px){
+    .blogContainer{
+        width: 100%;
+    }
+  }
+  
   @media (max-width: 1200px){
     .blogContainer{
         width: 100%;

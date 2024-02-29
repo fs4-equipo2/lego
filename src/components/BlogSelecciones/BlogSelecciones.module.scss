@@ -4,14 +4,15 @@
     flex-direction: column;
     align-items: center;
 }
-.blogContainer{    width: 86%;
+.blogContainer{    
+    width: 100%;
     // background-color: rgb(37, 129, 128);
     display: flex;
     flex-direction: column;
 }
 .titleBlog{
     margin: 15px;
-    margin-left: 180px;
+    margin-left: 190px;
     color: var(--white);
     width: 50%;
 }
@@ -21,6 +22,30 @@
     align-self: center;
   }
   
+  @media (max-width: 1440px){
+    .blogContainer{
+        width: 100%;
+    }
+    .blogCards {
+        .slick-slide {
+          width: 100%;
+        }
+        .slick-list {
+          margin: 20px;
+        }
+        .slick-track {
+          display: flex;
+        }
+      }
+    .slider {
+        width: 90%;
+        align-self: center;
+      }
+      .titleBlog{
+        margin-left: 70px;
+    }
+  }
+
 @media (max-width: 1200px) {
     .blogContainer{
         width: 100%;

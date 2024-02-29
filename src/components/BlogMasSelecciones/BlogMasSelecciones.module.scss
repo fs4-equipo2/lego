@@ -21,6 +21,30 @@
     align-self: center;
 
 }
+
+@media (max-width: 1440px){
+    .blogContainer{
+        width: 100%;
+    }
+    .blogCards {
+        .slick-slide {
+          width: 100%;
+        }
+        .slick-list {
+          margin: 0 auto;
+        }
+        .slick-track {
+          display: flex;
+        }
+      }
+      .slider {
+        width: 90%;
+    }
+    .titleBlog{
+        margin-left: 70px;
+    }
+  }
+
 @media (max-width: 1200px) {
     .blogContainer{
         width: 100%;
