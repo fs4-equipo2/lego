@@ -3,7 +3,7 @@ import styles from "./LinksNavbar.module.scss";
 import Button from "../Button/Button";
 import { useOutsideAlerter } from "../../hooks/useOutsideAlerter";
 import Tipografia from "../Tipografia/Tipografia";
-import { SubMenuCompraNavbar } from "../subMenuCompraNavbar/subMenuCompraNavbar";
+import { SubMenuCompraNavbar } from "../SubMenuCompraNavbar/SubMenuCompraNavbar";
 import { SubMenuDescubrirNavbar } from "../SubMenuDescubrirNavbar/SubMenuDescubrirNavbar";
 
 const LinksNavbar = () => {
