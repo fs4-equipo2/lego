@@ -29,12 +29,14 @@
           gap: 20rem;
           padding-bottom: 1rem;
           border-bottom: 1px solid lightgray;
-
-          .productImg {
-            width: auto;
-            max-width: 10rem;
-            height: auto;
-            max-height: 10rem;
+          .productImgCont{
+            width: 10rem;
+            .productImg {
+              width: auto;
+              max-width: 10rem;
+              height: auto;
+              max-height: 10rem;
+            }
           }
         }
       }

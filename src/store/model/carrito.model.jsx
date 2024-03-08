@@ -4,6 +4,9 @@ export const CarritoModel = {
   productos: [],
   precioTotal: 0,
 
+  setProductos: action((state, payload) => {
+    state.productos = [ ...payload ];
+  }),
 
   addProducto: action((state, payload) => {
     const uid = payload.uid;

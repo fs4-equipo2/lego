@@ -7,12 +7,23 @@ export const PaymentResultCancel = () => {
   const { user } = useStoreState((state) => state.user);
   const { setUser } = useStoreActions((actions) => actions.user);
 
+  const { setProductos, calcularPrecioTotal } =
+  useStoreActions((actions) => actions.carrito);
+
   window.onload = function () {
-    const valorAlmacenado = JSON.parse(
+    const valorAlmacenadoSesion = JSON.parse(
       sessionStorage.getItem("usuarioConectado")
     );
-    if (valorAlmacenado) {
-      setUser({ ...valorAlmacenado });
+    if (valorAlmacenadoSesion) {
+      setUser({ ...valorAlmacenadoSesion });
+    }
+    const valorAlmacenadoItemsCarrito = JSON.parse(
+      sessionStorage.getItem("itemsCarritoCompras")
+    );
+    if (valorAlmacenadoItemsCarrito) {
+      console.log(valorAlmacenadoItemsCarrito);
+      setProductos([ ...valorAlmacenadoItemsCarrito ]);
+      calcularPrecioTotal()
     }
   };
 

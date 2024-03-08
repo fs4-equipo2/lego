@@ -17,7 +17,9 @@ export const CheckoutPage = () => {
       });
       const data = await res.json();
       const valorSesion = JSON.stringify(user);
+      const itemsCarritoCompras = JSON.stringify(productos);
       sessionStorage.setItem("usuarioConectado", valorSesion);
+      sessionStorage.setItem("itemsCarritoCompras", itemsCarritoCompras);
       window.location.href = data.url;
     } catch (err) {
       console.error("ERROR", err);
@@ -41,7 +43,12 @@ export const CheckoutPage = () => {
                   return (
                     <li key={index}>
                       <div className={styles.cardProductCont}>
-                        <img className={styles.productImg} src={producto.src} />
+                        <div className={styles.productImgCont}>
+                          <img
+                            className={styles.productImg}
+                            src={producto.src}
+                          />
+                        </div>
                         <div className={styles.cardProductDetails}>
                           <div className={styles.cardProductFirstRow}>
                             <Tipografia
