@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import styles from "./LinksNavbarResponsive.module.scss";
 import Button from "../Button/Button";
-import { useOutsideAlerter } from "../../hooks/useOutsideAlerter";
+import { Link } from "react-router-dom";
 import Tipografia from "../Tipografia/Tipografia";
 import { SubMenuCompraNavbar } from "../SubMenuCompraNavbar/SubMenuCompraNavbar";
 import { SubMenuDescubrirNavbar } from "../SubMenuDescubrirNavbar/SubMenuDescubrirNavbar";
@@ -220,11 +220,13 @@ const LinksNavbarResponsive = ({ handleCloseModal, handleOpenLogin }) => {
               />
             </div>
             <div className={styles.carritoBoton}>
+            <Link to="/cart" onClick={handleCloseModal}>
               <Tipografia
                 color="--black"
                 texto={`Mi bolsa (${productos.length})`}
                 isBodyMedium
               />
+              </Link>
             </div>
             <div className={styles.localizacionCont}>
               <button className={styles.localizacionBoton}>
