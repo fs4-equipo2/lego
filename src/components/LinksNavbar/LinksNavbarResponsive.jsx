@@ -76,16 +76,6 @@ const LinksNavbarResponsive = ({ handleCloseModal, handleOpenLogin }) => {
     "Piezas de repuesto",
   ];
 
-  const closeSubMenu = () => {
-    setIsCompraVisible(true);
-    setIsDescubrirVisible(false);
-    setIsAyudaVisible(false);
-  };
-
-  useOutsideAlerter(menuRef, () => {
-    closeSubMenu();
-  });
-
   useEffect(() => {
     setIsReturnMenu(false);
   }, [handleCloseModal])
@@ -114,7 +104,7 @@ const LinksNavbarResponsive = ({ handleCloseModal, handleOpenLogin }) => {
                 </div>
                 <div className={styles.compraClickeable}></div>
                 <div className={styles.compra}>
-                  <SubMenuCompraNavbar handleClicker={closeSubMenu} />
+                  <SubMenuCompraNavbar handleClicker={() => {}} />
                 </div>
               </>
             )}
@@ -130,7 +120,7 @@ const LinksNavbarResponsive = ({ handleCloseModal, handleOpenLogin }) => {
                 </div>
                 <div className={styles.descubrirClickeable}>
                   <div className={styles.descubrir}>
-                    <SubMenuDescubrirNavbar handleClicker={closeSubMenu} />
+                    <SubMenuDescubrirNavbar handleClicker={() => {}} />
                   </div>
                 </div>
               </>
