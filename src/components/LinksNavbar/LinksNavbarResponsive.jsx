@@ -83,7 +83,6 @@ const LinksNavbarResponsive = ({ handleCloseModal, handleOpenLogin }) => {
   };
 
   useOutsideAlerter(menuRef, () => {
-    setIsMenuOpen(false);
     closeSubMenu();
   });
 
