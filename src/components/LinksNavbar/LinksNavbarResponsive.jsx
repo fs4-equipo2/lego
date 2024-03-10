@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import styles from "./LinksNavbarResponsive.module.scss";
 import Button from "../Button/Button";
 import { useOutsideAlerter } from "../../hooks/useOutsideAlerter";
@@ -86,6 +86,11 @@ const LinksNavbarResponsive = ({ handleCloseModal, handleOpenLogin }) => {
     setIsMenuOpen(false);
     closeSubMenu();
   });
+
+  useEffect(() => {
+    setIsReturnMenu(false);
+  }, [handleCloseModal])
+
 
   return (
     <>
