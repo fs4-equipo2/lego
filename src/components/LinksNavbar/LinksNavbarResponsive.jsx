@@ -15,7 +15,7 @@ import { IconoJoin } from "../MixButton/IconoJoin";
 import { useStoreState } from "../../store";
 import { TbLego } from "react-icons/tb";
 
-const LinksNavbarResponsive = ({ handleCloseModal }) => {
+const LinksNavbarResponsive = ({ handleCloseModal, handleOpenLogin }) => {
   const { user } = useStoreState((state) => state.user);
   const { productos } = useStoreState((state) => state.carrito);
 
@@ -26,6 +26,11 @@ const LinksNavbarResponsive = ({ handleCloseModal }) => {
   const [isReturnMenu, setIsReturnMenu] = useState(false); //Flecha retorno
 
   const menuRef = useRef(null);
+
+  function openModalLogIn() {
+    handleCloseModal();
+    handleOpenLogin();
+  }
 
   function handleCloseSidebar() {
     handleCloseModal();
@@ -206,7 +211,7 @@ const LinksNavbarResponsive = ({ handleCloseModal }) => {
                 }
                 href=""
                 icon={<TbLego />}
-                // onClick={openModalLogIn} // Cerrar un modal y abrir el otro
+                onClick={openModalLogIn}
               />
             </div>
             <div className={styles.uneteBoton}>

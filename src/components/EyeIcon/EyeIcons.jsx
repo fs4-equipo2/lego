@@ -30,7 +30,7 @@ const PasswordToggle = ({ onPassChange, password }) => {
         className={`${isEyeOpen ? "open" : ""}`}
         onClick={togglePassword}
       >
-        {isEyeOpen ? EyeIcons.closed : EyeIcons.open}
+        {isEyeOpen ? EyeIcons.open : EyeIcons.closed}
       </i>
     </div>
   );
