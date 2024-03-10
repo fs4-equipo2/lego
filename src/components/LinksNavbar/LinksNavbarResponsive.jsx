@@ -32,10 +32,6 @@ const LinksNavbarResponsive = ({ handleCloseModal, handleOpenLogin }) => {
     handleOpenLogin();
   }
 
-  function handleCloseSidebar() {
-    handleCloseModal();
-  }
-
   function handleClick(event) {
     setIsMenuOpen(true);
     setIsCompraVisible(false);
@@ -172,7 +168,7 @@ const LinksNavbarResponsive = ({ handleCloseModal, handleOpenLogin }) => {
             </div>
             <div
               className={styles.linksResponInicio}
-              onClick={handleCloseSidebar}
+              onClick={handleCloseModal}
             >
               <Tipografia color="--black" texto={"INICIO"} isBodyMedium />
             </div>

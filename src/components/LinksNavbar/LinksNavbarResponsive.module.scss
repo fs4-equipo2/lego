@@ -58,17 +58,17 @@
 }
 
 .menu {
-  // position: fixed;
   z-index: 5;
   top: 0;
   left: 0;
-  width: 80vw;
-  height: 100vh;
+  width: auto;
+  height: auto;
   flex-wrap: wrap;
-  
+
   .menuSelectionTitle {
     padding: 1rem 0;
     padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
     background-color: #006db7;
     > p {
       width: fit-content;
@@ -89,17 +89,17 @@
 .compra {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 .descubrir {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 .ayuda {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   padding-left: 1.25rem;
 }
 
