@@ -76,7 +76,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-   
+
   }
   .legoMain{
     height: 35px;
@@ -107,17 +107,19 @@
   }
 
   .botonOferta button{
-    width: 75px;
+    width: 68px;
 
     font-size: 0.9em;
     font-weight: lighter;
   }
 
   .botonMiembro button{
-    width: 90px;
+    width: 120px;
 
     font-size: 0.9em;
     font-weight: lighter;
+
+    white-space: nowrap;
   }
 }
 
