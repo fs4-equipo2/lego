@@ -92,7 +92,7 @@ const LinksNavbar = () => {
                     {subMenuAyuda.map((item) => (
                       <Tipografia
                         key={item}
-                        color="--black"
+                     
                         texto={item}
                         isBodyXL
                       />

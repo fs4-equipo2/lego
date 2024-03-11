@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 import { FaChevronRight } from "react-icons/fa6";
 import Tipografia from "../Tipografia/Tipografia";
 
-export function SubMenuCompraNavbar ({ handleClicker }) {
+export function SubMenuCompraNavbar({ handleClicker }) {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState(null);
   const [selectedItem, setSelectedItem] = useState(false);
@@ -50,7 +50,7 @@ export function SubMenuCompraNavbar ({ handleClicker }) {
       "Star Wars",
       "Technic",
     ],
-    Edades: [ "1,5+", "4+", "6+", "9+", "13+", "18+"],
+    Edades: ["1,5+", "4+", "6+", "9+", "13+", "18+"],
     Precios: [
       "Menos de 20 €",
       "20 € - 50 €",
@@ -99,10 +99,7 @@ export function SubMenuCompraNavbar ({ handleClicker }) {
       "Series de televisión",
       "Vehículos",
     ],
-    PickBuild: [
-      "Pick a Brick",
-      "Accesorios y kits de ladrillos",
-    ],
+    PickBuild: ["Pick a Brick", "Accesorios y kits de ladrillos"],
   };
 
   const handleClick = (subMenu) => {
@@ -118,7 +115,6 @@ export function SubMenuCompraNavbar ({ handleClicker }) {
   useOutsideAlerter(subMenuRef, () => {
     setIsSubMenuOpen(false);
     closeSubMenu();
-
   });
 
   const subMenuCompra = [
@@ -140,49 +136,60 @@ export function SubMenuCompraNavbar ({ handleClicker }) {
         subMenusCompraClick[activeSubMenu] ? styles.subMenuContainer : "none"
       }
     >
-      <div className={styles.comprarButtons}>
-        {/* Botones principales */}
-        <Button
-          iconRight={<FaChevronRight />}
-          texto="Sets por Tema"
-          handleClick={() => handleClick("setsTema")}
-          isSubMenu
-        />
-        <Button
-          iconRight={<FaChevronRight />}
-          texto="Edades"
-          handleClick={() => handleClick("Edades")}
-          isSubMenu
-        />
-        <Button
-          iconRight={<FaChevronRight />}
-          texto="Rangos de Precios"
-          handleClick={() => handleClick("Precios")}
-          isSubMenu
-        />
-        <Button
-          iconRight={<FaChevronRight />}
-          texto="Artículos LEGO"
-          handleClick={() => handleClick("Articulos")}
-          isSubMenu
-        />
-        <Button
-          iconRight={<FaChevronRight />}
-          texto="Intereses"
-          handleClick={() => handleClick("Intereses")}
-          isSubMenu
-        />
-        <Button
-          iconRight={<FaChevronRight />}
-          texto="Pick and Build"
-          handleClick={() => handleClick("PickBuild")}
-          isSubMenu
-        />
+      <div className={styles.compraButtonsTodos}>
+        <div className={styles.comprarButtonsClick}>
+          {/* Botones principales */}
+          <Button
+            iconRight={<FaChevronRight />}
+            texto="Sets por Tema"
+            handleClick={() => handleClick("setsTema")}
+            isSubMenu
+          />
+
+          <Button
+            iconRight={<FaChevronRight />}
+            texto="Edades"
+            handleClick={() => handleClick("Edades")}
+            isSubMenu
+          />
+          <Button
+            iconRight={<FaChevronRight />}
+            texto="Rangos de Precios"
+            handleClick={() => handleClick("Precios")}
+            isSubMenu
+          />
+          <Button
+            iconRight={<FaChevronRight />}
+            texto="Artículos LEGO"
+            handleClick={() => handleClick("Articulos")}
+            isSubMenu
+          />
+          <Button
+            iconRight={<FaChevronRight />}
+            texto="Intereses"
+            handleClick={() => handleClick("Intereses")}
+            isSubMenu
+          />
+          <Button
+            iconRight={<FaChevronRight />}
+            texto="Pick and Build"
+            handleClick={() => handleClick("PickBuild")}
+            isSubMenu
+          />
+        </div>
+        {/* no clicleables */}
+
+        <div className={styles.comprarButtons}>
           {subMenuCompra.map((item) => (
-            <Tipografia key={item} color="--black" texto={item} isBodyXL />
+            <Tipografia key={item} texto={item} isBodyXL />
           ))}
+        </div>
       </div>
-{/* TITULO POR MENU */}
+
+      <div className={styles.subLinea}>
+            <hr></hr>
+          </div>
+      {/* TITULO POR MENU */}
       {isSubMenuOpen && activeSubMenu && (
         <div className={styles.subMenu}>
           {isSubMenuOpen && activeSubMenu === "setsTema" && (
@@ -194,82 +201,80 @@ export function SubMenuCompraNavbar ({ handleClicker }) {
               />
             </div>
           )}
-      {/* EDADES */}
-      {isSubMenuOpen && activeSubMenu && (
-        <div className={styles.subMenu}>
-          {isSubMenuOpen && activeSubMenu === "Edades" && (
-            <div className={styles.titulo}>
-              <Button
-                texto={<h4>VER TODAS LAS EDADES</h4>}
-                handleClick={() => handleClick("Edades")}
-                isSubMenu
-              />
+          {/* EDADES */}
+          {isSubMenuOpen && activeSubMenu && (
+            <div>
+              {isSubMenuOpen && activeSubMenu === "Edades" && (
+                <div className={styles.titulo}>
+                  <Button
+                    texto={<h4>VER TODAS LAS EDADES</h4>}
+                    handleClick={() => handleClick("Edades")}
+                    isSubMenu
+                  />
+                </div>
+              )}
+            </div>
+          )}
+          {/* PRECIOS */}
+          {isSubMenuOpen && activeSubMenu && (
+            <div>
+              {isSubMenuOpen && activeSubMenu === "Precios" && (
+                <div className={styles.titulo}>
+                  <Button
+                    texto={<h4>VER TODOS LOS RANGOS DE PRECIOS</h4>}
+                    handleClick={() => handleClick("Precios")}
+                    isSubMenu
+                  />
+                </div>
+              )}
+            </div>
+          )}
+          {/* ARTICULOS */}
+          {isSubMenuOpen && activeSubMenu && (
+            <div>
+              {isSubMenuOpen && activeSubMenu === "Articulos" && (
+                <div className={styles.titulo}>
+                  <Button
+                    texto={<h4>VER TODOS LOS ARTÍCULOS LEGO</h4>}
+                    handleClick={() => handleClick("Articulos")}
+                    isSubMenu
+                  />
+                </div>
+              )}
+            </div>
+          )}
+          {/* INTERESES */}
+          {isSubMenuOpen && activeSubMenu && (
+            <div>
+              {isSubMenuOpen && activeSubMenu === "Intereses" && (
+                <div className={styles.titulo}>
+                  <Button
+                    texto={<h4>VER TODOS LOS INTERESES</h4>}
+                    handleClick={() => handleClick("Intereses")}
+                    isSubMenu
+                  />
+                </div>
+              )}
             </div>
           )}
 
-        </div>
-      )}
-            {/* PRECIOS */}
-            {isSubMenuOpen && activeSubMenu && (
-        <div className={styles.subMenu}>
-          {isSubMenuOpen && activeSubMenu === "Precios" && (
-            <div className={styles.titulo}>
-              <Button
-                texto={<h4>VER TODOS LOS RANGOS DE PRECIOS</h4>}
-                handleClick={() => handleClick("Precios")}
-                isSubMenu
-              />
+          {/* PICK AND BUILD */}
+          {isSubMenuOpen && activeSubMenu && (
+            <div>
+              {isSubMenuOpen && activeSubMenu === "PickBuild" && (
+                <div className={styles.titulo}>
+                  <Button
+                    texto={<h4>PICK AND BUILD</h4>}
+                    handleClick={() => handleClick("PickBuild")}
+                    isSubMenu
+                  />
+                </div>
+              )}
             </div>
           )}
 
-        </div>
-      )}
-                {/* ARTICULOS */}
-                {isSubMenuOpen && activeSubMenu && (
-        <div className={styles.subMenu}>
-          {isSubMenuOpen && activeSubMenu === "Articulos" && (
-            <div className={styles.titulo}>
-              <Button
-                texto={<h4>VER TODOS LOS ARTÍCULOS LEGO</h4>}
-                handleClick={() => handleClick("Articulos")}
-                isSubMenu
-              />
-            </div>
-          )}
-
-        </div>
-      )}
-                    {/* INTERESES */}
-                    {isSubMenuOpen && activeSubMenu && (
-        <div className={styles.subMenu}>
-          {isSubMenuOpen && activeSubMenu === "Intereses" && (
-            <div className={styles.titulo}>
-              <Button
-                texto={<h4>VER TODOS LOS INTERESES</h4>}
-                handleClick={() => handleClick("Intereses")}
-                isSubMenu
-              />
-            </div>
-          )}
-
-        </div>
-      )}
-                         {/* PICK AND BUILD */}
-                         {isSubMenuOpen && activeSubMenu && (
-        <div className={styles.subMenu}>
-          {isSubMenuOpen && activeSubMenu === "PickBuild" && (
-            <div className={styles.titulo}>
-              <Button
-                texto={<h4>PICK AND BUILD</h4>}
-                handleClick={() => handleClick("PickBuild")}
-                isSubMenu
-              />
-            </div>
-          )}
-
-        </div>
-      )}
-            {/* Buttons */}
+          {/* Buttons */}
+      
           <div className={styles.subCompra}>
             {subMenusCompraClick[activeSubMenu].map((item) => (
               <Button
@@ -285,7 +290,6 @@ export function SubMenuCompraNavbar ({ handleClicker }) {
           </div>
         </div>
       )}
-
     </div>
   );
 }
