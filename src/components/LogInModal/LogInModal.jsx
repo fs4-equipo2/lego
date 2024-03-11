@@ -19,10 +19,11 @@ export const LogInModal = () => {
     const fetchData = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:3001/api/users/login",
+          "http://localhost:3021/api/users/login",
           currentUser
         );
         setData(response.data);
+        setUser({username: data.username, isLoggedIn: true});
       } catch (error) {
         console.error("Error: ", error);
       }
@@ -76,7 +77,7 @@ export const LogInModal = () => {
     checkLogin(formState);
   };
 
-  console.log(data);
+  console.log("Data: ", data);
 
   return (
     <>
