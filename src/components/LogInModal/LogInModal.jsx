@@ -14,6 +14,7 @@ export const LogInModal = () => {
   const { setUser } = useStoreActions((actions) => actions.user);
 
   const [data, setData] = useState("");
+  const [control, setControl] = useState(false);
 
   const checkLogin = (currentUser) => {
     const fetchData = async () => {
@@ -23,9 +24,9 @@ export const LogInModal = () => {
           currentUser
         );
         setData(response.data);
-        setUser({username: data.username, isLoggedIn: true});
-      } catch (error) {
-        console.error("Error: ", error);
+        setControl(true);
+      } catch (e) {
+        console.error("Error: ", e.response.data.msg);
       }
     };
 
@@ -75,9 +76,13 @@ export const LogInModal = () => {
   const onSubmitLogIn = (event) => {
     event.preventDefault();
     checkLogin(formState);
+    if(control === true){
+      setUser({ username: data.username, isLoggedIn: true });
+    }
   };
 
-  console.log("Data: ", data);
+  console.log("Data total: ", data)
+  console.log(`username: ${data.username}`)
 
   return (
     <>
