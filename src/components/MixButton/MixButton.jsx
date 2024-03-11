@@ -1,6 +1,7 @@
+import IconoCara from "../logInButton/IconoCara";
 import styles from "./JoinButton.module.scss";
 import stylesTwo from "./loginButton.module.scss";
-import IconoCara from "../logInButton/IconoCara";
+
 
 export const MixButton = ({ isLogin, label, icon, onClick }) => {
   return (

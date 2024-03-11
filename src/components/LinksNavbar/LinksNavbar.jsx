@@ -90,12 +90,7 @@ const LinksNavbar = () => {
                 <div className={styles.descubrirClickeable}>
                   <div className={styles.ayuda}>
                     {subMenuAyuda.map((item) => (
-                      <Tipografia
-                        key={item}
-                     
-                        texto={item}
-                        isBodyXL
-                      />
+                      <Tipografia key={item} texto={item} isBodyXL />
                     ))}
                   </div>
                 </div>
@@ -118,7 +113,6 @@ const LinksNavbar = () => {
             handleClick={handleClick}
           />
           <Button isNavBar texto="AYUDA" id="ayuda" handleClick={handleClick} />
-          <Button isBotonEspecial texto="NAVIDAD" />
         </div>
       </div>
     </>
