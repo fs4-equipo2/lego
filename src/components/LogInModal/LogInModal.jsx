@@ -20,7 +20,7 @@ export const LogInModal = () => {
     const fetchData = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:3021/api/users/login",
+          "http://localhost:3002/api/users/login",
           currentUser
         );
         setData(response.data);
@@ -81,8 +81,8 @@ export const LogInModal = () => {
     }
   };
 
-  console.log("Data total: ", data)
-  console.log(`username: ${data.username}`)
+ /*  console.log("Data total: ", data)
+  console.log(`username: ${data.username}`) */
 
   return (
     <>
