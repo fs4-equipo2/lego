@@ -93,3 +93,31 @@
   right: 12px;
   transform: translateY(-50%);
 }
+
+@media (max-width: 800px) {
+
+  .logInModalContainerBodyBottomNewUser button {
+    width: fit-content;
+  }
+
+  #iconInputUsername, #iconInputPass {
+    position: absolute;
+    width: 35px;
+    height: 31px;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 500px) {
+
+  .logInModalContainerBody {
+    width: 260px!important;
+  }
+
+  .logInModalContainerBodyBottomFormBody, .logInModalContainerBodyBottomNewUser {
+    width: auto!important;
+  }
+
+}

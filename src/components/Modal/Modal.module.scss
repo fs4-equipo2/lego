@@ -29,3 +29,21 @@
     right: 1rem;
   }
 }
+
+@media (max-width: 1000px) {
+  .modalContainer {
+    background: var(--green-extra-light);
+  }
+}
+
+@media (max-width: 500px) {
+  .modal {
+    min-height: 0;
+    width: 100vw;
+  }
+
+  .modalContainer {
+    background: var(--green-extra-light);
+  }
+
+}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Tipografia from "../Tipografia/Tipografia";
 import styles from "./LogInModal.module.scss";
 import { LegoLogo } from "../Footer/LegoLogo";
@@ -14,7 +14,7 @@ export const LogInModal = () => {
   const { setUser } = useStoreActions((actions) => actions.user);
 
   const [data, setData] = useState("");
-  const [control, setControl] = useState(false);
+  const [control, setControl] = useState(null);
 
   const checkLogin = (currentUser) => {
     const fetchData = async () => {
@@ -26,6 +26,7 @@ export const LogInModal = () => {
         setData(response.data);
         setControl(true);
       } catch (e) {
+        setControl(false);
         console.error("Error: ", e.response.data.msg);
       }
     };
@@ -76,13 +77,24 @@ export const LogInModal = () => {
   const onSubmitLogIn = (event) => {
     event.preventDefault();
     checkLogin(formState);
-    if(control === true){
-      setUser({ username: data.username, isLoggedIn: true });
-    }
+    // if(control === true){
+    //   setUser({ username: data.username, isLoggedIn: true });
+    // }
   };
 
- /*  console.log("Data total: ", data)
-  console.log(`username: ${data.username}`) */
+  useEffect(() => {
+    if(control === true){
+      notify(!control);
+      setUser({ username: data.username, isLoggedIn: true });
+    }else if(control === false){
+      notify(!control);
+      setControl(null);
+    }
+  }, [control])
+
+
+  // console.log("Data total: ", data)
+  // console.log(`username: ${data.username}`)
 
   return (
     <>
