@@ -14,6 +14,8 @@ import { MixButton } from "../MixButton/MixButton";
 import { IconoJoin } from "../MixButton/IconoJoin";
 import { useStoreState } from "../../store";
 import { TbLego } from "react-icons/tb";
+import { Modal } from "bootstrap";
+import { LogInModal } from "../LogInModal/LogInModal";
 
 const LinksNavbarResponsive = ({ handleCloseModal, handleOpenLogin }) => {
   const { user } = useStoreState((state) => state.user);
@@ -24,6 +26,7 @@ const LinksNavbarResponsive = ({ handleCloseModal, handleOpenLogin }) => {
   const [isDescubrirVisible, setIsDescubrirVisible] = useState(false); // Secciones
   const [isAyudaVisible, setIsAyudaVisible] = useState(false); // Secciones
   const [isReturnMenu, setIsReturnMenu] = useState(false); //Flecha retorno
+  // const [isOpenLogIn, openModalLogIn, closeModalLogIn] = useModal(false); //modal
 
   const menuRef = useRef(null);
 
@@ -203,7 +206,11 @@ const LinksNavbarResponsive = ({ handleCloseModal, handleOpenLogin }) => {
                 icon={<TbLego />}
                 onClick={openModalLogIn}
               />
+
             </div>
+
+       
+
             <div className={styles.uneteBoton}>
               <MixButton
                 isLogin={false}
