@@ -3,26 +3,35 @@ import Tipografia from "../Tipografia/Tipografia";
 import styles from "./LogInModal.module.scss";
 import { LegoLogo } from "../Footer/LegoLogo";
 import { useForm } from "../../hooks/useForm";
-import { usersListData } from "./UsersData.tsx";
 import { useStoreActions } from "../../store";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { HiOutlineUser } from "react-icons/hi2";
 import PasswordToggle from "../EyeIcon/EyeIcons.jsx";
+import axios from 'axios';
 
 export const LogInModal = () => {
   const { setUser } = useStoreActions((actions) => actions.user);
 
-  const checkLogin = (lista, currentUser) => {
-    const result = lista.filter((user) => {
-      return JSON.stringify(user) === JSON.stringify(currentUser);
-    });
-    if (result.length === 0 || result.length > 1) {
-      return false;
-    } else {
-      setUser({ username: result[0].username, isLoggedIn: true });
-      return true;
-    }
+  const [data, setData] = useState("");
+  const [control, setControl] = useState(false);
+
+  const checkLogin = (currentUser) => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.post(
+          "http://localhost:3021/api/users/login",
+          currentUser
+        );
+        setData(response.data);
+        setControl(true);
+      } catch (e) {
+        console.error("Error: ", e.response.data.msg);
+      }
+    };
+
+    // Llamada a la función
+    fetchData();
   };
 
   const initialForm = {
@@ -66,13 +75,14 @@ export const LogInModal = () => {
 
   const onSubmitLogIn = (event) => {
     event.preventDefault();
-    setCheck({
-      status: checkLogin(usersListData, formState),
-      error: !checkLogin(usersListData, formState),
-      submit: true,
-    });
-    notify(!checkLogin(usersListData, formState));
+    checkLogin(formState);
+    if(control === true){
+      setUser({ username: data.username, isLoggedIn: true });
+    }
   };
+
+  console.log("Data total: ", data)
+  console.log(`username: ${data.username}`)
 
   return (
     <>
