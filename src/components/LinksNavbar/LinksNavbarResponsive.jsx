@@ -14,8 +14,8 @@ import { MixButton } from "../MixButton/MixButton";
 import { IconoJoin } from "../MixButton/IconoJoin";
 import { useStoreState } from "../../store";
 import { TbLego } from "react-icons/tb";
-import { Modal } from "bootstrap";
-import { LogInModal } from "../LogInModal/LogInModal";
+// import { Modal } from "bootstrap";
+// import { LogInModal } from "../LogInModal/LogInModal";
 
 const LinksNavbarResponsive = ({ handleCloseModal, handleOpenLogin }) => {
   const { user } = useStoreState((state) => state.user);
@@ -208,9 +208,6 @@ const LinksNavbarResponsive = ({ handleCloseModal, handleOpenLogin }) => {
               />
 
             </div>
-
-       
-
             <div className={styles.uneteBoton}>
               <MixButton
                 isLogin={false}
