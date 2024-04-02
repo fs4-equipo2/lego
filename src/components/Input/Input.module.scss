@@ -1,0 +1,20 @@
+.container {}
+
+.text {
+  &::placeholder {
+    color: yellow
+  }
+}
+
+
+.number {
+  &::placeholder {
+    color: green;
+  }
+}
+
+.password {
+  &::placeholder {
+    color: lightcoral;
+  }
+}
