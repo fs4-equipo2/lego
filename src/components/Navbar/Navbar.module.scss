@@ -1,10 +1,9 @@
 .containerPadreNav {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 100vw;
   flex-wrap: nowrap;
   background-color: var(--yellow);
-
 }
 
 .containerNav {
@@ -15,7 +14,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 40px;
-
 }
 
 .containerPre {
@@ -30,6 +28,12 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
+
+  .utilityBar {
+    width: 0.0625rem;
+    height: 1.25rem;
+    background: rgb(117, 117, 117);
+  }
 }
 
 .containerLeft {
@@ -37,6 +41,10 @@
   flex-direction: row;
   align-items: center;
   gap: 40px;
+
+  .hamburguerMenu {
+    display: none;
+  }
 }
 
 .buttonContainer {
@@ -47,14 +55,182 @@
 
 .containerRight {
   display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-background-color: transparent;
-gap: 40px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  gap: 40px;
 }
 
 .menuEspecial {
-background-color: var(--white);
-color: var(--red);
+  background-color: var(--white);
+  color: var(--red);
+}
+
+.iconoCara {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .iconoCara {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .iconoCara svg {
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    cursor: pointer;
+  }
+
+
+  .containerNav {
+    background-color: var(--green-extra-light);
+    border-bottom: 3px solid var(--green);
+   
+  }
+
+  .buttonContainer {
+    display: none;
+  }
+
+  .hamburguerMenu {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .containerPre {
+    display: none;
+  }
+  .containerRight {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    button {
+      svg {
+        width: 40px;
+        height: 40px;
+        margin-left: 5px;
+        stroke: 10px;
+        background-color: transparent;
+      }
+
+      display: flex;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+    }
+  }
+  .bolsaCompra svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carritoCompra {
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+
+ 
+      p{
+        align-self: center;
+        padding-left: 3px;
+      }
+
+  }
+}
+
+
+@media (max-width: 400px){
+  .iconoCara {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .iconoCara svg {
+    width: 25px;
+    height: 25px;
+    align-items: center;
+    cursor: pointer;
+  }
+
+
+  .containerNav {
+    gap: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    justify-content: space-between;
+    background-color: var(--green-extra-light);
+    border-bottom: 3px solid var(--green);
+  }
+
+  .buttonContainer {
+    display: none;
+  }
+
+  .hamburguerMenu {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .containerPre {
+    display: none;
+  }
+  .containerRight {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    button {
+
+      svg {
+        margin-right: 0px;
+        width: 30px;
+        height: 30px;
+      }
+
+      display: flex;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+    }
+  }
+  .bolsaCompra svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .carritoCompra {
+    width: 20px;
+    margin-top: 30px;
+    gap:0;
+
+    p{
+      align-self: center;
+      padding-left: 3px;
+    }
+  }
+
+  .containerLeft {
+    gap:20px;
+  }
+
 }

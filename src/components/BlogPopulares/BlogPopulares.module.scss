@@ -1,0 +1,104 @@
+.blog{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.blogContainer{
+    width: 86%;
+    display: flex;
+    flex-direction: column;
+    background-color: #e1f9e0;
+}
+.titleBlog{
+    margin: 15px;
+    color: var(--black);
+}
+.cardsContainer{
+    width: 85%;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.progressBar {
+    width: 100%;
+    height: 5px;
+    background-color: #ccc;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el indicador de progreso */
+  .progress {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+  }
+
+  @media (max-width: 1440px){
+    .blogContainer{
+        width: 100%;
+    }
+    .blogCards {
+        .slick-slide {
+          width: 100%;
+        }
+        .slick-list {
+          margin: 20px;
+        }
+        .slick-track {
+          display: flex;
+        }
+      }
+  }
+
+  @media (max-width: 1200px){
+    .blogContainer{
+        width: 100%;
+    }
+    .blogCards {
+        .slick-slide {
+          width: 100%;
+        }
+        .slick-list {
+          margin: 0 auto;
+        }
+        .slick-track {
+          display: flex;
+        }
+      }
+  }
+
+  @media (max-width: 900px){
+    .blogContainer{
+        width: 100%;
+    }
+    .blogCards {
+        .slick-slide {
+          width: 100%;
+        }
+        .slick-list {
+          margin: 0 auto;
+        }
+        .slick-track {
+          display: flex;
+        }
+      }
+  }
+
+  @media (max-width: 768px){
+    .blogContainer{
+        width: 100%;
+    }
+    .blogCards {
+        .slick-slide {
+          width: 100%;
+        }
+        .slick-list {
+          margin: 0 auto;
+        }
+        .slick-track {
+          display: flex;
+        }
+      }
+  }
+  

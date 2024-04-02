@@ -1,104 +1,90 @@
-/* Font-size */
+/* Font-size & line-height*/
 
 .titleXL {
-  font-size: 40px;
-}
-.titleLarge {
-   font-size: 32px; 
-}
-.title {
-    font-size: 29.7078px;
-}
-.subtitleLarge {
-    font-size: 24px;
-}
-.subtitle {
-    font-size: 20px;
-}
-.bodyXL {
-    font-size: 18px;
-}
-.bodyLarge {
-    font-size: 16px;
-}
-.body {
-    font-size: 14px;
-}
-.bodySmall {
-    font-size: 12px;
-}
-
-.regularWeight {
-    font-weight: 400;
-}
-
-/* Font-weight */
-
-.regularWeight {
-    font-weight: 400;
-}
-
-.mediumWeight {
-    font-weight: 500;
-}
-
-.boldWeight {
-    font-weight: 700;
-}
-
-/* Line-height */
-
-.lineHeight1 {
-    line-height: 16.1px;
-}
-
-.lineHeight2 {
-    line-height: 18px;
-}
-
-.lineHeight3 {
-    line-height: 19px;
-}
-
-.lineHeight4 {
-    line-height: 20px;
-}
-
-.lineHeight5 {
-    line-height: 21px;
-}
-.lineHeight6 {
-    line-height: 22px;
-}
-
-.lineHeight7 {
-    line-height: 24px;
-}
-
-.lineHeight8 {
-    line-height: 25px;
-}
-
-.lineHeight9 {
-    line-height: 28px;
-}
-
-.lineHeight10 {
-    line-height: 31px;
-}
-
-.lineHeight11 {
-    line-height: 36px;
-}
-
-.lineHeight12 {
-    line-height: 41.5909px;
-}
-
-.lineHeight13 {
-    line-height: 43px;
-}
-
-.lineHeight14 {
+    font-size: 40px;
     line-height: 50px;
-}
+  }
+
+  .titleLarge {
+    font-size: 32px;
+    line-height: 43px;
+  }
+
+  .titleBig {
+    font-size: 26px;
+    line-height: 25px;
+  }
+
+  .titleMediumPlus {
+    font-size: 24px;
+    line-height: 37px;
+  }
+
+  .titleMedium {
+      font-size: 20px;
+      line-height: 31px;
+    }
+
+  .titleRegular {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .titleSmall {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .subtitleXL {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .subtitleLarge {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .subtitleRegular {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .bodyXL {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .bodyLarge {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .bodyMedium {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .bodyRegular {
+    font-size: 12px;
+    line-height: 25px;
+  }
+  .bodySmall {
+    font-size: 12px;
+    line-height: 19px;
+  }
+
+  /* Font-weight */
+
+  .regularWeight {
+    font-weight: 400;
+  }
+
+  .mediumWeight {
+    font-weight: 500;
+  }
+
+  .bigWeight {
+    font-weight: 600;
+  }
+
+  .boldWeight {
+    font-weight: 700;
+  }

@@ -1,0 +1,176 @@
+.links {
+  // position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: auto;
+  padding: 0 1.25rem;
+}
+
+.zonaJuegosBoton {
+  display: flex;
+  justify-content: start;
+
+  #zonaJuegosBotonID {
+    padding: 10px 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.linksResponInicio {
+  cursor: pointer;
+}
+
+.listaDeseoBoton,
+.carritoBoton {
+  cursor: pointer;
+}
+
+.localizacionBoton {
+  cursor: pointer;
+
+  gap: 5px;
+  display: flex;
+  background: transparent;
+  border: 0;
+  align-items: center;
+  height: 1.1875rem;
+  width: 78px;
+
+  svg {
+    margin-right: 0.625rem;
+    width: 25px;
+    height: 19px;
+  }
+}
+
+.menuTitle {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 3px solid rgb(255, 207, 0);
+  padding: 1rem 1.25rem;
+}
+
+.menuTitlePointer {
+  cursor: pointer;
+}
+
+.menu {
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  flex-wrap: wrap;
+
+  .menuSelectionTitle {
+    padding: 1rem 0;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    background-color: #006db7;
+    > p {
+      width: fit-content;
+      border-bottom: 1px solid;
+    }
+  }
+}
+
+.compraClickeable,
+.descubrirClickeable {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: transparent;
+}
+
+.compra {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.descubrir {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.ayuda {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 1.25rem;
+}
+
+.ayuda {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: transparent;
+}
+
+.subMenuContainer {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80vw;
+  height: 100vh;
+  // background-color: var(--white);
+  padding-top: 150px;
+  padding-left: 135px;
+  gap: 20px;
+}
+
+.subMenudos {
+  background-color: aliceblue;
+}
+.subMenuCompra {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+@media (max-width: 800px) {
+  .links {
+    height: 85vh;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .seccionesSidebarContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .linksResponInicio,
+    .seccionesSidebarContainer,
+    .loginBoton,
+    .uneteBoton,
+    .listaDeseoBoton,
+    .carritoBoton,
+    .localizacionCont {
+      border-bottom: 1px solid rgb(224, 224, 224);
+      padding-bottom: 10px;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .modalContainer {
+    display: none,
+  }
+  .links {
+    display: none;
+  }
+}

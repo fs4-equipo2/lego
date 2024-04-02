@@ -1,0 +1,80 @@
+.subMenuContainer{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.subMenu {
+  background-color: transparent;
+  padding-left: 50px;
+
+  button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-right: 50px;
+  }
+
+}
+
+.subCompra{
+  display: inline-block;
+  padding-bottom: 0px;
+  gap: 10px;
+  background-color: transparent;
+  columns: 3;
+ column-gap: 20px;
+
+ button:hover {
+  color:var(--blue);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+}
+
+.subLinea{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background-color: transparent;
+  padding-left: 75px;
+}
+
+.comprarButtons {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  gap: 20px;
+  padding-left: 1.25rem;
+  padding-bottom: 1.25rem;
+  cursor: pointer;
+
+  button:hover {
+    color:var(--blue);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  
+}
+
+.comprarButtonsClick {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: transparent;
+  gap: 20px;
+  padding-left: 1.25rem;
+  padding-bottom: 1.25rem;
+
+  button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 250px;
+  }
+
+}

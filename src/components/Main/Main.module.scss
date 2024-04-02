@@ -1,0 +1,197 @@
+.containerGeneralMain {
+  position: relative;
+
+  width: 100vw;
+
+  display: flex;
+  align-items: center; //*
+}
+
+.backgroundMainMobile {
+  display: none;
+}
+
+.containerBackgroundMain {
+  width: 100vw;
+}
+
+.backgroundMain {
+  width: 100%;
+  z-index: -100;
+  position: relative;
+}
+
+// div por encima de la imagen
+
+.containerArribaMain {
+  position: absolute;
+  //   *top: 150px;
+  padding-left: 130px;
+  gap: 15px;
+  width: 35vw;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.containerLogosMain{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.legoMain{
+    height: 55px;
+    width: 55px;
+    z-index: -10;
+}
+
+.legoMain svg{
+    height: 55px;
+    width: 55px;
+}
+
+.containerTextoMain {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.containerBotonesMain {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+// responsive
+
+@media (max-width: 800px) {
+  //  ipad  -  1200 rotada
+  .containerArribaMain {
+    flex-wrap: wrap;
+    width: 35vw;
+    padding-left: 60px;
+
+    gap: 9px;
+  }
+
+  .containerLogosMain{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+  }
+  .legoMain{
+    height: 35px;
+    width: 35px;
+  }
+
+  .legoMain svg {
+    height: 35px;
+    width: 35px;
+  }
+
+  .containerLogosMain img {
+    height: 30px;
+  }
+
+  .tituloPrincipal p {
+    font-size: 1.25em;
+    line-height: 1.25em;
+  }
+
+  .texto p {
+    font-size: 0.75em;
+    line-height: 1.5em;
+  }
+
+  .containerBotonesMain button {
+    height: 15px;
+  }
+
+  .botonOferta button{
+    width: 68px;
+
+    font-size: 0.9em;
+    font-weight: lighter;
+  }
+
+  .botonMiembro button{
+    width: 120px;
+
+    font-size: 0.9em;
+    font-weight: lighter;
+
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 400px) {
+  //iphone  -  900 rotado
+
+  .containerGeneralMain{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .backgroundMain {
+    display: none;
+  }
+
+  .containerBackgroundMain{
+    position: static;
+    height: 213px;
+  }
+
+  .backgroundMainMobile {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .containerArribaMain{
+    background-color: var(--blue-main-mobile);
+
+    position: static;
+
+    width: 100vw;
+    height: 25vw;
+    padding: 20px 20px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .containerLogosMain{
+    display: none;
+  }
+
+  .containerTextoMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  .tituloPrincipal{
+    align-items: center;
+  }
+
+  .tituloPrincipal p{
+    font-size: 1em;
+  }
+
+  .texto p{
+    text-align: center;
+    font-size: 0.85em;
+  }
+
+    .botonOferta button, .botonMiembro button {
+    height: 10px;
+  }
+
+}

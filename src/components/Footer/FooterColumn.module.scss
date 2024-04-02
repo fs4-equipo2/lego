@@ -1,0 +1,18 @@
+.generico{
+    display:flex;
+    flex-direction: column;
+    width: 12em;
+}
+
+.columnItemFirst {
+    margin-bottom: 1em;
+}
+
+.columnItem {
+    color: white;
+    text-underline-position: under;
+}
+
+.columnItem:hover{
+    text-decoration: underline;
+}
